@@ -669,12 +669,6 @@ footer {
 
 
 
-#skill {
-
-  /* background-image: url(../img/skill/skill_car.svg), url(../img/skill/skill_stand.svg);
-  background-position: left 10% bottom, left 5%  bottom ;
-  background-size: 300px auto, 200px auto; */
-}
 
 .skill_box {
   position: relative;
@@ -685,6 +679,7 @@ footer {
   background-color: #0000ff;
   width: 800px;
   height: 600px;
+  padding: 2rem 2rem;
 }
 
 .skill_img {
@@ -715,13 +710,20 @@ footer {
   font-size: 15px;
 }
 
+.skill_button ul{
+  grid-template-columns: repeat(5, 50px);
+  gap: 8px;
+}
+.skill_button img{
 
+  filter: drop-shadow(2px 2px 3px #585858);
+}
 
-.skill_grid {
+/* .skill_grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 5em;
-}
+} */
 
 .skill_item p {
   padding-top: 50px;
@@ -732,6 +734,7 @@ footer {
 ============================================= */
 .water_text {
   position: relative;
+  height: 50px;
 }
 
 .water_text h3 {
@@ -784,6 +787,6 @@ footer {
 }
 
 
-.skill_item p {
+.skill_text_box p {
   color: #fff;
 }
