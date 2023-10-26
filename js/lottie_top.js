@@ -10,7 +10,7 @@ var params = {
     // アニメーションを読み込んだら自動で再生する
     autoplay: true,
     // アニメーションファイル(.json)のパス
-    path: "../json_top/top_mame.json"
+    path: "..json/json_top/top_mame.json"
 };
  
 // アニメーションをロード
