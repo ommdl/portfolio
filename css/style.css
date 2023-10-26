@@ -1,0 +1,728 @@
+@charset "utf-8";
+
+
+/* ============================================================
+共通設定
+============================================================= */
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%;
+}
+
+
+body {
+  color: #3a3a3a;
+  font-family: zen-maru-gothic, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+/* トップページの後ろのgradation */
+#index {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(20deg, rgba(255, 255, 255, 1) 0%, rgba(216, 252, 251, 1) 6%, rgba(64, 205, 199, 1) 18%, rgba(108, 171, 209, 1) 28%, rgba(183, 198, 154, 1) 38%, rgba(243, 200, 106, 1) 48%, rgba(243, 153, 106, 1) 59%, rgba(243, 106, 106, 1) 65%, rgba(148, 101, 165, 1) 74%, rgba(66, 49, 104, 1) 85%, rgba(11, 15, 63, 1) 100%);
+  background-size: 300% 400%;
+  /*サイズを大きくひきのばす*/
+  animation: bggradient 30s ease infinite;
+}
+
+@keyframes bggradient {
+  0% {
+    background-position: 50% 0%;
+  }
+
+  50% {
+    background-position: 50% 100%;
+  }
+
+  100% {
+    background-position: 50% 0%;
+  }
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: #3f271a;
+  transition: .3s;
+}
+
+
+a:hover {
+  /* 透過 */
+  opacity: 0.5;
+  transform: translate(0, 3%);
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sec {
+  padding: 50px 0;
+}
+
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+@media (max-width: 1200px) {
+  .wrapper {
+    padding: 0 4%;
+  }
+}
+
+/* ====================
+  =======header=========
+  ===================== */
+.header-inner {
+  max-width: 1200px;
+  height: 88px;
+  margin: 0 auto;
+  font-family: "jumble", sans-serif;
+  color: #fff;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+h1 {
+  line-height: 1;
+}
+
+h1 img {
+  height: 50px;
+  width: auto;
+}
+
+.gnav_list {
+  justify-content: center;
+}
+
+.gnav_item {
+  text-align: center;
+  font-weight: 500;
+  font-size: 2rem;
+  padding: 0 1rem;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.gnav_item span {
+  font-weight: normal;
+  font-size: 0.75rem;
+  display: block;
+}
+
+
+footer {
+  text-align: center;
+  height: 32px;
+  margin-bottom: 1rem;
+}
+
+
+/* ===================================
+===========header======================
+======================================= */
+
+/* 三本線　位置設定*/
+.hamburger .btn-gNav {
+  position: fixed;
+  top: 32px;
+  right: 32px;
+  width: 30px;
+  height: 24px;
+  z-index: 100;
+  box-sizing: border-box;
+  cursor: pointer;
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+}
+
+/* 通常時非表示 */
+.btn-gNav {
+  display: none;
+}
+
+/* 三本線の見た目 */
+.hamburger .btn-gNav span {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: #f2f2f2;
+  border-radius: 10px;
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+}
+
+.hamburger_span1 {
+  top: 0;
+}
+
+.hamburger_span2 {
+  top: 10px;
+}
+
+.hamburger_span3 {
+  top: 20px;
+}
+
+.gnav.open .hamburger_span1 {
+  background: #d43232;
+  top: 6px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+/* 開いたときの２本目と３本目 */
+.gnav.open .hamburger_span2,
+.gnav.open .hamburger_span3 {
+  top: 6px;
+  background: #d43232;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+@media screen and (max-width:768px) {
+  .btn-gNav {
+    display: block;
+  }
+
+  /* 通常時は右に隠れている */
+  header .gnav {
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #fae9d9;
+    font-size: 16px;
+    box-sizing: border-box;
+    z-index: 800;
+    padding-top: 50px;
+    transition: .3s;
+  }
+
+  /* JSでopenがきたら右からやってくる */
+  header .gnav.open {
+    right: 0;
+  }
+
+  header .gnav ul {
+    width: 100%;
+    display: block;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header .gnav ul li {
+    width: 86%;
+    padding: 15px;
+  }
+
+}
+
+
+
+/* =========================================
+  =======================================
+  TOPページ==============================
+  ====================================== */
+#index main {
+  height: calc(100vh - 120px);
+  align-items: center;
+}
+
+.lottie_contaner {
+  height: 100%;
+  display: grid;
+  place-content: center;
+  place-items: center;
+  padding: 4%;
+}
+
+#mainvisual {
+  max-width: 800px;
+  height: auto;
+}
+
+/* ゆらゆら揺れる後ろの背景 */
+.fluid {
+  background: #fafafa;
+  /*背景色*/
+  animation: fluidrotate 30s ease 0s infinite;
+  /*アニメーションの設定*/
+}
+
+@keyframes fluidrotate {
+
+  0%,
+  100% {
+    border-radius: 63% 37% 54% 46%/55% 48% 52% 45%;
+  }
+
+  14% {
+    border-radius: 40% 60% 54% 46%/49% 60% 40% 51%;
+  }
+
+  28% {
+    border-radius: 54% 46% 38% 62%/49% 70% 30% 51%;
+  }
+
+  42% {
+    border-radius: 61% 39% 55% 45%/61% 38% 62% 39%;
+  }
+
+  56% {
+    border-radius: 61% 39% 67% 33%/70% 50% 50% 30%;
+  }
+
+  70% {
+    border-radius: 50% 50% 34% 66%/56% 68% 32% 44%;
+  }
+
+  84% {
+    border-radius: 46% 54% 50% 50%/35% 61% 39% 65%;
+  }
+}
+
+.roop_bg{
+  background-image: url(../img/top/top_bg.svg);
+  background-repeat: repeat-x;
+  background-position: 0 0;
+  animation: roopbg 20s linear infinite;
+  background-size:auto 50%;
+  /* mix-blend-mode: overlay; */
+  background-blend-mode: overlay;
+}
+
+@keyframes roopbg {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -100% 0;
+  }
+}
+
+
+/* =================================
+============products================
+==================================== */
+
+/*==================================================
+ギャラリーのためのcss
+===================================*/
+
+
+/*＝＝＝並び替えボタンのCSS*/
+.sort-btn {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 50px 20px;
+}
+
+.sort-btn li {
+  list-style: none;
+  cursor: pointer;
+  padding: 10px;
+  margin: 0 10px;
+}
+
+.sort-btn li.active {
+  /*ボタンに現在地＝activeというクラス名がついたら背景色を変更*/
+  color: #0000ff
+}
+
+/*横幅が480px以下になった際の指定*/
+@media only screen and (max-width: 480px) {
+  .sort-btn {
+    justify-content: space-between;
+  }
+
+  .sort-btn li {
+    width: 48%;
+    margin: 0 0 10px 0;
+    text-align: center;
+  }
+}
+
+/*＝＝＝Muuriのレイアウトのための調整 */
+.grid {
+  position: relative;
+  /*並び替えの基準点を指定*/
+}
+
+/*各画像の横幅などの設定*/
+.item {
+  display: block;
+  position: absolute;
+  width: 33%;
+  /*横並びで3つ表示*/
+  z-index: 1;
+  list-style: none;
+}
+
+/*内側のボックスの高さが崩れないように維持*/
+.item-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/*画像の横幅を100%にしてレスポンシブ化*/
+.grid img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+  /*画像の下にできる余白を削除*/
+}
+
+/*横幅が768px以下になった際の指定*/
+@media only screen and (max-width: 768px) {
+  .item {
+    width: 49.5%;
+    /*横並びで2つ表示*/
+  }
+}
+
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+＝＝＝＝＝＝＝＝＝＝各作品紹介ページ＝＝＝
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+.work_title {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.work_title span {
+  display: block;
+  font-size: 18px;
+}
+
+.works_text_box {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.imgMock {
+  max-width: 880px;
+  margin: 0 auto 5rem auto;
+}
+
+.work_text {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.work_text dt {
+  width: 300px;
+  font-weight: bold;
+  font-size: 22px;
+  border-bottom: 1px solid #c3bfbf;
+  margin-bottom: 1em;
+}
+
+.work_text dl {
+  margin-bottom: 4rem;
+}
+
+.work_text_cont {
+  margin-top: 2rem;
+}
+
+.work_text_cont span {
+  display: inline-block;
+  margin-bottom: 0.5em;
+  text-indent: 1em;
+}
+
+.work_text_cont li {
+  list-style-type: circle;
+  margin-left: 3em;
+}
+
+@media (max-width: 767px) {
+  .work_text dt {
+    display: block;
+    width: 100%;
+  }
+}
+
+/* =====================================
+===========about me===============
+=================================== */
+
+/* -------タイプライター風文字 ーーーーー*/
+.typewriter {
+  display: block;
+
+}
+
+.typewriter-text {
+  font-family: dotgothic16, sans-serif;
+  font-size: 18px;
+  animation: cursor 1s ease-in-out infinite;
+}
+
+/*文字列後ろの線の設定*/
+.typewriter-text::after {
+  content: "|";
+  animation: typinganime .8s ease infinite;
+}
+
+@keyframes typinganime {
+  from {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+
+/* @media (max-width: 767.98px) {
+  .typewriter { font-size: 35px; }
+} */
+
+
+
+/*------- 画像文字が流れる -------*/
+.flowimg {
+  position: relative;
+  overflow: hidden;
+}
+
+.flowimg::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 230px;
+  background-image: url(../img/aboutme/back_name.svg);
+  background-repeat: repeat-x;
+  background-position: 0 0;
+  background-size: 1000px auto;
+  animation: flowimg 60s linear infinite;
+  z-index: -1;
+}
+
+@keyframes flowimg {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: -1000px 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .flow-font01 {
+    padding: 60px 10vw;
+  }
+
+  .flow-font01::before {
+    height: 90px;
+    background-size: 500px auto;
+  }
+
+  @keyframes flowimg {
+    0% {
+      background-position: 0 0;
+    }
+
+    100% {
+      background-position: -500px 0;
+    }
+  }
+}
+
+/* =============================================
+===================timeline========================
+================================================== */
+
+/*タイムライン全体の設定*/
+.timeline {
+  max-width: 400px;
+  width: 100%;
+  margin: 50px auto;
+  padding: 0 30px;
+}
+
+.timeline li {
+  /*線の起点とするためrelativeを設定*/
+  position: relative;
+  list-style: none;
+  padding: 0 0 20px 0;
+}
+
+.timeline dl {
+  margin: 0 0 20px 3em;
+}
+
+/*絶対配置で線を設定*/
+.border-line {
+  /*線の位置*/
+  position: absolute;
+  left: 0.2em;
+  top: 0;
+  width: 2px;
+  /*線の太さ*/
+  height: 0;
+  /*はじめは高さを0に*/
+  background: #ccc;
+}
+
+/*タイムラインの見出し横の丸の位置と形状*/
+.timeline li::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background: #666;
+  border-radius: 50%;
+
+}
+
+
+/* ↓profileの基本設定 */
+
+.profile_visual,
+.name,
+.sub_title {
+  text-align: center;
+}
+
+.profile_text {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 2;
+}
+
+
+.interests_list {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+#skill {
+  background-color: #d89191;
+}
+
+#skill .sub_title {
+  color: #fff;
+}
+
+
+
+.skill_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 5em;
+}
+
+.skill_item p {
+  padding-top: 50px;
+}
+
+/* ===========================================
+==========SKILLの波線文字=====================
+============================================= */
+.water_text {
+  position: relative;
+}
+
+.water_text h3 {
+  position: absolute;
+  transform: translate(0, 0);
+  font-size: 32px;
+
+}
+
+.water_text .water1 {
+  color: transparent;
+  -webkit-text-stroke: 0.5px #ffffff;
+}
+
+.water_text .water2 {
+  color: #fff;
+  animation: wave 6s ease-in-out infinite;
+}
+
+
+
+.water_text .water3 {
+  color: #fff;
+  animation: wave2 6s ease-in-out infinite;
+}
+
+@keyframes wave {
+
+  0%,
+  100% {
+    clip-path: polygon(0 32%, 10% 65%, 18% 55%, 35% 50%, 28% 50%, 50% 40%, 70% 35%, 100% 25%, 100% 100%, 0% 100%);
+  }
+
+  50% {
+    clip-path: polygon(0 50%, 14% 40%, 15% 50%, 30% 42%, 46% 30%, 61% 30%, 70% 40%, 100% 50%, 100% 100%, 0% 100%);
+  }
+}
+
+
+@keyframes wave2 {
+
+  0%,
+  100% {
+    clip-path: polygon(0 42%, 13% 48%, 26% 55%, 41% 64%, 56% 65%, 69% 58%, 84% 45%, 100% 38%, 100% 100%, 0% 100%);
+  }
+
+  50% {
+    clip-path: polygon(0 63%, 14% 57%, 25% 50%, 40% 42%, 56% 40%, 71% 44%, 84% 50%, 100% 60%, 100% 100%, 0% 100%);
+  }
+}
+
+
+.skill_item p {
+  color: #fff;
+}

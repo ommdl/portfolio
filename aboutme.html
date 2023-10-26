@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yanagihara haruka</title>
+    <meta name="description" content="柳原遥香のポートフォリオです。">
+
+    <!--自作のJS-->
+    <script src="js/menu.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        (function (d) {
+            var config = {
+                kitId: 'rlp3jfs',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
+
+
+</head>
+
+
+
+
+
+<body>
+   
+    <header id="header" class="header-inner flex">
+        <h1><a href="index.html"><img src="img/logo.svg" alt="">nagi portfolio</a></h1>
+        <nav class="gnav">
+            <ul class="gnav_list flex">
+                <li class="gnav_item gnav__item_works"><a href="works.html">WORKS <span>つくってきたもの</span></a></li>
+                <li class="gnav_item gnav__item_aboutme"><a href="aboutme.html">ABOUTME <span>わたしのこと</span></a></li>
+                <li class="gnav_item gnav__item_contact"><a href="contact.html">CONTACT <span>お問い合わせ</span></a></li>
+            </ul>
+            <div class="hamburger"> <!--SP用ハンバーガーメニュー３本線-->
+                <div class="btn-gNav">
+                  <span class="hamburger_span1"></span>
+                  <span class="hamburger_span2"></span>
+                  <span class="hamburger_span3"></span>
+                </div>
+              </div>
+        </nav>
+    </header>
+
+    <main id="aboutme">
+        <h2>about me</h2>
+
+        <section id="profile">
+            <div class="flowimg">
+                <div class="profile_visual ">
+                    <div class="typewriter">
+                        <p class="typewriter-text" data-text='[ "Hello:)", "Welcome to my site!", "I am Aspiring to Be a Web Designer" ]'>
+                        </p>
+                    </div>
+
+                    <img src="img/aboutme/me.svg" alt="" width="300px" height="300px">
+                </div>
+            </div>
+
+
+            <div class="profile_text">
+                <div class="name">
+                    <h2 class="myname">Haruka Yanagihara</h2>
+                    <h3>柳原 遥香</h3>
+                </div>
+                <p class="profile_p">
+                    1993年生まれ、広島県出身。<br>
+                    Webエンジニアの父の影響で幼いころからWebデザインやプログラムについて興味を持ちました。2023年退職後、パソコンスクールHA＊NAにてwebデザインを学んでおります. <br>
+                    前職で培った、ユーザーニーズや思いに答える視点を持ったWebデザイナーを目指します。<br>
+                    趣味は、ドライブと旅行です。<br>
+                    ちいさくてかわいいものが好きです。
+                </p>
+            </div>
+        </section>
+            <div class="profile_timeline">
+                <ul class="timeline">
+                    <li><!--線が伸びる基準となるHTML。liを基準として、spanに指定された線を伸ばします。-->
+                        <dl>
+                            <dt>20</dt>
+                            <dd>内容</dd>
+                        </dl>
+                        <span class="border-line"></span>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>2002</dt>
+                            <dd>内容</dd>
+                        </dl>
+                        <span class="border-line"></span>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>2002</dt>
+                            <dd>内容</dd>
+                        </dl>
+                        <span class="border-line"></span>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>2002</dt>
+                            <dd>内容</dd>
+                        </dl>
+                        <span class="border-line"></span>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>2002</dt>
+                            <dd>内容</dd>
+                        </dl>
+                        <span class="border-line"></span>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>2002</dt>
+                            <dd>内容</dd>
+                        </dl>
+                        <span class="border-line"></span>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>2002</dt>
+                            <dd>内容</dd>
+                        </dl>
+
+                    </li>
+                </ul>
+
+
+
+
+        <section id="skill">
+            <h3 class="sub_title">skill</h3>
+
+            <ul class=" skill_grid">
+                <li class="skill_item">
+                    <div class="water_text">
+                        <h3 class="water1">illustrator</h3>
+                        <h3 class="water2">illustrator</h3>
+                    </div>
+                    <p>ロゴ、バナー、アイコン、名刺、
+                        LINEリッチメニュー、イラスト等の
+                        制作に使用しています。</p>
+                </li>
+                <li class="skill_item">
+                    <div class="water_text">
+                        <h3 class="water1">Photoshop</h3>
+                        <h3 class="water2">Photoshop</h3>
+                    </div>
+                    <p>写真の色調補正、レタッチ、合成等による修正ができます。デザインカンプの作成もできます。</p>
+                </li>
+                <li class="skill_item">
+                    <div class="water_text">
+                        <h3 class="water1">HTML5＆CSS3</h3>
+                        <h3 class="water2">HTML5＆CSS3</h3>
+                    </div>
+                    <p>レスポンシブルを含め、Webサイトを一から構築するための基本的なコーディングが可能です。エディタはVisual Studioをメインで使用しています。
+                    </p>
+                </li>
+                <li class="skill_item">
+                    <div class="water_text">
+                        <h3 class="water1">JavaScript</h3>
+                        <h3 class="water2">JavaScript</h3>
+                    </div>
+                    <p>「jQuery」などJavaScriptの基本技術を学んでおります。
+                    </p>
+                </li>
+                <li class="skill_item">
+                    <div class="water_text">
+                        <h3 class="water1"> After Effect</h3>
+                        <h3 class="water3"> After Effect</h3>
+                    </div>
+                    <p>テキストアニメーションや作成したイラストに動きをつけることができます。ただいま勉強中です。
+                    </p>
+                </li>
+                <li class="skill_item">
+                    <div class="water_text">
+                        <h3 class="water1"> Premiere Pro</h3>
+                        <h3 class="water3"> Premiere Pro</h3>
+                    </div>
+                    <p>基本的な動画編集や、字幕や簡単な合成動画を作成することができます。ただいま勉強中です。
+                    </p>
+                </li>
+
+
+            </ul>
+        </section>
+    </main>
+
+
+    <footer class="wrapper"><small>&copy;yanagiharaharuka</small>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="js/aboutme.js"></script>
+
+</body>
+
+</html>
