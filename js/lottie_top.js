@@ -1,5 +1,7 @@
 'use strict';
 
+//TOPページ 走る豆助 lottie挿入
+
 var params = {
     // アニメーションを表示したい要素(今回はlottieというidを付けて取得しています。)
     container: document.getElementById('mainvisual'),

@@ -1,5 +1,6 @@
+'use strict';
 
-
+//#aboutme プロフィール画像の上にタイプライター
 
 $(document).ready(function() {
   

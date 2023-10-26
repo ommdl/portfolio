@@ -1,5 +1,6 @@
 'use strict';
 
+//#全てのページ ハンバーガーメニュー 
 
 // SP-menu
  const gNavBtn = document.querySelector('.btn-gNav');
