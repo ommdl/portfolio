@@ -789,9 +789,44 @@ footer {
 
 
 .skill_text_box {
-  color: #fff;
-}
+  color: #3a3a3a;}
 
 .skill_text_box li{
   list-style-type: circle;
+}
+
+
+.tab-list {
+  display: flex;
+  margin-left: 1rem;
+}
+
+.tab-link {
+  font-size: 1.4rem;
+  padding: 1rem 1.5rem 0.5rem;
+  border-radius: 10px 10px 0 0;
+
+  margin-right: 0.3rem;
+  cursor: pointer;
+}
+
+
+.tab-link.open {
+  background: #A8DBA8;
+}
+
+.tab-sec__container {
+  padding: 1rem;
+}
+
+.tab-sec {
+  min-height: auto;
+  opacity: 0;
+  display: none;
+  transition: 0.5s opacity;
+}
+
+.tab-sec.open {
+  opacity: 1;
+  display: block;
 }
