@@ -18,10 +18,12 @@
     <!--自作のJS-->
     <script src="js/menu.js" defer></script>
     <script src="js/aboutme.js" defer></script>
+    <script src="js/lottie_me.js" defer></script>
 
     <!-- css -->
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link rel="stylesheet" href="css/style.css">
+
     <script>
         (function (d) {
             var config = {
@@ -85,21 +87,21 @@
 
         <section id="profile" class="sec">
             <div class="flowimg">
-                <div class="profile_visual ">
-                    <div class="typewriter">
+                <div class="profile_visual wrapper ">
+                    <!-- <div class="typewriter">
                         <p class="typewriter-text" data-text='[ "Hello:)", "Welcome to my site!", "I am Aspiring to Be a Web Designer" ]'>
                         </p>
-                    </div>
+                    </div> -->
+                    <div id="me_visual"></div>
 
-                    <img src="img/aboutme/me.svg" alt="" width="300px" height="300px">
                 </div>
             </div>
 
-
-            <div class="profile_text">
+            <div class="profile_text wrapper">
                 <div class="name">
-                    <h2 class="myname">Haruka Yanagihara</h2>
+
                     <h3>柳原 遥香</h3>
+                    <h2 class="myname">Yanagihara Haruka</h2>
                 </div>
                 <p class="profile_p">
                     1993年生まれ、広島県出身。<br>
@@ -110,61 +112,62 @@
                 </p>
             </div>
         </section>
+
         <section id="skill" class="sec">
-            <h3 class="sub_title">skill</h3>
+            <h3 class="sub_title">SKILL STAND<span>できること</span></h3>
 
-            <ul class=" skill_grid">
-                <li class="skill_item">
-                    <div class="water_text">
-                        <h3 class="water1">illustrator</h3>
-                        <h3 class="water2">illustrator</h3>
-                    </div>
-                    <p>ロゴ、バナー、アイコン、名刺、
-                        LINEリッチメニュー、イラスト等の
-                        制作に使用しています。</p>
-                </li>
-                <li class="skill_item">
-                    <div class="water_text">
-                        <h3 class="water1">Photoshop</h3>
-                        <h3 class="water2">Photoshop</h3>
-                    </div>
-                    <p>写真の色調補正、レタッチ、合成等による修正ができます。デザインカンプの作成もできます。</p>
-                </li>
-                <li class="skill_item">
-                    <div class="water_text">
-                        <h3 class="water1">HTML5＆CSS3</h3>
-                        <h3 class="water2">HTML5＆CSS3</h3>
-                    </div>
-                    <p>レスポンシブルを含め、Webサイトを一から構築するための基本的なコーディングが可能です。エディタはVisual Studioをメインで使用しています。
-                    </p>
-                </li>
-                <li class="skill_item">
-                    <div class="water_text">
-                        <h3 class="water1">JavaScript</h3>
-                        <h3 class="water2">JavaScript</h3>
-                    </div>
-                    <p>「jQuery」などJavaScriptの基本技術を学んでおります。
-                    </p>
-                </li>
-                <li class="skill_item">
-                    <div class="water_text">
-                        <h3 class="water1"> After Effect</h3>
-                        <h3 class="water3"> After Effect</h3>
-                    </div>
-                    <p>テキストアニメーションや作成したイラストに動きをつけることができます。ただいま勉強中です。
-                    </p>
-                </li>
-                <li class="skill_item">
-                    <div class="water_text">
-                        <h3 class="water1"> Premiere Pro</h3>
-                        <h3 class="water3"> Premiere Pro</h3>
-                    </div>
-                    <p>基本的な動画編集や、字幕や簡単な合成動画を作成することができます。ただいま勉強中です。
-                    </p>
-                </li>
-
-
-            </ul>
+            <div class="wrapper">
+                <ul class=" skill_grid">
+                    <li class="skill_item">
+                        <div class="water_text">
+                            <h3 class="water1">illustrator</h3>
+                            <h3 class="water2">illustrator</h3>
+                        </div>
+                        <p>ロゴ、バナー、アイコン、名刺、
+                            LINEリッチメニュー、イラスト等の
+                            制作に使用しています。</p>
+                    </li>
+                    <li class="skill_item">
+                        <div class="water_text">
+                            <h3 class="water1">Photoshop</h3>
+                            <h3 class="water2">Photoshop</h3>
+                        </div>
+                        <p>写真の色調補正、レタッチ、合成等による修正ができます。デザインカンプの作成もできます。</p>
+                    </li>
+                    <li class="skill_item">
+                        <div class="water_text">
+                            <h3 class="water1">HTML5＆CSS3</h3>
+                            <h3 class="water2">HTML5＆CSS3</h3>
+                        </div>
+                        <p>レスポンシブルを含め、Webサイトを一から構築するための基本的なコーディングが可能です。エディタはVisual Studioをメインで使用しています。
+                        </p>
+                    </li>
+                    <li class="skill_item">
+                        <div class="water_text">
+                            <h3 class="water1">JavaScript</h3>
+                            <h3 class="water2">JavaScript</h3>
+                        </div>
+                        <p>「jQuery」などJavaScriptの基本技術を学んでおります。
+                        </p>
+                    </li>
+                    <li class="skill_item">
+                        <div class="water_text">
+                            <h3 class="water1"> After Effect</h3>
+                            <h3 class="water3"> After Effect</h3>
+                        </div>
+                        <p>テキストアニメーションや作成したイラストに動きをつけることができます。ただいま勉強中です。
+                        </p>
+                    </li>
+                    <li class="skill_item">
+                        <div class="water_text">
+                            <h3 class="water1"> Premiere Pro</h3>
+                            <h3 class="water3"> Premiere Pro</h3>
+                        </div>
+                        <p>基本的な動画編集や、字幕や簡単な合成動画を作成することができます。ただいま勉強中です。
+                        </p>
+                    </li>
+                </ul>
+            </div>
         </section>
         <section id="career_road" class="sec">
             <div class="profile_timeline">
@@ -221,7 +224,9 @@
                 </ul>
             </div>
         </section>
-
+        <section id="strength" class="sec">
+           
+        </section>
 
 
 
