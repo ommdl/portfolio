@@ -318,12 +318,12 @@ footer {
   }
 }
 
-.roop_bg{
+.roop_bg {
   background-image: url(../img/top/top_bg.svg);
   background-repeat: repeat-x;
   background-position: 0 0;
   animation: roopbg 20s linear infinite;
-  background-size:auto 50%;
+  background-size: auto 50%;
   /* mix-blend-mode: overlay; */
   background-blend-mode: overlay;
 }
@@ -332,6 +332,7 @@ footer {
   from {
     background-position: 0 0;
   }
+
   to {
     background-position: -100% 0;
   }
@@ -573,8 +574,9 @@ footer {
       background-position: -500px 0;
     }
   }
-} */
+}
 
+*/
 /* =============================================
 ===================timeline========================
 ================================================== */
@@ -638,13 +640,14 @@ footer {
   margin: 0 auto;
   line-height: 2;
 }
-.name h3{
+
+.name h3 {
   font-size: 2rem;
   line-height: 0;
   padding-bottom: 0.5em;
 }
 
-.myname{
+.myname {
   font-size: 15px;
 }
 
@@ -657,8 +660,8 @@ footer {
   justify-content: space-between;
 }
 
-#me_visual{
- min-width: 300px;
+#me_visual {
+  min-width: 300px;
 }
 
 
@@ -667,20 +670,48 @@ footer {
 
 
 #skill {
-  background-color: #d89191;
+
+  /* background-image: url(../img/skill/skill_car.svg), url(../img/skill/skill_stand.svg);
+  background-position: left 10% bottom, left 5%  bottom ;
+  background-size: 300px auto, 200px auto; */
+}
+
+.skill_box {
+  position: relative;
+  background-color: #da0505;
+}
+
+.skill_container {
+  background-color: #0000ff;
+  width: 800px;
+  height: 600px;
+}
+
+.skill_img {
+  position: absolute;
+  bottom: 10%;
+  right: 0;
+  z-index: 100;
+
+}
+.skill_img_car{
+  position: absolute;
+  bottom: 0;
+  right: 10%;
+  z-index: 101;
+
 }
 
 #skill .sub_title {
-    font-family: "jumble", sans-serif;
-
+  font-family: "jumble", sans-serif;
   text-transform: capitalize;
-  color: #fff;
+  color: #000;
   font-size: 3rem;
   font-weight: normal;
-
 }
-#skill .sub_title span{
-  display:block;
+
+#skill .sub_title span {
+  display: block;
   font-size: 15px;
 }
 
