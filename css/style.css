@@ -668,8 +668,6 @@ footer {
 
 
 
-
-
 .skill_box {
   position: relative;
   background-color: #da0505;
@@ -715,15 +713,18 @@ footer {
   gap: 8px;
 }
 .skill_button img{
-
   filter: drop-shadow(2px 2px 3px #585858);
 }
 
-/* .skill_grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 5em;
-} */
+.skill_button,
+.skill_container h3{
+ text-align: center;
+  align-items: center;
+}
+.skill_button ul{
+  text-align: center;
+  width: 90%;
+}
 
 .skill_item p {
   padding-top: 50px;
@@ -740,7 +741,7 @@ footer {
 .water_text h3 {
   position: absolute;
   transform: translate(0, 0);
-  font-size: 32px;
+  font-size: 40px;
 
 }
 
@@ -787,6 +788,10 @@ footer {
 }
 
 
-.skill_text_box p {
+.skill_text_box {
   color: #fff;
+}
+
+.skill_text_box li{
+  list-style-type: circle;
 }
