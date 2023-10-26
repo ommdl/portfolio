@@ -25,11 +25,31 @@
     <script>
         (function (d) {
             var config = {
-                kitId: 'rlp3jfs',
-                scriptTimeout: 3000,
-                async: true
-            },
-                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+                    kitId: 'rlp3jfs',
+                    scriptTimeout: 3000,
+                    async: true
+                },
+                h = d.documentElement,
+                t = setTimeout(function () {
+                    h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+                }, config.scriptTimeout),
+                tk = d.createElement("script"),
+                f = false,
+                s = d.getElementsByTagName("script")[0],
+                a;
+            h.className += " wf-loading";
+            tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+            tk.async = true;
+            tk.onload = tk.onreadystatechange = function () {
+                a = this.readyState;
+                if (f || a && a != "complete" && a != "loaded") return;
+                f = true;
+                clearTimeout(t);
+                try {
+                    Typekit.load(config)
+                } catch (e) {}
+            };
+            s.parentNode.insertBefore(tk, s)
         })(document);
     </script>
 
@@ -41,7 +61,6 @@
 
 
 <body>
-   
     <header id="header" class="header-inner flex">
         <h1><a href="index.html"><img src="img/logo.svg" alt="">nagi portfolio</a></h1>
         <nav class="gnav">
@@ -50,20 +69,21 @@
                 <li class="gnav_item gnav__item_aboutme"><a href="aboutme.html">ABOUTME <span>わたしのこと</span></a></li>
                 <li class="gnav_item gnav__item_contact"><a href="contact.html">CONTACT <span>お問い合わせ</span></a></li>
             </ul>
-            <div class="hamburger"> <!--SP用ハンバーガーメニュー３本線-->
+            <div class="hamburger">
+                <!--SP用ハンバーガーメニュー３本線-->
                 <div class="btn-gNav">
-                  <span class="hamburger_span1"></span>
-                  <span class="hamburger_span2"></span>
-                  <span class="hamburger_span3"></span>
+                    <span class="hamburger_span1"></span>
+                    <span class="hamburger_span2"></span>
+                    <span class="hamburger_span3"></span>
                 </div>
-              </div>
+            </div>
         </nav>
     </header>
 
     <main id="aboutme">
         <h2>about me</h2>
 
-        <section id="profile">
+        <section id="profile" class="sec">
             <div class="flowimg">
                 <div class="profile_visual ">
                     <div class="typewriter">
@@ -90,63 +110,7 @@
                 </p>
             </div>
         </section>
-            <div class="profile_timeline">
-                <ul class="timeline">
-                    <li><!--線が伸びる基準となるHTML。liを基準として、spanに指定された線を伸ばします。-->
-                        <dl>
-                            <dt>20</dt>
-                            <dd>内容</dd>
-                        </dl>
-                        <span class="border-line"></span>
-                    </li>
-                    <li>
-                        <dl>
-                            <dt>2002</dt>
-                            <dd>内容</dd>
-                        </dl>
-                        <span class="border-line"></span>
-                    </li>
-                    <li>
-                        <dl>
-                            <dt>2002</dt>
-                            <dd>内容</dd>
-                        </dl>
-                        <span class="border-line"></span>
-                    </li>
-                    <li>
-                        <dl>
-                            <dt>2002</dt>
-                            <dd>内容</dd>
-                        </dl>
-                        <span class="border-line"></span>
-                    </li>
-                    <li>
-                        <dl>
-                            <dt>2002</dt>
-                            <dd>内容</dd>
-                        </dl>
-                        <span class="border-line"></span>
-                    </li>
-                    <li>
-                        <dl>
-                            <dt>2002</dt>
-                            <dd>内容</dd>
-                        </dl>
-                        <span class="border-line"></span>
-                    </li>
-                    <li>
-                        <dl>
-                            <dt>2002</dt>
-                            <dd>内容</dd>
-                        </dl>
-
-                    </li>
-                </ul>
-
-
-
-
-        <section id="skill">
+        <section id="skill" class="sec">
             <h3 class="sub_title">skill</h3>
 
             <ul class=" skill_grid">
@@ -202,6 +166,63 @@
 
             </ul>
         </section>
+        <section id="career_road" class="sec">
+            <div class="profile_timeline">
+                <ul class="timeline">
+                    <li>
+                        <!--線が伸びる基準となるHTML。liを基準として、spanに指定された線を伸ばします。-->
+                        <dl>
+                            <dt>20</dt>
+                            <dd>内容</dd>
+                        </dl>
+                        <span class="border-line"></span>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>2002</dt>
+                            <dd>内容</dd>
+                        </dl>
+                        <span class="border-line"></span>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>2002</dt>
+                            <dd>内容</dd>
+                        </dl>
+                        <span class="border-line"></span>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>2002</dt>
+                            <dd>内容</dd>
+                        </dl>
+                        <span class="border-line"></span>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>2002</dt>
+                            <dd>内容</dd>
+                        </dl>
+                        <span class="border-line"></span>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>2002</dt>
+                            <dd>内容</dd>
+                        </dl>
+                        <span class="border-line"></span>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>2002</dt>
+                            <dd>内容</dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+
 
 
     </main>
