@@ -10,10 +10,14 @@
 
     <!--CDN  -->
     <!-- jquery -->
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
 
     <!-- lottie -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js" type="text/javascript"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
 
     <!--自作のJS-->
@@ -21,7 +25,7 @@
     <script src="js/aboutme.js" defer></script>
     <script src="js/lottie_me.js" defer></script>
     <script src="js/skill_button.js" defer></script>
-
+    <script src="js/scroll.js" defer></script>
     <!-- css -->
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -29,10 +33,10 @@
     <script>
         (function (d) {
             var config = {
-                    kitId: 'rlp3jfs',
-                    scriptTimeout: 3000,
-                    async: true
-                },
+                kitId: 'rlp3jfs',
+                scriptTimeout: 3000,
+                async: true
+            },
                 h = d.documentElement,
                 t = setTimeout(function () {
                     h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
@@ -51,7 +55,7 @@
                 clearTimeout(t);
                 try {
                     Typekit.load(config)
-                } catch (e) {}
+                } catch (e) { }
             };
             s.parentNode.insertBefore(tk, s)
         })(document);
@@ -119,211 +123,119 @@
             <h3 class="sub_title">SKILL STAND<span>できること</span></h3>
 
             <div class="wrapper skill_box">
-                <!-- <ul class=" skill_grid">
-                    <li class="skill_item">
-                        <div class="water_text">
-                            <h3 class="water1">illustrator</h3>
-                            <h3 class="water2">illustrator</h3>
-                        </div>
-                        <p>ロゴ、バナー、アイコン、名刺、
-                            LINEリッチメニュー、イラスト等の
-                            制作に使用しています。</p>
-                    </li>
-                    <li class="skill_item">
-                        <div class="water_text">
-                            <h3 class="water1">Photoshop</h3>
-                            <h3 class="water2">Photoshop</h3>
-                        </div>
-                        <p>写真の色調補正、レタッチ、合成等による修正ができます。デザインカンプの作成もできます。</p>
-                    </li>
-                    <li class="skill_item">
-                        <div class="water_text">
-                            <h3 class="water1">HTML5＆CSS3</h3>
-                            <h3 class="water2">HTML5＆CSS3</h3>
-                        </div>
-                        <p>レスポンシブルを含め、Webサイトを一から構築するための基本的なコーディングが可能です。エディタはVisual Studioをメインで使用しています。
-                        </p>
-                    </li>
-                    <li class="skill_item">
-                        <div class="water_text">
-                            <h3 class="water1">JavaScript</h3>
-                            <h3 class="water2">JavaScript</h3>
-                        </div>
-                        <p>「jQuery」などJavaScriptの基本技術を学んでおります。
-                        </p>
-                    </li>
-                    <li class="skill_item">
-                        <div class="water_text">
-                            <h3 class="water1"> After Effect</h3>
-                            <h3 class="water3"> After Effect</h3>
-                        </div>
-                        <p>テキストアニメーションや作成したイラストに動きをつけることができます。ただいま勉強中です。
-                        </p>
-                    </li>
-                    <li class="skill_item">
-                        <div class="water_text">
-                            <h3 class="water1"> Premiere Pro</h3>
-                            <h3 class="water3"> Premiere Pro</h3>
-                        </div>
-                        <p>基本的な動画編集や、字幕や簡単な合成動画を作成することができます。ただいま勉強中です。
-                        </p>
-                    </li>
-                </ul> -->
                 <div class="skill_container">
-                    <!-- スキル中身 -->
-                        <h3>Please choose from below</h3>
+                    <!-- スキルBOX -->
+                    <h3>Please choose from below</h3>
+                    <div class="skill_text">
                         <div class="skill_button">
                             <ul class="grid">
-                                <li  class="tab-link open" data-tab="object"><img src="img/skill/dummy_button.svg" width="25" height="25"></li>
-                                <li class="tab-link " data-tab="craft"><img src="img/skill/dummy_button.svg" width="25px" height="25px"></li>
-                                <li class="tab-link" data-tab="sample-image"><img src="img/skill/dummy_button.svg" width="25px" height="25px"></li>
-                                <li><img src="img/skill/dummy_button.svg" width="25px" height="25px"></li>
-                                <li><img src="img/skill/dummy_button.svg" width="25px" height="25px"></li>
-                                <li><img src="img/skill/dummy_button.svg" width="25px" height="25px"></li>
-                                <li><img src="img/skill/dummy_button.svg" width="25px" height="25px"></li>
-                                <li><img src="img/skill/dummy_button.svg" width="25px" height="25px"></li>
-                                <li><img src="img/skill/dummy_button.svg" width="25px" height="25px"></li>
-                                <li><img src="img/skill/dummy_button.svg" width="25" height="25"></li>
+                                <li class="button_link open " data-button="ai">
+                                    <img src="dummy_button.svg" alt="" class="button_img1">
+                                    <img src="dummy_2.svg" alt="" class="button_img2">
+                                </li>
+                                <li class="button_link" data-button="ps">
+                                    <img src="dummy_button.svg" alt="" class="button_img1">
+                                    <img src="dummy_2.svg" alt="" class="button_img2">
+                                </li>
+                                <li class="button_link" data-button="figma">
+                                    <img src="dummy_button.svg" alt="" class="button_img1">
+                                    <img src="dummy_2.svg" alt="" class="button_img2">
+                                </li>
+                                <li class="button_link" data-button="pp">
+                                    <img src="dummy_button.svg" alt="" class="button_img1">
+                                    <img src="dummy_2.svg" alt="" class="button_img2">
+                                </li>
+                                <li class="button_link" data-button="ae">
+                                    <img src="dummy_button.svg" alt="" class="button_img1">
+                                    <img src="dummy_2.svg" alt="" class="button_img2">
+                                </li>
+                                <li class="button_link" data-button="html">
+                                    <img src="dummy_button.svg" alt="" class="button_img1">
+                                    <img src="dummy_2.svg" alt="" class="button_img2">
+                                </li>
+                                <li class="button_link" data-button="css">
+                                    <img src="dummy_button.svg" alt="" class="button_img1">
+                                    <img src="dummy_2.svg" alt="" class="button_img2">
+                                </li>
+                                <li class="button_link" data-button="js">
+                                    <img src="dummy_button.svg" alt="" class="button_img1">
+                                    <img src="dummy_2.svg" alt="" class="button_img2">
+                                </li>
+                                <li class="button_link" data-button="wp">
+                                    <img src="dummy_button.svg" alt="" class="button_img1">
+                                    <img src="dummy_2.svg" alt="" class="button_img2">
+                                </li>
+                                <li class="button_link" data-button="office"> <img src="dummy_button.svg" alt="" class="button_img1 open">
+                                    <img src="dummy_2.svg" alt="" class="button_img2">
+                                </li>
                             </ul>
-                       </div>
-                            <div class="skill_text_box">
-                                <div class="water_text">
-                                    <h3 class="water1">illustrator</h3>
-                                    <h3 class="water2">illustrator</h3>
-                                </div>
-                                <div class="skill_text">
-                                    <div class="tab-sec__container">
-                                        <section id="object" class="object tab-sec open">
-                                          <h3>材料</h3>
-                                
-                                          <ul class="object__list">
-                                            <li class="object__item">蓋付きのボトル（形はお好みで）</li>
-                                            <li class="object__item">オイル（ミネラルオイルもしくはシリコンオイル）</li>
-                                            <li class="object__item">ハーバリウムにしたい花<br>（プリザーブドフラワーもしくはドライフラワー）</li>
-                                            <li class="object__item">割り箸もしくはピンセット</li>
-                                            <li class="object__item">ハサミ</li>
-                                            <li class="object__item">アルコールウェットティッシュ</li>
-                                            <li class="object__item">ティッシュペーパー</li>
-                                          </ul>
-                                        </section>
-                                
-                                        <section id="craft" class="craft tab-sec">
-                                          <h3>作り方</h3>
-                                
-                                          <ol class="craft__list">
-                                            <li class="craft__item">どんなハーバリウムが作りたいか考え、花やボトルを用意する。</li>
-                                            <li class="craft__item">用意したボトルを一度アルコールウェットティッシュで拭き、ティッシュペーパーで余計な水分を拭きとる。</li>
-                                            <li class="craft__item">用意した花を背の低い順からピンセットや割り箸でボトルへ入れていく。</li>
-                                            <li class="craft__item">花を入れ終わったらオイルをボトルへ入れる。<br>ボトルを斜めにしてゆっくりオイルを入れると花がつぶれにくい。</li>
-                                            <li class="craft__item">ボトルいっぱいにオイルを入れたら、空気を抜くため3〜5分置いておく。</li>
-                                            <li class="craft__item">空気が抜けたら蓋をして、完成！</li>
-                                          </ol>
-                                        </section>
-                                
-                                        <section id="sample-image" class="craft tab-sec">
-                                          <h3>見本写真</h3>
-                                
-                                          <img src="images/herbarium.png" alt="">
-                                        </section>
-                                      </div><!-- /.tab-sec__container -->
-                                
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                    <p>
-                                        ロゴ、バナー、アイコン、名刺、
-                                        LINEリッチメニュー、イラスト等の
-                                        制作に使用しています。</p>
-                                </div>
+                        </div>
+                    </div>
+                    <!-- スキル内容 -->
+                    <div class="skill-sec__container ">
+                        <section id="ai" class="ai skill-sec open">
+                            <div class="water_text">
+                                <h3 class="water1">illustrator</h3>
+                                <h3 class="water2">illustrator</h3>
                             </div>
-                </div>
+                            <ul>
+                                <li>Aiのスキル</li>
+                                <li>Aiのスキル</li>
+                            </ul>
+                        </section>
 
+                        <section id="ps" class="ps skill-sec">
+                            <h3>Photoshop</h3>
+                            <ul>
+                                <li>psのスキル</li>
+                                <li>psのスキル</li>
+                            </ul>
+                        </section>
+
+                        <section id="figma" class="figma skill-sec">
+                            <h3>figma</h3>
+                            <ul>
+                                <li>psのスキル</li>
+                                <li>psのスキル</li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
                 <div class="skill_img">
                     <img src="img/skill/skill_stand.svg" alt="" width="200" height="150">
-
-
                 </div>
                 <div class="skill_img_car">
                     <img src="img/skill/skill_car.svg" alt="" width="300" height="150">
                 </div>
             </div>
-
         </section>
-        <section id="career_road" class="sec">
-            <div class="profile_timeline">
-                <ul class="timeline">
-                    <li>
-                        <!--線が伸びる基準となるHTML。liを基準として、spanに指定された線を伸ばします。-->
-                        <dl>
-                            <dt>20</dt>
-                            <dd>内容</dd>
-                        </dl>
-                        <span class="border-line"></span>
-                    </li>
-                    <li>
-                        <dl>
-                            <dt>2002</dt>
-                            <dd>内容</dd>
-                        </dl>
-                        <span class="border-line"></span>
-                    </li>
-                    <li>
-                        <dl>
-                            <dt>2002</dt>
-                            <dd>内容</dd>
-                        </dl>
-                        <span class="border-line"></span>
-                    </li>
-                    <li>
-                        <dl>
-                            <dt>2002</dt>
-                            <dd>内容</dd>
-                        </dl>
-                        <span class="border-line"></span>
-                    </li>
-                    <li>
-                        <dl>
-                            <dt>2002</dt>
-                            <dd>内容</dd>
-                        </dl>
-                        <span class="border-line"></span>
-                    </li>
-                    <li>
-                        <dl>
-                            <dt>2002</dt>
-                            <dd>内容</dd>
-                        </dl>
-                        <span class="border-line"></span>
-                    </li>
-                    <li>
-                        <dl>
-                            <dt>2002</dt>
-                            <dd>内容</dd>
-                        </dl>
-                    </li>
-                </ul>
+
+
+
+
+
+        <section id="career" class="scroll sec ">
+            <div class="contents_inner wrapper">
+                <h3 class="sub_title">Career Road<span>経歴</span></h3>
+
+                <div class="scroll_container">
+                    <div class="scroll_wrap">
+                        <div class="scroll_box">1993</div>
+                        <div class="scroll_box">大学</div>
+                        <div class="scroll_box">社会人</div>
+                        <div class="scroll_box">もう一戸</div>
+                        <div class="scroll_box">今</div>
+                    </div>
+                </div>
             </div>
         </section>
-        <section id="strength" class="sec">
+
+
+
+
+
+        <section id="strength" class="sec ">
+            <h3 class="sub_title">Career Road<span>経歴</span></h3>
 
         </section>
 

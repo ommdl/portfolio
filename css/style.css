@@ -578,56 +578,52 @@ footer {
 
 */
 /* =============================================
-===================timeline========================
+===================career road========================
 ================================================== */
 
-/*タイムライン全体の設定*/
-.timeline {
-  max-width: 400px;
+/* .section {
   width: 100%;
-  margin: 50px auto;
-  padding: 0 30px;
+  padding: 100px 0;
+} */
+.contents_inner {
+  /* max-width: 1200px; */
+  /* width: 80%; */
+  margin: 0 auto;
 }
 
-.timeline li {
-  /*線の起点とするためrelativeを設定*/
+
+.scroll {
+  background-color: #d43232;
+}
+
+.scroll_container {
+  width: 100%;
+  height: 100svh;
   position: relative;
-  list-style: none;
-  padding: 0 0 20px 0;
+  overflow: hidden;
 }
+.scroll_wrap {
+  display: flex;
+  column-gap: 1000px;
 
-.timeline dl {
-  margin: 0 0 20px 3em;
-}
-
-/*絶対配置で線を設定*/
-.border-line {
-  /*線の位置*/
-  position: absolute;
-  left: 0.2em;
-  top: 0;
-  width: 2px;
-  /*線の太さ*/
-  height: 0;
-  /*はじめは高さを0に*/
-  background: #ccc;
-}
-
-/*タイムラインの見出し横の丸の位置と形状*/
-.timeline li::after {
-  content: '';
   position: absolute;
   top: 0;
   left: 0;
-  width: 10px;
-  height: 10px;
-  background: #666;
-  border-radius: 50%;
-
+}
+.scroll_box {
+  /* font-size: 30px;
+  font-weight: 700;
+  color: #000000; */
+  background-color: #eeeeee;
+  width: 320px;
+  height:300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-
-/* ↓profileの基本設定 */
+/* ===============↓profileの基本設定 =========================
+=============================================================*/
 
 .profile_visual,
 .name,
@@ -653,19 +649,9 @@ footer {
 
 
 
-
-
-.interests_list {
-  display: flex;
-  justify-content: space-between;
-}
-
 #me_visual {
   min-width: 300px;
 }
-
-
-
 
 
 .skill_box {
@@ -680,33 +666,17 @@ footer {
   padding: 2rem 2rem;
 }
 
-.skill_img {
-  position: absolute;
-  bottom: 10%;
-  right: 0;
-  z-index: 100;
+/* スキルボタン */
+.skill_text_box {
+  color: #3a3a3a;}
 
-}
-.skill_img_car{
-  position: absolute;
-  bottom: 0;
-  right: 10%;
-  z-index: 101;
-
+  .skill-sec{
+    opacity: 0;
+    display: none;
+    transition: 0.5s opacity;
 }
 
-#skill .sub_title {
-  font-family: "jumble", sans-serif;
-  text-transform: capitalize;
-  color: #000;
-  font-size: 3rem;
-  font-weight: normal;
-}
 
-#skill .sub_title span {
-  display: block;
-  font-size: 15px;
-}
 
 .skill_button ul{
   grid-template-columns: repeat(5, 50px);
@@ -729,6 +699,52 @@ footer {
 .skill_item p {
   padding-top: 50px;
 }
+.skill-sec.open{
+    opacity: 1;
+    display: block;
+}
+
+.button_img1{
+    opacity: 1;
+    display: block;
+    transition: 0.5s opacity;
+}
+
+ .button_img2{
+    opacity: 0;
+    display: none;
+    transition: 0.5s opacity;
+}
+
+.button_link.open .button_img1{
+    opacity: 0;
+    display: none;
+}
+
+.button_link.open .button_img2{
+    opacity: 1;
+    display: block;
+}
+
+
+/* スキル飾り */
+.skill_img {
+  position: absolute;
+  bottom: 10%;
+  right: 0;
+  z-index: 100;
+
+}
+.skill_img_car{
+  position: absolute;
+  bottom: 0;
+  right: 10%;
+  z-index: 101;
+
+}
+
+
+
 
 /* ===========================================
 ==========SKILLの波線文字=====================
@@ -788,45 +804,7 @@ footer {
 }
 
 
-.skill_text_box {
-  color: #3a3a3a;}
-
-.skill_text_box li{
-  list-style-type: circle;
-}
 
 
-.tab-list {
-  display: flex;
-  margin-left: 1rem;
-}
-
-.tab-link {
-  font-size: 1.4rem;
-  padding: 1rem 1.5rem 0.5rem;
-  border-radius: 10px 10px 0 0;
-
-  margin-right: 0.3rem;
-  cursor: pointer;
-}
 
 
-.tab-link.open {
-  background: #A8DBA8;
-}
-
-.tab-sec__container {
-  padding: 1rem;
-}
-
-.tab-sec {
-  min-height: auto;
-  opacity: 0;
-  display: none;
-  transition: 0.5s opacity;
-}
-
-.tab-sec.open {
-  opacity: 1;
-  display: block;
-}

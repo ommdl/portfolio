@@ -3,19 +3,14 @@
 //#aboutme スキルスタンド buttonを押すと文字が切り替わる
 
 
-
-
-// const skill_List = document.querySelector('#skill_ul');
-// const contents = [
-//     `<li>こんにちわ</li>`,
-//     `<li>こんばんわ</li>`,
-// ];
-// skill_List.insertAdjacentHTML('beforeend',contents[0]);
-
-
-$('.tab-link').on('click', (e) => {
-    $('.tab-link,.tab-sec').removeClass('open');
-    const tabTarget = $(e.target);
-    tabTarget.addClass('open');
-    $(`#${tabTarget.data('tab')}`).addClass('open');
-})
+$(function() {
+    $('.button_link').on('click', function() {
+      $('.button_link,.skill-sec').removeClass('open');
+    
+      $(this).addClass('open');
+       
+     var index = $('.button_link').index(this);
+       $('.skill-sec').eq(index).addClass('open');
+    });
+  });
+  
