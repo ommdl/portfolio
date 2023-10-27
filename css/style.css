@@ -660,19 +660,21 @@ footer {
 
 .skill_box {
   position: relative;
-  background-color: #da0505;
 }
 
 .skill_container {
-  background-color: #0000ff;
   width: 800px;
   height: 600px;
   padding: 2rem 2rem;
 }
 
+.skill_text{
+  margin-bottom: 3rem;
+}
 /* スキルボタン */
 .skill_text_box {
-  color: #3a3a3a;}
+  color: #3a3a3a;
+}
 
   .skill-sec{
     opacity: 0;
@@ -685,6 +687,8 @@ footer {
 .skill_button ul{
   grid-template-columns: repeat(5, 50px);
   gap: 8px;
+  /* place-content: center; */
+  place-items: center;
 }
 
 
@@ -695,7 +699,6 @@ footer {
 }
 .skill_button ul{
   text-align: center;
-  width: 90%;
 }
 
 .skill_item p {
@@ -746,8 +749,13 @@ footer {
 .water_text {
   position: relative;
   height: 50px;
+  margin-bottom: 3rem;
 }
 
+.oil_img{
+  position: absolute;
+  
+}
 .water_text h3 {
   position: absolute;
   transform: translate(0, 0);
@@ -757,18 +765,18 @@ footer {
 
 .water_text .water1 {
   color: transparent;
-  -webkit-text-stroke: 0.5px #ffffff;
+  -webkit-text-stroke: 0.5px #df5252;
 }
 
 .water_text .water2 {
-  color: #fff;
+  color: #df5252;
   animation: wave 6s ease-in-out infinite;
 }
 
 
 
 .water_text .water3 {
-  color: #fff;
+  color: #df5252;
   animation: wave2 6s ease-in-out infinite;
 }
 
@@ -797,9 +805,18 @@ footer {
   }
 }
 
+.time_study{
+  background: #ffa008;
+  color: #f2f2f2;
+  border-radius: 50%;
+  padding: 4px 8px;
+  display: inline;
+}
 
-
-
+.skill-sec__container ul{
+  list-style-type: disc;
+  margin-left: 3rem;
+}
 
 
 
