@@ -589,6 +589,7 @@ footer {
   /* max-width: 1200px; */
   /* width: 80%; */
   margin: 0 auto;
+  
 }
 
 
@@ -598,7 +599,7 @@ footer {
 
 .scroll_container {
   width: 100%;
-  height: 100svh;
+  height: calc(100svh - 300px);
   position: relative;
   overflow: hidden;
 }
@@ -621,7 +622,10 @@ footer {
   justify-content: center;
   align-items: center;
 }
-
+.car_img img,
+.car_img{
+  height: 200px;
+}
 /* ===============↓profileの基本設定 =========================
 =============================================================*/
 
@@ -808,3 +812,15 @@ footer {
 
 
 
+
+.box {
+  height: 100svh;
+  text-align: center;
+  font-size: 3rem;
+}
+#scrolly-video {
+  min-width: 100vh;
+
+  min-height: 100vh;
+  z-index: -1; /* 弟要素に文字が入るなら必須 */
+}

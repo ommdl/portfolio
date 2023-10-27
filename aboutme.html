@@ -20,6 +20,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
 
+
     <!--自作のJS-->
     <script src="js/menu.js" defer></script>
     <script src="js/aboutme.js" defer></script>
@@ -223,11 +224,12 @@
                         <div class="scroll_box">1993</div>
                         <div class="scroll_box">大学</div>
                         <div class="scroll_box">社会人</div>
-                        <div class="scroll_box">もう一戸</div>
+                        <div class="scroll_box">もうひとつ</div>
                         <div class="scroll_box">今</div>
                     </div>
                 </div>
             </div>
+        <div class="car_img"><img src="img/skill/skill_car.svg" alt=""></div>
         </section>
 
 
@@ -235,8 +237,14 @@
 
 
         <section id="strength" class="sec ">
-            <h3 class="sub_title">Career Road<span>経歴</span></h3>
+            <h3 class="sub_title">Strengths sign<span>強み</span></h3>
+            <div>
+                <div id="scrolly-video"></div>
+                <div class="box">強み1</div>
+                <div class="box">強み2</div>
+                <div class="box">強み３</div>
 
+            </div>
         </section>
 
 
@@ -246,8 +254,14 @@
 
     <footer class="wrapper"><small>&copy;yanagiharaharuka</small>
     </footer>
-
-
+    <script src="https://cdn.jsdelivr.net/npm/scrolly-video@latest/dist/scrolly-video.js"></script>
+    <script type="text/javascript">
+      new ScrollyVideo({
+        scrollyVideoContainer: "scrolly-video",
+        src: "bgmovie.mp4",
+        cover: false,
+      });
+    </script>
 
 </body>
 

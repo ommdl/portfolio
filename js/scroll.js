@@ -24,7 +24,22 @@ gsap.to(list_wrap, {
     pin: true,
     anticipatePin: 1,
     //高速スクロール時にpinによる画面固定のずれを防止する
-    invalidateOnRefresh: true
+    invalidateOnRefresh: true,
     //サイズが変わっても再計算
   }
 });
+
+const car = document.querySelector('.car_img');
+
+gsap.to('.car_img',{
+    x: () => (window.innerWidth),
+    scrollTrigger:{
+        trigger: '.scroll',
+        start: 'top top',
+        end: () => (list_wrap.clientWidth - container.clientWidth),
+      markers:true,
+      scrub:true,
+    //   once:true,
+    toggleActions: "play none none none"
+    }
+  });
