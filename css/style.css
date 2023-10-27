@@ -346,8 +346,16 @@ footer {
 /*==================================================
 ギャラリーのためのcss
 ===================================*/
-
-
+.works_p{
+  font-size: 14px;
+}
+.works_name{
+  font-weight: bold;
+}
+.item-content img{
+  margin-bottom: 0.5rem;
+  
+}
 /*＝＝＝並び替えボタンのCSS*/
 .sort-btn {
   display: flex;
@@ -395,6 +403,7 @@ footer {
   /*横並びで3つ表示*/
   z-index: 1;
   list-style: none;
+  padding: 1rem;
 }
 
 /*内側のボックスの高さが崩れないように維持*/
@@ -408,8 +417,7 @@ footer {
 .grid img {
   width: 100%;
   height: auto;
-  vertical-align: bottom;
-  /*画像の下にできる余白を削除*/
+  
 }
 
 /*横幅が768px以下になった際の指定*/
@@ -663,14 +671,21 @@ footer {
 }
 
 .skill_container {
-  width: 800px;
-  height: 600px;
+  width: 600px;
+  height: 800px;
   padding: 2rem 2rem;
 }
 
 .skill_text{
   margin-bottom: 3rem;
 }
+
+.click_here{
+padding: 1rem;
+font-weight: bold;
+}
+
+
 /* スキルボタン */
 .skill_text_box {
   color: #3a3a3a;
@@ -685,7 +700,7 @@ footer {
 
 
 .skill_button ul{
-  grid-template-columns: repeat(5, 50px);
+  grid-template-columns: repeat(5, 64px);
   gap: 8px;
   /* place-content: center; */
   place-items: center;
@@ -754,8 +769,25 @@ footer {
 
 .oil_img{
   position: absolute;
-  
+  top: 0;
+  left: -50px;
+  animation: oil 6s ease-in-out infinite;
 }
+
+
+@keyframes oil{
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+
+  50%,
+  70% {
+    transform: rotate(-30deg);
+  }
+}
+
+
 .water_text h3 {
   position: absolute;
   transform: translate(0, 0);
