@@ -76,6 +76,7 @@ a:hover {
 
 .wrapper {
   max-width: 1200px;
+  width: calc(100% - 4%);
   margin: 0 auto;
 }
 
@@ -92,11 +93,8 @@ a:hover {
   display: grid;
 }
 
-@media (max-width: 1200px) {
-  .wrapper {
-    padding: 0 4%;
-  }
-}
+
+
 
 /* ====================
   =======header=========
@@ -446,12 +444,47 @@ footer {
 .works_text_box {
   margin-bottom: 2rem;
   text-align: center;
+  margin: 0 auto;
 }
 
 .imgMock {
   max-width: 880px;
   margin: 0 auto 5rem auto;
 }
+
+/* =====viewsite button======*/
+.view_site_button{
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.btn-gradient {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+  border-radius: 16px;
+  width: 400px;
+  height: 40px;
+  font-weight: bold;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
+  background-image: linear-gradient(134deg, rgba(255, 196, 190, 1), rgba(236, 127, 119, 1) 100%, rgba(240, 226, 226, 1));
+}
+
+
+@media (max-width: 500px) {
+  .btn-gradient {
+
+    width: 100%;
+  }
+}
+
+/* =====viewsite button ここまで======*/
+
+
 
 .work_text {
   max-width: 800px;
@@ -485,6 +518,54 @@ footer {
   list-style-type: circle;
   margin-left: 3em;
 }
+
+.works_more{
+  margin: 1rem 0 2rem 0;
+  font-size: 12px;
+  line-height: 1;
+}
+
+#lemansauto.works_more{
+  background-color: #1e1c1b;
+}
+
+.works_color_li{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+#kenko-animal .basecolor{
+  background-color: #fcf2de;
+}
+#kenko-animal .maincolor{
+  background-color: #ed8e23;
+}
+#kenko-animal .accentcolor{
+  background-color: #89c4ec;
+}
+
+#lemansauto .basecolor{
+  background-color: #1e1c1b;
+}
+#lemansauto .maincolor{
+  background-color: #545353;
+}
+#lemansauto .accentcolor{
+  background-color: #c1a362;
+}
+
+
+.works_color {
+  grid-template-columns: repeat(auto-fit,100px);
+  gap: 0.25rem;
+  }
+  
+  .works_more_card {
+  grid-row: span 3;
+  /*サブグリットの指定*/
+  grid-template-rows: subgrid;
+  }
 
 @media (max-width: 767px) {
   .work_text dt {
@@ -804,8 +885,6 @@ font-weight: bold;
   color: #df5252;
   animation: wave 6s ease-in-out infinite;
 }
-
-
 
 .water_text .water3 {
   color: #df5252;

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WORKS | Lemans Auto CAFE</title>
+    <meta name="description" content=" Le mans Autoの説明">
+
+
+    <!--自作のJS-->
+    <script src="../js/menu.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+
+    <!-- css -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script>
+        (function (d) {
+            var config = {
+                kitId: 'rlp3jfs',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement,
+                t = setTimeout(function () {
+                    h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+                }, config.scriptTimeout),
+                tk = d.createElement("script"),
+                f = false,
+                s = d.getElementsByTagName("script")[0],
+                a;
+            h.className += " wf-loading";
+            tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+            tk.async = true;
+            tk.onload = tk.onreadystatechange = function () {
+                a = this.readyState;
+                if (f || a && a != "complete" && a != "loaded") return;
+                f = true;
+                clearTimeout(t);
+                try {
+                    Typekit.load(config)
+                } catch (e) { }
+            };
+            s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
+</head>
+
+
+<body>
+    <header id="header" class="header-inner flex">
+        <h1><a href="../index.html"><img src="img/logo.svg" alt="">nagi portfolio</a></h1>
+        <nav class="gnav">
+            <ul class="gnav_list flex">
+                <li class="gnav_item gnav__item_works"><a href="../works.html">WORKS <span>つくってきたもの</span></a></li>
+                <li class="gnav_item gnav__item_aboutme"><a href="../aboutme.html">ABOUTME <span>わたしのこと</span></a></li>
+                <li class="gnav_item gnav__item_contact"><a href="../contact.html">CONTACT <span>お問い合わせ</span></a></li>
+            </ul>
+            <div class="hamburger">
+                <!--SP用ハンバーガーメニュー３本線-->
+                <div class="btn-gNav">
+                    <span class="hamburger_span1"></span>
+                    <span class="hamburger_span2"></span>
+                    <span class="hamburger_span3"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <main id="lemansauto">
+        <div class="wrapper">
+
+            <div class="works_text_box sec">
+                <h2>Lemans Auto CAFE(架空) Webサイト</h2>
+                <p>デザイン・コーディング（レスポンシブ対応）</p>
+            </div>
+            <div class="imgMock"><img src="../img/lemansauto/lemansauto.png" alt=""></div>
+
+
+
+
+            <div class="work_text">
+                <!-- 作品概要 -->
+
+                <div class="view_site_button">
+                    <a href="/lemansauto/index.html" class="btn-gradient"><span>view site</span></a>
+                </div>
+
+
+                <dl>
+                    <dt>サイト概要</dt>
+                    <dd>
+                        カフェ『LeMans Auto CAFE』のwebサイト（架空サイト）<br>
+                        <div class="work_text_cont">
+                            <span>【LeMans Auto CAFE】</span><br>
+                            カーエンスーな方々が集まるカフェ。自家焙煎のこだわりのコーヒーを提供している。地元の食材を使った料理の提供や、こだわりのショップオリジナルグッズの販売を行っている。店内は全体的に暗めで、インダストリアルな雰囲気の中に、旧車のグッズや本、ポスターが飾られている。
+                        </div>
+
+                    </dd>
+                </dl>
+                <!-- ターゲット層 -->
+                <dl>
+                    <dt>ターゲット層</dt>
+                    <dd>
+                        旧車やメカニックが好きな、車への関心が高い30-60代の男性
+                    </dd>
+                </dl>
+                <!-- 目的・ゴール -->
+                <dl>
+                    <dt>目的・ゴール</dt>
+                    <dd>カフェの雰囲気を知ってもらい、新規の顧客開拓に繋げる。<br>
+                    </dd>
+                </dl>
+                <!--コンセプト -->
+                <!-- <dl>
+                    <dt>コンセプト</dt>
+                    <dd>2健康や環境に対して関心が高い20-50代の男女</dd>
+                </dl> -->
+                <dl>
+                    <dt>制作ポイント</dt>
+                    <dd>自家焙煎のコーヒーへのこだわりが鮮明に伝わるよう、サイト全体にシックで高級感のあるコーヒーの様な色合いを使用し、フォントや配色からシックなお店の雰囲気がでるようにしました。旧車のような無機質な中にこだわりを感じるシンプルなデザインになるよう工夫しました。<br>
+                    また、メニューの開閉の動きやリンクのホバーや画面変移の動きに、車が走っていくような印象の流れる動きを加えました。<br>
+                        <div class="works_more">
+                            <div class="works_color grid">
+                                <ul class="works_more_card grid">
+                                    <li class="works_color_li basecolor"></li>
+                                    <li>#1e1c1b</li>
+                                    <!-- <li>ベースカラー</li> -->
+                                </ul>
+                                <ul class="works_more_card grid">
+                                    <li class="works_color_li maincolor"></li>
+                                    <li>#545353</li>
+                                    <!-- <li>メインカラー</li> -->
+                                </ul>
+                                <ul class="works_more_card grid">
+                                    <li class="works_color_li accentcolor"></li>
+                                    <li>#c1a362</li>
+                                    <!-- <li>アクセントカラー</li> -->
+                                </ul>
+                            </div>
+                        </div>
+                    メニューの開閉の動きやリンクのホバーや画面変移の動きに、車が走っていくような印象の流れる動きを加えました。<br>
+                    作成したロゴマークは、一目で『LeMans Auto CAFE』のロゴであると認識できるようタイヤをモチーフにし、『COFFEE』の『O』をコーヒー豆の形にあしらいました。横に流れるリボンは、車のレースのスタートの旗をイメージし、『LeMans Auto CAFE』のコーヒー一杯からエンジン全開でまた新しいスタートを切る、というメッセージを込めました。ターゲット層である方々が好きな80年代の車に関するレトロなロゴや”Rote66”のようなどこか懐かしい印象を与えられるようにし、カフェ限定グッズのTシャツや、キャップにも展開できるロゴデザインを目指しました。
+                    
+                        <div class="works_more">
+                            <img src="../img/lemansauto/LeMansAuto_logo.png" alt="" width="500" height="150">
+                        </div>
+                    </dd>
+                </dl>
+                <!-- 制作過程 -->
+                <!-- <dl>
+                    <dt>制作過程</dt>
+                    <dd>職業訓練校のデザイン課題で制作しました。課題内容が『”健康堂”という名の架空サイトをつくる』だったので、そのまま『健康堂』だとつまらないと考え、”けんこうどう”ぶつクリニックと引っかけて今回動物病院のWebサイトの作成に至りました。
+                    </dd>
+                </dl> -->
+                <dl>
+                    <dt>制作期間</dt>
+                    <dd>デザイン2日、コーディング3日</dd>
+                </dl>
+                <dl>
+                    <dt>使用ツール</dt>
+                    <dd>illustrator/Photoshop/HTML・CSS/JavaScript<br>
+                    </dd>
+                </dl>
+            </div>
+
+        </div>
+    </main>
+
+
+    <footer class="wrapper">
+        <small>&copy;yanagiharaharuka</small>
+    </footer>
+</body>
+
+</html>
