@@ -697,17 +697,20 @@ footer {
   background-color: #ffc643;
 }
 
+.bg_yellow{
+  background-color: #ffc643;
+}
+
 .scroll_container {
   width: 100%;
-  height: calc(100svh - 300px);
+  height: 900px;/* height: calc(100svh - 150px); */
   position: relative;
   overflow: hidden;
 }
 
 .scroll_wrap {
   display: flex;
-  column-gap: 300px;
-  /* column-gap: 880px; */
+  column-gap: 500px;
   position: absolute;
   top: 0;
   left: 0;
@@ -719,7 +722,7 @@ footer {
   color: #000000; */
   /* background-color: #eeeeee; */
   width: 320px;
-  height:auto;
+  height:500px;
 }
 
 .nen{
@@ -757,15 +760,43 @@ footer {
 }
 .car_img img,
 .car_img{
-  height: 100px;
+  height: 400px;
 }
+
 /* ===============↓profileの基本設定 =========================
 =============================================================*/
-
+main{
+  position: relative;
+}
 .profile_visual,
 .name,
 .sub_title {
   text-align: center;
+}
+.sub_title{
+  font-weight: normal;
+  font-size: 36px;
+  font-family: "jumble", sans-serif;
+  line-height: 0.75;
+  margin-top: 2rem;
+}
+.sub_title span{
+  font-size: 18px;
+}
+
+.h2_hedding{
+  font-family: "jumble", sans-serif;
+  -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    height: 300px;
+    opacity: 0.2;
+    font-size: 72px;
+    margin-bottom: 1rem;
+    position: absolute;
+    position: fixed;
+  z-index: -1;
+  color: #ed8e23;
 }
 
 .profile_text {
@@ -785,7 +816,11 @@ footer {
 }
 
 
+.profile_p{
+  letter-spacing: 0.9px;
+  line-height: 1.5;
 
+}
 #me_visual {
   min-width: 300px;
 }
@@ -793,22 +828,67 @@ footer {
 
 .skill_box {
   position: relative;
+  max-width: 1040px;
 }
 
 .skill_container {
   width: 600px;
   height: 800px;
-  padding: 2rem 2rem;
+  padding: 2rem 4rem;
+  margin: 2em 0;
+  background: rgb(255, 255, 255);
+  border-top: solid 5px #ffa74f;
+  box-shadow: 0 3px 5px rgba(49, 49, 49, 0.22);
+  background-image: url(../img/aboutme/crisp-paper-ruffles.png);
 }
-
+@media screen and (max-width: 768px) {
+  .skill_container {
+    width: 100%; 
+    padding: 2rem 2rem;
+  }
+}
 .skill_text{
   margin-bottom: 3rem;
 }
 
+
 .click_here{
-padding: 1rem;
-font-weight: bold;
+  padding: 1rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+  animation: click_here_anime 2s ease-in-out infinite;
+  color: #3f271a;
+  }
+
+@keyframes click_here_anime {
+  0%, 40% {
+    transform: skew(0deg, 0deg);
+  }
+  5% {
+    transform: skew(5deg, 5deg);
+  }
+  10% {
+    transform: skew(-4deg, -4deg);
+  }
+  15% {
+    transform: skew(3deg, 3deg);
+  }
+  20% {
+    transform: skew(-2deg, -2deg);
+  }
+  25% {
+    transform: skew(1deg, 1deg);
+  }
+  30% {
+    transform: skew(-0.6deg, -0.6deg);
+  }
+  35% {
+    transform: skew(0.3deg, 0.3deg);
+  }
 }
+
+
+
 
 
 /* スキルボタン */
@@ -825,9 +905,9 @@ font-weight: bold;
 
 
 .skill_button ul{
-  grid-template-columns: repeat(5, 64px);
+  grid-template-columns:  repeat(5, minmax(48px, 82px));
   gap: 8px;
-  /* place-content: center; */
+  place-content: center;
   place-items: center;
 }
 
@@ -877,19 +957,28 @@ font-weight: bold;
   bottom: 0;
   right: 10%;
   z-index: 101;
-
 }
 
+@media screen and (max-width: 768px) {
 
+  .skill_img,
+  .skill_img_car{
+    display: none;
+  }
+  .water_text h3 {
+    font-size: 38px;
 
-
+  }
+}
 /* ===========================================
 ==========SKILLの波線文字=====================
 ============================================= */
 .water_text {
   position: relative;
   height: 50px;
-  margin-bottom: 3rem;
+  margin-left: 1rem;
+  margin-bottom: 2em;
+
 }
 
 .oil_img{
@@ -916,7 +1005,8 @@ font-weight: bold;
 .water_text h3 {
   position: absolute;
   transform: translate(0, 0);
-  font-size: 40px;
+  font-size: 50px;
+  white-space: nowrap;
 
 }
 
@@ -961,16 +1051,18 @@ font-weight: bold;
 }
 
 .time_study{
-  background: #ffa008;
+  background: #e25124;
   color: #f2f2f2;
-  border-radius: 50%;
-  padding: 4px 8px;
+  border-radius:8px;
+  padding: 4px 20px;
   display: inline;
+  font-weight: bold;
 }
 
 .skill-sec__container ul{
   list-style-type: disc;
   margin-left: 3rem;
+  margin-bottom: 2rem;
 }
 
 
@@ -985,4 +1077,43 @@ font-weight: bold;
 
   min-height: 100vh;
   z-index: -1; /* 弟要素に文字が入るなら必須 */
+}
+/*==========CONTACT ==================*/
+.contact{
+  height: calc( 100svh - 120px);
+text-align: center;
+line-height: 1;
+}
+
+.contact h3{
+  font-size: 50px;
+  
+}
+.contact_car{
+  margin-top: 4rem;
+  animation: contact_car 8s ease infinite;
+}
+
+
+@keyframes contact_car {
+  0%{
+    opacity: 0;
+    transform:scale(100%);
+  }
+  15%{transform: rotateX(20deg);}
+
+
+  30%{
+    opacity: 1;
+    transform:scale(100%);
+
+  }
+  /* 50% {
+    opacity: 1;
+    transform:scale(50%)
+  } */
+  100%{
+    opacity: 0;
+    transform: scale(0);
+  }
 }

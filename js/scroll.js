@@ -32,14 +32,16 @@ gsap.to(list_wrap, {
 const car = document.querySelector('.car_img');
 
 gsap.to('.car_img',{
-    x: () => (window.innerWidth),
+    // x: () => (window.innerWidth),
+    xPercent: 100,
     scrollTrigger:{
-        trigger: '.scroll',
-        start: 'top top',
-        end: () => (list_wrap.clientWidth - container.clientWidth),
-      markers:true,
-      scrub:true,
-    //   once:true,
-    toggleActions: "play none none none"
-    }
+      trigger: 'car',
+      start: 'bottom bottom',
+        
+      //markers:true,
+      duration: 2,
+      delay: 3, //アニメーションの初期遅延（アニメーションが開始されるまでの指定）
+      duration: 50, //アニメーションの時間の設定
+      opacity: 1, //表示状態の指定
+toggleActions:'play none none reverse',    }
   });
