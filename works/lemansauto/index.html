@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lemans Auto | COFFEE ROASTERY</title>
+    <meta name="viewport" content="width=device-width">
+
+
+
+    <!-- jクエリ -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!--JS-->
+    <script src="js/common.js"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="style.css">
+
+
+
+    <!--ADOBE font-->
+    <script>
+        (function (d) {
+            var config = {
+                kitId: 'hsi1sdj',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
+</head>
+
+
+<body>
+    <div id="splash">
+        <div id="splash-logo">
+            <img src="img/logo.png" alt="">
+        </div>
+        <!--/splash-->
+    </div>
+    <div class="splashbg"></div><!---画面遷移用-->
+
+    <div id="container">
+        <header>
+            <div id="header">
+                <div class="header_inner flex">
+                    <h1>
+                        <a href="index.html" class="header-logo">
+                            <img src="img/logo.png" alt="Le mans Auto" class="src" width="100" height="100"></a>
+                        <span>Le Mans Auto</span>
+                    </h1>
+
+
+                    <div class="openbtn"><span></span><span></span><span></span></div>
+                    <nav id="g-nav">
+                        <ul>
+                            <li><a href="concept.html" class="href">CONCEPT</a></li>
+                            <li><a href="menu.html" class="href">MENU</a></li>
+                            <li><a href="shop.html" class="href">SHOP</a></li>
+                            <li><a href="access.html" class="href">ACCESS</a></li>
+                        </ul>
+                    </nav>
+                    <div class="circle-bg"></div>
+                </div>
+            </div>
+
+            <div class="hero">
+                <div class="inner ">
+                    <div class="big_text">
+                        <h2>
+                            Rev Up Your Day </h2>
+                        <h2>with<span>Car</span>and<span>Coffee</span>
+                        </h2>
+                    </div>
+
+                    <div class="scrolldown2"><span>Scroll</span></div>
+                </div>
+            </div>
+
+        </header>
+
+
+
+
+        <main id="TOP">
+
+            <section id="main_text" class="sec">
+                <div class="inner">
+                    <p class="phrase">旅の先には、いくつもの可能性が広がっています。</p>
+                    <p class="phrase"> ルマンオートでは、心躍る車たちと香り高いコーヒーが、新たな世界への扉を開きます。 </p>
+                    <p class="phrase"> 本物のクラシックカーが醸し出すノスタルジアと、香り豊かなコーヒーの旅路が、 </p>
+                    <p class="phrase"> あなたの日常に輝きを添えます。</p>
+                    <p class="lemansauto">Le Mans Auto</p>
+                    <button class="co_button">CONCEPT</button>
+                </div>
+            </section>
+
+
+            <section id="menu_list" class="sec">
+                <h3 class="sec_headding_rl">Recomend</h3>
+                <div class="inner">
+                    <h2 class="sec_headding">季節のおすすめメニュー</h2>
+                    <ul class="item-list slider">
+                        <li>
+                            <img src="img/index/drink1.jpg" alt="" class="src">
+                            <dl>
+                                <dt>アイスカフェオレ</dt>
+                                <dd>自家焙煎のこだわりの一杯</dd>
+                            </dl>
+                            <p class="price">&yen;500</p>
+                        </li>
+                        <li>
+                            <img src="img/index/burger.jpg" alt="" class="src">
+                            <dl>
+                                <dt>ハンバーガー</dt>
+                                <dd>ビーフ100％の広島県産バーガー</dd>
+                            </dl>
+                            <p class="price">&yen;680</p>
+                        </li>
+                        <li>
+                            <img src="img/index/cake.jpg" class="src">
+                            <dl>
+                                <dt>日替わりケーキ</dt>
+                                <dd>旬のフルーツを添えた季節の一品</dd>
+                            </dl>
+                            <p class="price">&yen;520</p>
+                        </li>
+                        <li>
+                            <img src="img/index/drink2.jpg" alt="" class="src">
+                            <dl>
+                                <dt>ウィンナーコーヒー</dt>
+                                <dd>大山のミルクを使ったこだわりの一杯</dd>
+                            </dl>
+                            <p class="price">&yen;600</p>
+                        </li>
+                        <li>
+                            <img src="img/index/pasta.jpg" alt="" class="src">
+                            <dl>
+                                <dt>ペスカトーレ</dt>
+                                <dd>瀬戸内の新鮮な魚介を使ったパスタ</dd>
+                            </dl>
+                            <p class="price">&yen;980</p>
+                        </li>
+                        <li>
+                            <img src="img/index/sandwitch.jpg" class="src">
+                            <dl>
+                                <dt>クラブサンド</dt>
+                                <dd>フード人気NO.1 楽しい時間の相棒に</dd>
+                            </dl>
+                            <p class="price">&yen;720</p>
+                        </li>
+                    </ul>
+                    <button class="co_button">MENU</button>
+                </div>
+            </section>
+
+
+            <div id="video-area" class="sec">
+                <video id="video" poster="img/index/index_bg1.jpg" webkit-playsinline playsinline muted autoplay loop>
+
+                    <source src="movie/coffee1.mp4" type="video/mp4">
+                    <!-- <source src="video/movie.ogv" type="video/ogv">
+            <source src="video/movie.webm" type="video/webm"> -->
+                    <p>動画を再生できる環境ではありません。</p>
+                </video>
+            </div>
+
+
+
+
+            <section id="goods_list" class="sec">
+                <h3 class="sec_headding_rl">Original Goods</h3>
+                <div class="inner">
+                    <h2 class="sec_headding">オリジナルグッズ</h2>
+                
+                    <div class="container">
+                        <div class="card">
+                            <div class="face face2">
+                                <div class="content">
+                                    <img src="img/index/cup.jpg">
+                                    <h4>MIYAJIMA お砂焼きマグカップ</h4>
+                                    <p>当店で使用しているマグカップです。コーヒーの香りが引き立つ一品です。</p>
+                                    <a href="#">Buy NOW</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="face face2">
+                                <div class="content">
+                                    <img src="img/index/cap.jpg">
+                                    <h4>ドライビングキャップ</h4>
+                                    <p>広島県産帆布を使用したキャップ。オシャレに熱中症対策ができます。サイズ変更可能な金具付き。</p>
+                                    <a href="#">Buy NOW</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="face face2">
+                                <div class="content">
+                                    <img src="img/index/coffe_bag.jpg">
+                                    <h4>Organic leathe 珈琲鞄</h4>
+                                    <p>350～500mlのタンブラーがすっぽりと収まるサイズ。スマホや財布の鞄としてもご利用いただけます。</p>
+                                    <a href="#">Buy NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="face face2">
+                                <div class="content">
+                                    <img src="img/index/bag.jpg">
+                                    <h4>オーガニック エコバッグ</h4>
+                                    <p>LemansAutoのロゴが入ったエコバックです。オーガニックな素材を使用することで持続可能な社会に貢献できます。</p>
+                                    <a href="#">Buy NOW</a>
+                                </div>
+                            </div>
+                        </div>                        
+                        <div class="card">
+                            <div class="face face2">
+                                <div class="content">
+                                    <img src="img/index/key.jpg">
+                                    <h4>LemansAuto キーチェーン</h4>
+                                    <p>LemansAutoのロゴが入ったキーチェーンです。広島のジビエレザーを使用した一品。純粋な天然ものならではの個体差をお楽しみください。</p>
+                                    <a href="#">Buy NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="face face2">
+                                <div class="content">
+                                    <img src="img/index/tshirts.jpg">
+                                    <h4>LemansAuto Tシャツ</h4>
+                                    <p>LemansAutoのロゴが入ったTシャツです。オーガニックな素材を使用することで持続可能な社会に貢献できます。</p>
+                                    <a href="#">Buy NOW</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <button class="co_button">ONLINE SHOP</button>
+                </div>
+            </section>
+
+            <section id="bg">
+                <div class="bg"></div>
+            </section>
+        </main>
+
+
+        <footer class="footer inner">
+            <div class="footer_grid">
+                <div class="footer_box">
+                    <ul class="nav__list">
+                        <li><a href="#" class="href">CONCEPT</a></li>
+                        <li><a href="#" class="href">MENU</a></li>
+                        <li><a href="#" class="href">SHOP</a></li>
+                        <li><a href="#l" class="href">ACCESS</a></li>
+                    </ul>
+
+                    <div class="sns_list">
+                        <a href="#" target="_blank">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 30 30" enable-background="new 0 0 30 30" xml:space="preserve">
+                                <path id="facebook" fill="#ffffff" d="M17.252,11.106V8.65c0-0.922,0.611-1.138,1.041-1.138h2.643V3.459l-3.639-0.015
+        c-4.041,0-4.961,3.023-4.961,4.961v2.701H10v4.178h2.336v11.823h4.916V15.284h3.316l0.428-4.178H17.252z" />
+                            </svg>
+                        </a>
+
+                        <a href="#" target="_blank">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 30 30" enable-background="new 0 0 30 30" xml:space="preserve">
+                                <path id="instagram" fill="#ffffff" d="M22.107,3.415H7.893c-2.469,0-4.479,2.007-4.479,4.477v4.73v9.486c0,2.469,2.01,4.479,4.479,4.479h14.215
+        c2.469,0,4.479-2.01,4.479-4.479v-9.486v-4.73C26.586,5.421,24.576,3.415,22.107,3.415 M23.393,6.086l0.512-0.004v0.511v3.416
+        l-3.916,0.014l-0.012-3.928L23.393,6.086z M11.693,12.622c0.742-1.028,1.945-1.7,3.307-1.7s2.564,0.672,3.307,1.7
+        c0.484,0.67,0.771,1.49,0.771,2.379c0,2.248-1.828,4.078-4.078,4.078c-2.248,0-4.078-1.83-4.078-4.078
+        C10.922,14.112,11.211,13.292,11.693,12.622 M24.328,22.107c0,1.225-0.994,2.219-2.221,2.219H7.893
+        c-1.225,0-2.219-0.994-2.219-2.219v-9.486h3.459C8.832,13.356,8.664,14.159,8.664,15c0,3.494,2.842,6.335,6.336,6.335
+        s6.336-2.842,6.336-6.335c0-0.842-0.17-1.645-0.467-2.379h3.459V22.107z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer_box">
+                    <a href="index.html" class="footer-logo">
+                        <img src="img/logo.png" alt="Le mans Auto" class="src" width="160" height="180">
+                    </a>
+                </div>
+
+                <div class="footer_box">
+                    <p class="footer-tel">Tel:0123-456-789</p>
+                    <p class="footer-time">OPEN:Fri-sun 9:00-18:00</p>
+                </div>
+            </div>
+
+            <p class="copyright"><small>&copy;LemansAuto</small></p>
+
+        </footer>
+    </div>
+
+
+
+
+</body>
+
+</html>

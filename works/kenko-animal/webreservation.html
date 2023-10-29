@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>健幸どうぶつクリニック</title>
+
+  <!-- CSS -->
+  <!-- リセットCSS -->
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <!-- 自作CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/ashiato.css">
+  <!-- HERO_Slideshow CDN -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+  <!-- font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+
+
+<body>
+  <div id="#top">
+    <header>
+      <div class="header_inner inner">
+        <h1><a href="index.html"><!--ロゴマーク-->
+            <img src="img/common/logo.svg" alt="" width="130" height="93" class="logo_mark">
+            <img src="img/common/logo_moji.svg" alt="健幸どうぶつクリニック" width="140" height="55">
+          </a>
+        </h1>
+
+        <div class="header_right "><!--電話と診察時間-->
+          <ul class="header_top_nav flex">
+            <li><a href="tel:" class="a_tel">
+                <p class="p_tel"> 082-836-5200</p>
+              </a>
+            </li>
+            <li><a href="#bottom_info" class="header_btn">診察時間</a></li>
+          </ul>
+
+          <nav class="gnav  flex"><!--gnav-->
+            <ul class="g_nav_items  g_nav_items_left flex">
+
+              <img src="img/common/menue_line.svg" alt="">
+              <li>
+                <a href="index.html#first">
+                  <p class="en_nav">first</p>
+                  <p class="ja_nav">初めての方へ</p>
+                  <img src="img/common/first.svg" alt="">
+                </a>
+              </li>
+              <img src="img/common/menue_line.svg" alt="">
+              <li>
+                <a href="index.html#medical">
+                  <p class="en_nav">medical</p>
+                  <p class="ja_nav">診察のご案内</p>
+                  <img src="img/common/medical.svg" alt="">
+                </a>
+              </li>
+              <img src="img/common/menue_line.svg" alt="">
+              <li>
+                <a href="stuff.html">
+                  <p class="en_nav">stuff</p>
+                  <p class="ja_nav">スタッフ紹介</p>
+                  <img src="img/common/stuff.svg" alt="">
+                </a>
+              </li>
+              <img src="img/common/menue_line.svg" alt="">
+            </ul>
+
+            <ul class="g_nav_items flex">
+
+              <img src="img/common/menue_line.svg" alt="">
+              <li>
+                <a href="clinic.html">
+                  <p class="en_nav">clinic</p>
+                  <p class="ja_nav">施設案内</p>
+                  <img src="img/common/clinic.svg" alt="">
+                </a>
+              </li>
+              <img src="img/common/menue_line.svg" alt="">
+              <li>
+                <a href="salonhotel.html">
+                  <p class="en_nav">salon hotel</p>
+                  <p class="ja_nav">サロン＆ホテル</p>
+                  <img src="img/common/salonand hotel.svg" alt="">
+                </a>
+              </li>
+              <img src="img/common/menue_line.svg" alt="">
+              <li>
+                <a href="access.html">
+                  <p class="en_nav">access</p>
+                  <p class="ja_nav">アクセス</p>
+                  <img src="img/common/access.svg" alt="">
+                </a>
+              </li>
+              <img src="img/common/menue_line.svg" alt="">
+            </ul>
+            
+          <div class="hamburger"> <!--SP用ハンバーガーメニュー３本線-->
+            <p class="btn-gNav">
+              <span></span>
+              <span></span>
+              <span></span>
+            </p>
+          </div>
+          </nav>
+
+        </div>
+      </div>
+    </header>
+
+
+
+  </div>
+
+
+
+  <main id="webres">
+
+    <!-- web予約ボタン -->
+    <button class="fixed_webreservation">
+      <a href="webreservation.html">
+        <img class="fixed_banner_pc" src="img/common/webreservation.svg" alt="WEB予約はこちらから">
+      </a>
+    </button>
+    <!-- ページトップへ戻るボタン -->
+    <p id="page-top"><a href="#">ページ<br>トップ</a></p>
+
+
+
+    <div class="page_header inner">
+      <h1>WEBご予約フォーム</h1>
+    </div>
+
+    <article class="  wrapper sec">
+      <div class="articl_text">
+
+        <div class="Form">
+
+          <div class="Form-Item">
+            <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>飼い主様の氏名</p>
+            <input type="text" class="Form-Item-Input" placeholder="例）山田太郎">
+          </div>
+          
+          <div class="Form-Item">
+            <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>電話番号</p>
+            <input type="text" class="Form-Item-Input" placeholder="例）123-456-789">
+          </div>
+          <div class="Form-Item">
+            <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>メールアドレス</p>
+            <input type="email" class="Form-Item-Input" placeholder="例）info@kanimalclinic.com">
+          </div>
+          <div class="Form-Item">
+            <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>種類</p>
+            <label>
+              <input type="radio" name="answer" value="1"  class="Form-Item-Input_selct">
+              <span class="text">犬</span>
+            </label>
+            <label class="label_2">
+              <input type="radio" name="answer" value="2" >
+              <span class="text">猫</span>
+            </label>
+            </div>
+          <div class="Form-Item">
+            <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>ご予約内容</p>
+            <select name="" id="" class="Form-Item-Input">
+              <option value=""></option>
+              <option value="チェック１">診察のご希望</option>
+              <option value="チェック2">トリミングサロン</option>
+              <option value="チェック3">ペットホテル</option>
+            </select>
+          </div>
+          <div class="Form-Item">
+            <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>ご希望日</p>
+            <input type="date" class="Form-Item-Input" placeholder="例）example@gmail.com">
+          </div>
+          <div class="Form-Item">
+            <p class="Form-Item-Label isMsg">お問い合わせ内容</p>
+            <textarea class="Form-Item-Textarea"></textarea>
+          </div>
+          <input type="submit" class="Form-Btn" value="送信する">
+        </div>
+
+
+      </div>
+    </article>
+
+
+
+  </main>
+
+
+
+
+  <section id="bottom_info">
+    <div id="clinic_info" class="wrapper sec flex">
+      <div class="clinic_date">
+        <h1><img src="img/common/logo_yoko_white.svg" alt="健幸どうぶつクリニック"></h1>
+        <a href="tel:" class="a_tel">
+          <p class="p_tel"> 082-836-5200</p>
+        </a>
+        <p class="p_postcord">&#12306;739-0012</p>
+        <p class="p_address">
+          広島県広島市中区上八丁堀8番20号</p>
+      </div>
+
+      <div class="clinic_sche">
+        <h2><img src="img/common/title_schedule.svg" alt="診察スケジュール" width="200" height="50"></h2>
+        <img src="img/common/born_green.svg" alt="" width="50" height="20">
+
+        <div class="sche_fig">
+          <img src="img/common/sche_fig.svg" alt="" width="450" height="140">
+        </div>
+
+        <dl class="sche_time">
+          <div class="flex">
+            <dl>受付時間</dl>
+            <dt>9:00-12:00/16:00-19:00</dt>
+          </div>
+          <div class="flex">
+            <dl>休診日 </dl>
+            <dd>木曜午後</dd>
+          </div>
+          <p><small>※休診日を設けることがありますのでHPにてご確認ください。</small></p>
+        </dl>
+
+
+      </div>
+
+    </div>
+
+
+    <div id="google_map" class="sec">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3292.1188950346655!2d132.46140467622968!3d34.39832379937644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x355a9be08e7c0a8f%3A0x5456f89d240f91b1!2z44OR44K944Kz44Oz44K544Kv44O844Or77yo77yh77yK77yu77yh!5e0!3m2!1sja!2sjp!4v1696345781797!5m2!1sja!2sjp" width="800" height="400" style="border:0; margin-right: calc(50% - 50vw); margin-left: calc(50% - 50vw); max-width: none; width: 100vw" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+
+  <footer>
+    <div class="inner">
+      <nav>
+        <ul class="gnav flex">
+          <li>
+            <a href="./index.html#first">
+              <p class="ja_nav">初めての方へ<img src="img/top/icon_ashiato.svg" alt="" class="footer_gnav_icon"></p>
+            </a>
+          </li>
+          <li>
+            <a href="index.html#medical">
+              <p class="ja_nav">診察のご案内<img src="img/top/icon_ashiato.svg" alt="" class="footer_gnav_icon"></p>
+            </a>
+          </li>
+          <li>
+            <a href="stuff.html">
+              <p class="ja_nav">スタッフ紹介<img src="img/top/icon_ashiato.svg" alt="" class="footer_gnav_icon"></p>
+            </a>
+          </li>
+          <li>
+            <a href="clinic.html">
+              <p class="ja_nav">施設案内<img src="img/top/icon_ashiato.svg" alt="" class="footer_gnav_icon"></p>
+            </a>
+          </li>
+          <li>
+            <a href="salonhotel.html">
+              <p class="ja_nav">サロン＆ホテル<img src="img/top/icon_ashiato.svg" alt="" class="footer_gnav_icon"></p>
+            </a>
+          </li>
+          <li>
+            <a href="access.html">
+              <p class="ja_nav">アクセス<img src="img/top/icon_ashiato.svg" alt="" class="footer_gnav_icon"></p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <p class="p_small"><small>&copy;健幸どうぶつクリニック</small></p>
+    </div>
+
+
+  </footer>
+
+
+  <!-- JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.js"></script>
+
+
+
+  <!--自作のJS-->
+  <script src="js/hero_ss.js"></script>
+  <script src="js/pagetop.js"></script>
+  <script src="js/slideshow.js"></script>
+  <script src="js/spmenu.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,906 @@
+@charset "utf-8";
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    transform: translate(0, 2%);
+    opacity: 0.5;
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+.flex {
+    display: flex;
+}
+
+body {
+    font-family: ten-mincho, serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: #f2f2f2;
+    line-height: 1.8;
+    background-color: #1e1c1b;
+}
+
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+
+/* -＝＝＝＝＝＝＝＝＝＝＝余白調整＝＝＝＝＝＝＝＝＝＝＝＝ */
+
+
+.inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: calc(100% - 8px);
+}
+
+
+
+/*========= 途中からハンバーガーメニューに変化するのためのCSS ===============*/
+
+
+/*========= ヘッダーナビゲーションのためのCSS ===============*/
+
+header {
+    position: relative;
+}
+
+/*==ヘッダーの形状*/
+#header {
+    position: absolute;
+    top: 0;
+    height: 120px;
+    width: 100%;
+
+    color: #f2f2f2;
+    text-align: center;
+    background-color: rgba(68, 68, 68, 0.4);
+}
+
+.header_inner {
+    margin: 1rem 3%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .header_inner h1 span{
+        font-size: 24px;
+    }
+}
+/*ナビゲーション*/
+#g-nav ul {
+	opacity: 0;/*はじめは透過0*/
+    /*ナビゲーション天地中央揃え※レイアウトによって調整してください。不必要なら削除*/
+    position: absolute;
+    z-index: 999;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+/*背景が出現後にナビゲーションを表示*/
+#g-nav.panelactive ul {
+    opacity:1;
+}
+
+
+
+
+/*アクティブになったエリア*/
+#g-nav.panelactive{
+    /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+    position:fixed;
+    z-index: 999;
+	top: 0;
+	width:100%;
+    height: 100vh;
+}
+
+/*丸の拡大*/
+.circle-bg{
+    position: fixed;
+	z-index:3;
+    /*丸の形*/
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #8a8a8a;
+    
+    /*丸のスタート位置と形状*/
+	transform: scale(0);/*scaleをはじめは0に*/
+	right:-50px;
+    top:-50px;
+    transition: all 0.8s;
+}
+
+.circle-bg.circleactive{
+	transform: scale(50);/*クラスが付与されたらscaleを拡大*/
+}
+
+
+/*リストのレイアウト設定*/
+#g-nav li{
+	text-align: center; 
+	list-style: none;
+}
+
+#g-nav li a{
+	text-decoration: none;
+	display: block;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	font-weight: bold;
+    display: block;
+    text-decoration: none;
+    color: #4a4a4a;
+    padding: 2rem;
+}
+#g-navi ul li.current a,
+#g-navi ul li a:hover {
+    color: #878787;
+}
+
+
+/*========= ボタンのためのCSS ===============*/
+.openbtn{
+	position:fixed;
+	top:10px;
+	right: 10px;
+	z-index: 9999;/*ボタンを最前面に*/
+	cursor: pointer;
+    width: 50px;
+    height:50px;
+}
+	
+/*×に変化*/	
+.openbtn span{
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+	background-color: #666;
+  	width: 45%;
+  }
+
+.openbtn span:nth-of-type(1) {
+	top:15px;	
+}
+
+.openbtn span:nth-of-type(2) {
+	top:23px;
+}
+
+.openbtn span:nth-of-type(3) {
+	top:31px;
+}
+
+.openbtn.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+	opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3){
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
+
+section {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* -＝＝＝＝＝＝＝＝＝＝＝フッター＝＝＝＝＝＝＝＝＝＝＝＝ */
+.footer {
+    padding-top: 30px;
+    padding-bottom: 15px;
+
+
+}
+
+.footer_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr) );
+    margin: 0 auto;
+}
+
+
+.footer_box {
+    text-align: center;
+    padding: 30px;
+    border-left: 1px solid #fff;
+}
+
+
+.footer_box:first-child {
+    font-family: din-2014, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #836b54;
+    text-align: left;
+    border-left: none;
+}
+
+.footer_box a:hover {
+    color: #FFF;
+    transition-duration: 1s;
+}
+
+
+/*  HOVER COLOR */
+
+.sns_list a svg:hover #facebook,
+.sns_list a svg:hover #instagram {
+    fill: #836b54;
+}
+
+/* GENERAL STYLES */
+.sns_list {
+    width: 100%;
+    margin: 30px auto;
+    text-align: left;
+    zoom: 1;
+}
+
+.sns_list a {
+    outline: none;
+    border: 0;
+    text-decoration: none;
+}
+
+.sns_list a svg #facebook,
+.sns_list a svg #instagram {
+    transition: 200ms;
+    transition-timing-function: ease-in-out;
+    -webkit-transition: 200ms;
+    -webkit-transition-timing-function: ease-in-out;
+}
+
+
+
+.footer-tel {
+    font-size: 26px;
+    font-weight: bold;
+    margin: 26px 0 16px 0;
+    font-family: sheila, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.footer-time {
+    font-size: 13px;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 90px;
+}
+
+
+
+
+
+
+
+/*＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+========= ローディング画面のためのCSS ===============
+===================================================*/
+#splash {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #333;
+    z-index: 9999999;
+    text-align: center;
+    color: #fff;
+}
+
+#splash-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/*========= 画面遷移のためのCSS ===============*/
+
+/*画面遷移アニメーション*/
+.splashbg {
+    display: none;
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear .splashbg {
+    display: block;
+    content: "";
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    background-color: #665242;
+    /*伸びる背景色の設定*/
+    animation-name: PageAnime;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes PageAnime {
+    0% {
+        transform-origin: left;
+        transform: scaleX(0);
+    }
+
+    50% {
+        transform-origin: left;
+        transform: scaleX(1);
+    }
+
+    50.001% {
+        transform-origin: right;
+    }
+
+    100% {
+        transform-origin: right;
+        transform: scaleX(0);
+    }
+}
+
+/*画面遷移の後現れるコンテンツ設定*/
+#container {
+    opacity: 0;
+    /*はじめは透過0に*/
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear #container {
+    animation-name: PageAnimeAppear;
+    animation-duration: 1s;
+    animation-delay: 0.8s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes PageAnimeAppear {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* ================top======================== */
+
+section {
+    position: relative;
+    z-index: 1;
+}
+
+.sec {
+    padding-top: 100px;
+    padding-bottom: 150px
+}
+
+#TOP {
+    text-align: center;
+}
+
+.hero {
+    height:100svh;
+    background-image: url(img/index/mainvisual.jpg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+}
+
+
+.big_text{
+    padding-top: 250px;
+}
+
+.big_text h2 {
+    font-size: 55px;
+    font-family: garamond-premier-pro, serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #f2f2f2;
+
+}
+
+.big_text span {
+    font-size: 75px;
+    font-family: sheila, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    margin: 0 20px;
+}
+
+@media (max-width: 768px) {
+    .big_text h2 {
+        font-size: 32px;
+    }
+    .big_text span {
+        font-size: 40px;
+    }
+}
+
+.co_button:hover::before {
+    scale: 3;
+}
+
+
+
+#main_text {
+    background-color: #f2f2f2;
+    color: #000;
+}
+
+/* =======================================
+========SCROLL==============================
+==================================== */
+/*スクロールダウン全体の場所*/
+.scrolldown2 {
+    /*描画位置※位置は適宜調整してください*/
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+}
+
+/*Scrollテキストの描写*/
+.scrolldown2 span {
+    /*描画位置*/
+    position: absolute;
+    left: 5px;
+    bottom: 10px;
+    /*テキストの形状*/
+    color: #eee;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    /* font-family: din-condensed, sans-serif; */
+    font-weight: normal;
+    /*縦書き設定*/
+    -ms-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+}
+
+/* 丸の描写 */
+.scrolldown2:before {
+    content: "";
+    /*描画位置*/
+    position: absolute;
+    bottom: 0;
+    left: -4px;
+    /*丸の形状*/
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #eee;
+    /*丸の動き1.6秒かけて透過し、永遠にループ*/
+    animation:
+        circlemove 1.6s ease-in-out infinite,
+        cirlemovehide 1.6s ease-out infinite;
+}
+
+/*下からの距離が変化して丸の全体が上から下に動く*/
+@keyframes circlemove {
+    0% {
+        bottom: 45px;
+    }
+
+    100% {
+        bottom: -5px;
+    }
+}
+
+/*上から下にかけて丸が透過→不透明→透過する*/
+@keyframes cirlemovehide {
+    0% {
+        opacity: 0
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 0.9;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* 線の描写 */
+.scrolldown2:after {
+    content: "";
+    /*描画位置*/
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /*線の形状*/
+    width: 2px;
+    height: 50px;
+    background: #eee;
+}
+
+
+
+
+
+/* ==================SECTION======================== */
+/* ============共通設定=============================== */
+#menu_list{
+    position: relative;
+}
+.sec_headding_rl{
+    position: absolute;
+    line-height: 1;
+    margin-bottom: 1rem;
+    left: 0;
+    font-size: 120px;
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    height: 500px;
+    color: #616161;
+    opacity: .8;
+    z-index: -1;
+}
+
+.sec_headding{
+    font-size: 28px;
+    font-weight: normal;
+    margin-bottom: 2rem;
+
+}
+
+/*  ==================#main_text===========================*/
+.phrase {
+    padding: 10px;
+}
+
+.lemansauto {
+    padding: 30px;
+    font-size: 30px;
+    font-family: sheila, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.co_button {
+    cursor: pointer;
+    position: relative; 
+    width: 300px;
+    padding: 8px 24px;
+    font-size: 18px;
+    color: rgb(193, 163, 98);
+    border: 2px solid rgb(193, 163, 98);
+    background-color: transparent;
+    font-family: din-condensed, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    transition: all 1s cubic-bezier(0.23, 1, 0.320, 1);
+    overflow: hidden;
+    margin-top: 3em;
+}
+
+.co_button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 300px;
+    height: 50px;
+    border-radius: inherit;
+    scale: 0;
+    z-index: -1;
+    background-color: rgb(193, 163, 98);
+    transition: all 1s cubic-bezier(0.23, 1, 0.320, 1);
+}
+@media (max-width: 768px) {
+    .co_button,
+    .co_button::before{
+        width: 100%;
+    }
+}
+.co_button:hover {
+    color: #0a1110;
+    scale: 1.1;
+    box-shadow: 0 0px 20px rgba(193, 163, 98, 0.4);
+}
+
+.co_button:active {
+    scale: 1;
+}
+
+/* ===================#MENU_LIst================================ */
+#menu_list {
+    background-color: #3f3b3a;
+}
+
+
+
+/*==================================================
+スライダーのためのcss
+===================================*/
+
+
+.slider img {
+    width: 100%;
+    /*スライダー内の画像を横幅100%に*/
+    height: auto;
+}
+
+/*slickのJSで書かれるタグ内、スライド左右の余白調整*/
+
+.slider .slick-slide {
+    margin: 0 10px;
+}
+
+/*矢印の設定*/
+
+/*戻る、次へ矢印の位置*/
+.slick-prev,
+.slick-next {
+    position: absolute;
+    /*絶対配置にする*/
+    top: 42%;
+    cursor: pointer;
+    /*マウスカーソルを指マークに*/
+    outline: none;
+    /*クリックをしたら出てくる枠線を消す*/
+    border-top: 2px solid #666;
+    /*矢印の色*/
+    border-right: 2px solid #666;
+    /*矢印の色*/
+    height: 15px;
+    width: 15px;
+}
+
+.slick-prev {
+    /*戻る矢印の位置と形状*/
+    left: -1.5%;
+    transform: rotate(-135deg);
+}
+
+.slick-next {
+    /*次へ矢印の位置と形状*/
+    right: -1.5%;
+    transform: rotate(45deg);
+}
+
+/*ドットナビゲーションの設定*/
+
+.slick-dots {
+    text-align: center;
+    margin: 20px 0 0 0;
+}
+
+.slick-dots li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.slick-dots button {
+    color: transparent;
+    outline: none;
+    width: 5px;
+    /*ドットボタンのサイズ*/
+    height: 5px;
+    /*ドットボタンのサイズ*/
+    display: block;
+    border-radius: 50%;
+    background: #ccc;
+    /*ドットボタンの色*/
+}
+
+.slick-dots .slick-active button {
+    background: #333;
+    /*ドットボタンの現在地表示の色*/
+}
+
+
+#video-area {
+    height: 500px;
+    position: fixed;
+    z-index: -1;
+    /*最背面に設定*/
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+#video {
+    /*天地中央配置*/
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*縦横幅指定*/
+    width: 177.77777778vh;
+    /* 16:9 の幅→16 ÷ 9＝ 177.77% */
+    height: 56.25vw;
+    /* 16:9の幅 → 9 ÷ 16 = 56.25% */
+    min-height: 100%;
+    min-width: 100%;
+}
+
+
+
+
+
+#goods_list {
+    background-color: #3f3b3a;
+}
+
+
+.item-list dl {
+    margin-top: 2rem;
+}
+
+.item-list dt {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.item-list dd {
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-top: 0.5rem;
+}
+
+.item-list .price {
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.item-list  img{
+    aspect-ratio: 1/1;
+
+}
+
+
+/* ここ調整 */
+.good_list_bg {
+    background-color: #665242;
+    border-top-right-radius: 25%;
+    background-size: 50%;
+}
+
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr) ) ;
+    gap: 4rem 2rem;
+    place-content: center;
+    place-items: center;
+    margin: 0 auto;
+}
+
+
+.container .card .face {
+    width: 300px;
+    height: 500px;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .card .face.face2 .content img {
+    max-width: 240px;
+    object-fit: cover;
+    aspect-ratio: 1/ 1;
+}
+
+.container .card .face.face2 .content h4 {
+    margin: 10px 0 4px;
+    padding: 0;
+    color: #202020;
+    text-align: center;
+    font-size: 18px;
+}
+
+.container .card .face.face2 {
+    background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+
+}
+
+.container .card:hover .face.face2 {
+    transform: translateY(3px);
+}
+
+.container .card .face.face2 .content p {
+    margin: 0;
+    padding: 0;
+    color: #202020;
+    line-height: 1.5;
+}
+
+/* BUY NOW */
+.container .card .face.face2 .content a {
+    margin: 1rem 0 ;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: #333;
+    padding: 5px;
+    border: 1px solid #333;
+}
+
+.container .card .face.face2 .content a:hover {
+    background: #333;
+    color: #fff;
+}
+
+.bg{
+    height: 500px;
+    width: 100%;
+    background-image: url(img/index/index_bg2.jpg);
+   background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+  }
+  
+    
