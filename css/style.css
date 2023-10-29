@@ -18,11 +18,13 @@ html {
 
 
 body {
-  color: #3a3a3a;
+  background-color: #fffdf9;
+  color: #1d1d1d;
   font-family: zen-maru-gothic, sans-serif;
   font-size: 16px;
   line-height: 1.5;
   text-align: left;
+  letter-spacing: 0.05em;
 }
 
 /* トップページの後ろのgradation */
@@ -94,6 +96,17 @@ a:hover {
 }
 
 
+/* スマホの時に見出しに改行させる */
+.sp_br {
+  display: none; 
+  /* 768px以上では改行タグを無効に。 */
+}
+@media screen and (max-width: 768px) {
+  .sp_br {
+    display: block; 
+    /* 768px未満で改行タグを有効に。 */
+  }
+}
 
 
 /* ====================
