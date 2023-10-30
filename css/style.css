@@ -267,6 +267,10 @@ footer {
     padding: 15px;
   }
 
+  #index .gnav_item a{
+    color: #3f271a;
+  }
+
 }
 
 
@@ -1091,7 +1095,7 @@ line-height: 1;
 }
 
 .contact h3{
-  font-size: 50px;
+  font-size: 40px;
   
 }
 .contact_car{
