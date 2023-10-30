@@ -34,7 +34,7 @@ gsap.to('.car_img', {
   xPercent: 100,
   duration: 3,
   scrollTrigger: {
-    trigger: 'car',
+    trigger: '.car_img',
     start: 'bottom bottom',
     // markers:true,
     toggleActions: 'play none none reverse',

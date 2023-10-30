@@ -143,6 +143,10 @@ h1 img {
   line-height: 1;
   margin-bottom: 0.5rem;
 }
+#index .gnav_item a{
+  color: #fafafa;
+}
+
 
 .gnav_item span {
   font-weight: normal;
@@ -384,7 +388,8 @@ footer {
 
 .sort-btn li.active {
   /*ボタンに現在地＝activeというクラス名がついたら背景色を変更*/
-  color: #0000ff
+  color: #d43232;
+  font-weight: bold;
 }
 
 /*横幅が480px以下になった際の指定*/
@@ -893,7 +898,7 @@ main{
 
 /* スキルボタン */
 .skill_text_box {
-  color: #3a3a3a;
+  color: inherit;
 }
 
   .skill-sec{
@@ -1052,7 +1057,7 @@ main{
 
 .time_study{
   background: #e25124;
-  color: #f2f2f2;
+  color: #fafafa;
   border-radius:8px;
   padding: 4px 20px;
   display: inline;
@@ -1117,3 +1122,21 @@ line-height: 1;
     transform: scale(0);
   }
 }
+.mame_box{
+  text-align: center;
+  animation: mame_go 2s ease infinite;
+}
+.mame_box .click_here{
+  font-family: "jumble", sans-serif;
+  font-size: 30px;
+}
+@keyframes mame_go{
+  0% , 100%{
+    transform: rotate(15deg);
+}
+50%{
+    transform: rotate(-10deg);
+}
+}
+
+
