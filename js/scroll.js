@@ -33,7 +33,6 @@ const car = document.querySelector('.car_img');
 gsap.to('.car_img', {
   xPercent: 100,
   duration: 3,
-
   scrollTrigger: {
     trigger: 'car',
     start: 'bottom bottom',
