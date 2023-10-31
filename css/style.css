@@ -729,7 +729,7 @@ footer {
 
 .scroll_wrap {
   display: flex;
-  column-gap: 500px;
+  column-gap: 900px;
   position: absolute;
   top: 0;
   left: 0;
@@ -987,7 +987,7 @@ main {
   position: absolute;
   bottom: 10%;
   right: 0;
-  z-index: 100;
+  z-index: 1;
 
 }
 
@@ -995,7 +995,7 @@ main {
   position: absolute;
   bottom: 0;
   right: 10%;
-  z-index: 101;
+  z-index: 2;
 }
 
 @media screen and (max-width: 768px) {
@@ -1175,7 +1175,10 @@ main {
 
 .mame_box .click_here {
   font-family: "jumble", sans-serif;
-  font-size: 30px;
+  font-size: 64px;
+  line-height: 1;
+  color: #d43232;
+  margin-top: 2rem;
 }
 
 @keyframes mame_go {
