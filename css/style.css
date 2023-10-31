@@ -1143,4 +1143,32 @@ line-height: 1;
 }
 }
 
+.back_page{
+  font-weight: bold;
+  color: #3f271a;
+  transition: all 0.8s ease 0.2s;
+  position: relative;
+  padding-left: 28px;
+
+
+}
+.back_page::before{
+  position: absolute;
+  left: 0;
+  content: url('../img/works/handle.png');
+  transition: all 0.5s ease ;
+
+}
+
+
+.back_page:hover{
+  opacity: 0.5;
+  transform: translate(-16px,0);
+  
+}
+
+.back_page:hover:before{
+  transform: rotate(-45deg);
+}
+
 
