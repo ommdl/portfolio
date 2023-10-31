@@ -101,9 +101,10 @@ a:hover {
   display: none; 
   /* 768px以上では改行タグを無効に。 */
 }
+
 @media screen and (max-width: 768px) {
   .sp_br {
-    display: block; 
+    display: block;
     /* 768px未満で改行タグを有効に。 */
   }
 }
@@ -143,7 +144,8 @@ h1 img {
   line-height: 1;
   margin-bottom: 0.5rem;
 }
-#index .gnav_item a{
+
+#index .gnav_item a {
   color: #fafafa;
 }
 
@@ -365,16 +367,19 @@ footer {
 /*==================================================
 ギャラリーのためのcss
 ===================================*/
-.works_p{
+.works_p {
   font-size: 14px;
 }
-.works_name{
+
+.works_name {
   font-weight: bold;
 }
-.item-content img{
+
+.item-content img {
   margin-bottom: 0.5rem;
-  
+
 }
+
 /*＝＝＝並び替えボタンのCSS*/
 .sort-btn {
   display: flex;
@@ -437,7 +442,7 @@ footer {
 .grid img {
   width: 100%;
   height: auto;
-  
+
 }
 
 /*横幅が768px以下になった際の指定*/
@@ -475,7 +480,7 @@ footer {
 }
 
 /* =====viewsite button======*/
-.view_site_button{
+.view_site_button {
   text-align: center;
   margin-bottom: 2rem;
 }
@@ -541,7 +546,7 @@ footer {
   margin-left: 3em;
 }
 
-.works_more{
+.works_more {
   margin: 1rem 0 2rem 0;
   font-size: 12px;
   line-height: 1;
@@ -549,43 +554,47 @@ footer {
 
 
 
-.works_color_li{
+.works_color_li {
   height: 50px;
   width: 50px;
   border-radius: 50%;
 }
 
-#kenko-animal .basecolor{
+#kenko-animal .basecolor {
   background-color: #fcf2de;
 }
-#kenko-animal .maincolor{
+
+#kenko-animal .maincolor {
   background-color: #ed8e23;
 }
-#kenko-animal .accentcolor{
+
+#kenko-animal .accentcolor {
   background-color: #89c4ec;
 }
 
-#lemansauto .basecolor{
+#lemansauto .basecolor {
   background-color: #1e1c1b;
 }
-#lemansauto .maincolor{
+
+#lemansauto .maincolor {
   background-color: #545353;
 }
-#lemansauto .accentcolor{
+
+#lemansauto .accentcolor {
   background-color: #c1a362;
 }
 
 
 .works_color {
-  grid-template-columns: repeat(auto-fit,100px);
+  grid-template-columns: repeat(auto-fit, 100px);
   gap: 0.25rem;
-  }
-  
-  .works_more_card {
+}
+
+.works_more_card {
   grid-row: span 3;
   /*サブグリットの指定*/
   grid-template-rows: subgrid;
-  }
+}
 
 @media (max-width: 767px) {
   .work_text dt {
@@ -706,13 +715,14 @@ footer {
   background-color: #ffc643;
 }
 
-.bg_yellow{
+.bg_yellow {
   background-color: #ffc643;
 }
 
 .scroll_container {
   width: 100%;
-  height: 900px;/* height: calc(100svh - 150px); */
+  height: 900px;
+  /* height: calc(100svh - 150px); */
   position: relative;
   overflow: hidden;
 }
@@ -731,10 +741,10 @@ footer {
   color: #000000; */
   /* background-color: #eeeeee; */
   width: 320px;
-  height:500px;
+  height: 500px;
 }
 
-.nen{
+.nen {
   font-size: 90px;
   margin-bottom: 0.5rem;
   position: relative;
@@ -753,57 +763,62 @@ footer {
   background: -webkit-linear-gradient(to right, rgb(230, 90, 90), transparent);
   background: linear-gradient(to right, rgb(230, 90, 90), transparent);
 }
-.scroll_title{
+
+.scroll_title {
   font-size: 28px;
- font-weight: bold;
- margin-bottom: 1rem;
- line-height: 1.25;
- letter-spacing: -0.01rem;
- 
+  font-weight: bold;
+  margin-bottom: 1rem;
+  line-height: 1.25;
+  letter-spacing: -0.01rem;
+
 }
 
-.scroll_text{
+.scroll_text {
   letter-spacing: 0.03rem;
   line-height: 1.8;
   padding: 0 1rem;
 }
+
 .car_img img,
-.car_img{
+.car_img {
   height: 400px;
 }
 
 /* ===============↓profileの基本設定 =========================
 =============================================================*/
-main{
+main {
   position: relative;
 }
+
 .profile_visual,
 .name,
 .sub_title {
   text-align: center;
 }
-.sub_title{
+
+.sub_title {
   font-weight: normal;
   font-size: 36px;
   font-family: "jumble", sans-serif;
   line-height: 0.75;
   margin-top: 2rem;
 }
-.sub_title span{
+
+.sub_title span {
   font-size: 18px;
 }
 
-.h2_hedding{
+.h2_hedding {
   font-family: "jumble", sans-serif;
   -webkit-writing-mode: vertical-rl;
-    -ms-writing-mode: tb-rl;
-    writing-mode: vertical-rl;
-    height: 300px;
-    opacity: 0.2;
-    font-size: 72px;
-    margin-bottom: 1rem;
-    position: absolute;
-    position: fixed;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  height: 300px;
+  opacity: 0.2;
+  font-size: 72px;
+  margin-bottom: 1rem;
+  position: absolute;
+  position: fixed;
   z-index: -1;
   color: #ed8e23;
 }
@@ -825,11 +840,12 @@ main{
 }
 
 
-.profile_p{
+.profile_p {
   letter-spacing: 0.9px;
   line-height: 1.5;
 
 }
+
 #me_visual {
   min-width: 300px;
 }
@@ -850,47 +866,58 @@ main{
   box-shadow: 0 3px 5px rgba(49, 49, 49, 0.22);
   background-image: url(../img/aboutme/crisp-paper-ruffles.png);
 }
+
 @media screen and (max-width: 768px) {
   .skill_container {
-    width: 100%; 
+    width: 100%;
     padding: 2rem 2rem;
   }
 }
-.skill_text{
+
+.skill_text {
   margin-bottom: 3rem;
 }
 
 
-.click_here{
+.click_here {
   padding: 1rem;
   font-weight: bold;
   font-size: 1.5rem;
   animation: click_here_anime 2s ease-in-out infinite;
   color: #3f271a;
-  }
+}
 
 @keyframes click_here_anime {
-  0%, 40% {
+
+  0%,
+  40% {
     transform: skew(0deg, 0deg);
   }
+
   5% {
     transform: skew(5deg, 5deg);
   }
+
   10% {
     transform: skew(-4deg, -4deg);
   }
+
   15% {
     transform: skew(3deg, 3deg);
   }
+
   20% {
     transform: skew(-2deg, -2deg);
   }
+
   25% {
     transform: skew(1deg, 1deg);
   }
+
   30% {
     transform: skew(-0.6deg, -0.6deg);
   }
+
   35% {
     transform: skew(0.3deg, 0.3deg);
   }
@@ -905,16 +932,16 @@ main{
   color: inherit;
 }
 
-  .skill-sec{
-    opacity: 0;
-    display: none;
-    transition: 0.5s opacity;
+.skill-sec {
+  opacity: 0;
+  display: none;
+  transition: 0.5s opacity;
 }
 
 
 
-.skill_button ul{
-  grid-template-columns:  repeat(5, minmax(48px, 82px));
+.skill_button ul {
+  grid-template-columns: repeat(5, minmax(48px, 82px));
   gap: 8px;
   place-content: center;
   place-items: center;
@@ -922,33 +949,35 @@ main{
 
 
 .skill_button,
-.skill_container h3{
- text-align: center;
+.skill_container h3 {
+  text-align: center;
   align-items: center;
 }
-.skill_button ul{
+
+.skill_button ul {
   text-align: center;
 }
 
 .skill_item p {
   padding-top: 50px;
 }
-.skill-sec.open{
-    opacity: 1;
-    display: block;
+
+.skill-sec.open {
+  opacity: 1;
+  display: block;
 }
 
-.button_img1{
-    display: block;
-    transition: 0.5s;
-    filter: brightness(0.5) drop-shadow(2px 2px 2px #585858);
-   }
+.button_img1 {
+  display: block;
+  transition: 0.5s;
+  filter: brightness(0.5) drop-shadow(2px 2px 2px #585858);
+}
 
 
-.button_link.open .button_img1{
-  filter:  drop-shadow(1px 1px 1px #585858);
+.button_link.open .button_img1 {
+  filter: drop-shadow(1px 1px 1px #585858);
   transform: scale(1.1);
-  transform:translateY(2px);
+  transform: translateY(2px);
 }
 
 
@@ -961,7 +990,8 @@ main{
   z-index: 100;
 
 }
-.skill_img_car{
+
+.skill_img_car {
   position: absolute;
   bottom: 0;
   right: 10%;
@@ -971,14 +1001,16 @@ main{
 @media screen and (max-width: 768px) {
 
   .skill_img,
-  .skill_img_car{
+  .skill_img_car {
     display: none;
   }
+
   .water_text h3 {
     font-size: 38px;
 
   }
 }
+
 /* ===========================================
 ==========SKILLの波線文字=====================
 ============================================= */
@@ -990,7 +1022,7 @@ main{
 
 }
 
-.oil_img{
+.oil_img {
   position: absolute;
   top: 0;
   left: -50px;
@@ -998,7 +1030,8 @@ main{
 }
 
 
-@keyframes oil{
+@keyframes oil {
+
   0%,
   100% {
     transform: rotate(0);
@@ -1059,16 +1092,16 @@ main{
   }
 }
 
-.time_study{
+.time_study {
   background: #e25124;
   color: #fafafa;
-  border-radius:8px;
+  border-radius: 8px;
   padding: 4px 20px;
   display: inline;
   font-weight: bold;
 }
 
-.skill-sec__container ul{
+.skill-sec__container ul {
   list-style-type: disc;
   margin-left: 3rem;
   margin-bottom: 2rem;
@@ -1081,66 +1114,113 @@ main{
   text-align: center;
   font-size: 3rem;
 }
+
 #scrolly-video {
   min-width: 100vh;
 
   min-height: 100vh;
-  z-index: -1; /* 弟要素に文字が入るなら必須 */
-}
-/*==========CONTACT ==================*/
-.contact{
-  height: calc( 100svh - 120px);
-text-align: center;
-line-height: 1;
+  z-index: -1;
+  /* 弟要素に文字が入るなら必須 */
 }
 
-.contact h3{
-  font-size: 40px;
-  
+/*==========CONTACT ==================*/
+.contact {
+  height: calc(100svh - 120px);
+  text-align: center;
+  line-height: 1;
 }
-.contact_car{
+
+.contact h3 {
+  font-size: 40px;
+
+}
+
+.contact_car {
   margin-top: 4rem;
   animation: contact_car 8s ease infinite;
 }
 
 
 @keyframes contact_car {
-  0%{
+  0% {
     opacity: 0;
-    transform:scale(100%);
+    transform: scale(100%);
   }
-  15%{transform: rotateX(20deg);}
+
+  15% {
+    transform: rotateX(20deg);
+  }
 
 
-  30%{
+  30% {
     opacity: 1;
-    transform:scale(100%);
+    transform: scale(100%);
 
   }
+
   /* 50% {
     opacity: 1;
     transform:scale(50%)
   } */
-  100%{
+  100% {
     opacity: 0;
     transform: scale(0);
   }
 }
-.mame_box{
+
+.mame_box {
   text-align: center;
   animation: mame_go 2s ease infinite;
 }
-.mame_box .click_here{
+
+.mame_box .click_here {
   font-family: "jumble", sans-serif;
   font-size: 30px;
 }
-@keyframes mame_go{
-  0% , 100%{
+
+@keyframes mame_go {
+
+  0%,
+  100% {
     transform: rotate(15deg);
-}
-50%{
+  }
+
+  50% {
     transform: rotate(-10deg);
-}
+  }
 }
 
 
+
+
+
+
+.back_page {
+  position: relative;
+  padding-left: 35px;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+.back_page:before {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-image: url('../img/works/handle.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.3s;
+}
+.back_page:hover{
+  opacity: 0.5;
+  transform: translateX(-5px);
+}
+
+.back_page:hover::before{
+  transform: rotate(-30deg);
+
+}
