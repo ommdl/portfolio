@@ -5,21 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WORKS | NEW DRIVE AND DREAM</title>
-    <meta name="description" content="柳原遥香のポートフォリオです。">
+    <meta name="description" content="これまで作ってきた制作物の紹介ページです。">
     <!--自作のJS-->
     <script src="js/menu.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    
+
     <script>
-        (function(d) {
-          var config = {
-            kitId: 'rlp3jfs',
-            scriptTimeout: 3000,
-            async: true
-          },
-          h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        (function (d) {
+            var config = {
+                kitId: 'rlp3jfs',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
         })(document);
-      </script>
+    </script>
 
     <!-- css -->
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
@@ -35,7 +35,6 @@
 
 
 <body>
- 
     <header id="header" class="header-inner flex">
         <h1><a href="index.html"><img src="img/logo.svg" alt="NEw DRIVE and DREAM 柳原遥香のポートフォリオ"></a></h1>
         <nav class="gnav">
@@ -45,19 +44,19 @@
                 <li class="gnav_item gnav__item_contact"><a href="contact.html">CONTACT <span>お問い合わせ</span></a></li>
             </ul>
             <div class="hamburger"> <!--SP用ハンバーガーメニュー３本線-->
-                <div class="btn-gNav">
-                  <span class="hamburger_span1"></span>
-                  <span class="hamburger_span2"></span>
-                  <span class="hamburger_span3"></span>
-                </div>
-              </div>
+                <!--SP用ハンバーガーメニュー３本線-->
+                <button class="btn-gNav">
+                    <span class="hamburger_span1"></span>
+                    <span class="hamburger_span2"></span>
+                    <span class="hamburger_span3"></span>
+                </button>
+            </div>
         </nav>
     </header>
 
 
     <main id="works">
         <h2 class="h2_hedding">product</h2>
-
         <div class="wrapper sec">
 
             <!-- ======カテゴリー======= -->
@@ -80,22 +79,33 @@
                     <div class="item-content">
                         <a href="works/kenko-animal.html" data-caption="グループ1キャプション">
                             <img src="img/works/kenko-do_menu.jpg" alt=""></a>
-                            <div>
-                                <p class="works_p">Website / Logo</p>
-                                <p class="works_name">健幸どうぶつ病院 (架空)</p>
-                            </div>
+                        <div>
+                            <p class="works_p">Website / Logo</p>
+                            <p class="works_name">健幸どうぶつ病院 (架空)</p>
+                        </div>
                     </div>
                 </li>
-
                 <!-- ======作品1(Le MansAutoカフェ)======= -->
                 <li class="item sort01">
                     <div class="item-content">
                         <a href="works/lemansauto.html" data-caption="グループ1キャプション">
                             <img src="img/works/lemansauto_menu.jpg" alt=""></a>
-                            <div>
-                                <p class="works_p">Website / Logo</p>
-                                <p class="works_name">Lemans Auto カフェ (架空)</p>
-                            </div>
+                        <div>
+                            <p class="works_p">Website / Logo</p>
+                            <p class="works_name">Lemans Auto カフェ (架空)</p>
+                        </div>
+                    </div>
+                </li>
+                <!-- ======作品１(ポートフォリオサイト)=======-->
+                <li class="item sort01">
+
+                    <div class="item-content">
+                        <a href="works/portfolio.html" data-caption="グループ1キャプション">
+                            <img src="img/works/myportfolio_menu.jpg" alt=""></a>
+                        <div>
+                            <p class="works_p">Website / Logo</p>
+                            <p class="works_name">柳原遥香ポートフォリオサイト</p>
+                        </div>
                     </div>
                 </li>
                 <!-- ======作品2(スポーツジム)======= -->
@@ -106,24 +116,38 @@
                             <div>
                                 <p class="works_p">Banner（コンペ作品）</p>
                                 <p class="works_name">女性向けスポーツジム　バナー</p>
-                            </div></a>
+                            </div>
+                        </a>
                     </div>
                 </li>
-                    <!-- ======作品2(就活用バナー)======= -->
-                    <li class="item sort02">
-                        <div class="item-content">
-                            <a href="works/recruitbanner.html" data-fancybox="group" data-caption="グループ2キャプション">
-                                <img src="img/works/recruit_menu.jpg" alt="">
-                                <div>
-                                    <p class="works_p">Banner（コンペ作品）</p>
-                                    <p class="works_name">就活生向けリクルート バナー
-                                    </p>
-                                </div></a>
-                        </div>
-                    </li>
-    
-                   <!-- ======作品2(健康食品)======= -->
-                   <li class="item sort02">
+                <!-- ======作品2(就活用バナー)======= -->
+                <li class="item sort02">
+                    <div class="item-content">
+                        <a href="works/recruitbanner.html" data-fancybox="group" data-caption="グループ2キャプション">
+                            <img src="img/works/recruit_menu.jpg" alt="">
+                            <div>
+                                <p class="works_p">Banner（コンペ作品）</p>
+                                <p class="works_name">就活生向けリクルート バナー
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <!-- ======作品2(美容液)======= -->
+                <li class="item sort02">
+                    <div class="item-content">
+                        <a href="works/beautyserum.html" data-fancybox="group" data-caption="グループ2キャプション">
+                            <img src="img/works/beautyserum_menu.jpg" alt="">
+                            <div>
+                                <p class="works_p">Package</p>
+                                <p class="works_name">株式会社3サロン様 美容液パッケージデザイン
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <!-- ======作品2(健康食品)======= -->
+                <li class="item sort02">
                     <div class="item-content">
                         <a href="works/superfood.html" data-fancybox="group" data-caption="グループ2キャプション">
                             <img src="img/works/superfood_menu.jpg" alt="">
@@ -131,23 +155,23 @@
                                 <p class="works_p">Package（コンペ作品）</p>
                                 <p class="works_name">健康食品 パッケージデザイン
                                 </p>
-                            </div></a>
+                            </div>
+                        </a>
                     </div>
                 </li>
-                
-                <!-- ======作品2(美容液)======= -->
-                   <li class="item sort02">
+                <!-- ======作品2(名刺)======= -->
+                <li class="item sort02">
                     <div class="item-content">
-                        <a href="works/beautyserum.html" data-fancybox="group" data-caption="グループ2キャプション">
-                            <img src="img/works/beautyserum_menu.jpg" alt="">
+                        <a href="works/name_card.html" data-fancybox="group" data-caption="グループ2キャプション">
+                            <img src="img/works/namecard_manu.jpg" alt="">
                             <div>
-                                <p class="works_p">Package（コンペ作品）</p>
-                                <p class="works_name">美容液　パッケージデザイン
+                                <p class="works_p">Business card</p>
+                                <p class="works_name">名刺デザイン
                                 </p>
-                            </div></a>
+                            </div>
+                        </a>
                     </div>
                 </li>
-
                 <!-- ======作品1（大伸堂製菓店）======= -->
                 <!-- <li class="item sort01">
                     <div class="item-content">
@@ -159,7 +183,18 @@
                             </div>
                     </div>
                 </li> -->
-
+                <!-- ======作品2（HaloWedding）======= -->
+                <li class="item sort02">
+                    <div class="item-content">
+                        <a href="works/halo_wedding.html" data-fancybox="group2" data-caption="グループ2キャプション">
+                            <img src="img/works/halowedding_menu.jpg" alt="">
+                            <div>
+                                <p class="works_p">Logo</p>
+                                <p class="works_name">Halo Wedding様ロゴ</p>
+                            </div>
+                        </a>
+                    </div>
+                </li>
                 <!-- ======作品2(沖縄カーショップロゴ)======= -->
                 <li class="item sort02">
                     <div class="item-content">
@@ -172,31 +207,17 @@
                         </a>
                     </div>
                 </li>
-
                 <!-- ======作品2(SDGSラジオ)======= -->
                 <li class="item sort02">
                     <div class="item-content">
                         <a href="works/sdgs_radio.html" data-fancybox="group2" data-caption="グループ2キャプション">
                             <img src="img/works/radio_menu.jpg" alt=""></a>
-                            <div>
-                                <p class="works_p">Logo（コンペ作品）</p>
-                                <p class="works_name">SDGsをテーマにしたラジオ番組ロゴ</p>
-                            </div>
+                        <div>
+                            <p class="works_p">Logo（コンペ作品）</p>
+                            <p class="works_name">SDGsをテーマにしたラジオ番組ロゴ</p>
+                        </div>
                     </div>
                 </li>
-                
-                <!-- ======作品2（HaloWedding）======= -->
-                <li class="item sort02">
-                    <div class="item-content">
-                        <a href="works/halo_wedding.html" data-fancybox="group2" data-caption="グループ2キャプション">
-                            <img src="img/works/halowedding_menu.jpg" alt="">
-                            <div>
-                                <p class="works_p">Logo</p>
-                                <p class="works_name">Halo Wedding様ロゴ</p>
-                            </div></a>
-                    </div>
-                </li>
-
                 <!-- ======作品2（alcoholspray）======= -->
                 <li class="item sort02">
                     <div class="item-content">
@@ -205,15 +226,10 @@
                             <div>
                                 <p class="works_p">Package</p>
                                 <p class="works_name">アルコール除菌スプレー ラベル</p>
-                            </div></a>
+                            </div>
+                        </a>
                     </div>
                 </li>
-                
-
-
-
-                    
-
                 <!-- ======作品3(LINEスタンプ)======= -->
                 <li class="item sort03">
                     <div class="item-content">
@@ -236,7 +252,8 @@
                                 <p class="works_p">Thumbnail design / movie</p>
                                 <p class="works_name">360度VR YouTube動画
                                 </p>
-                            </div></a>
+                            </div>
+                        </a>
                     </div>
                 </li>
 
@@ -253,7 +270,7 @@
                     </div>
                 </li> -->
 
-                
+
                 <!-- ======作品2（結婚式ポスター）======= -->
                 <!-- <li class="item sort02">
                     <div class="item-content">
@@ -265,9 +282,8 @@
                             </div></a>
                     </div>
                 </li> -->
-                
 
-                                
+
                 <!-- ======作品3（大伸堂SNS運営）======= -->
                 <!-- <li class="item sort03">
                     <div class="item-content">
@@ -279,14 +295,14 @@
                             </div></a>
                     </div>
                 </li> -->
-                
 
-            
 
-                
 
-                 <!-- ======作品3======= -->
-                 <!-- <li class="item sort03">
+
+
+
+                <!-- ======作品3======= -->
+                <!-- <li class="item sort03">
                     <div class="item-content">
                         <a href="works/space_hills.html" data-fancybox="group3" data-caption="グループ3キャプション">
                             <img src="img/products/other01.jpg" alt="">

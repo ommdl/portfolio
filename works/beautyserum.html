@@ -12,15 +12,15 @@
     <script src="../js/menu.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script>
-        (function(d) {
-          var config = {
-            kitId: 'rlp3jfs',
-            scriptTimeout: 3000,
-            async: true
-          },
-          h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        (function (d) {
+            var config = {
+                kitId: 'rlp3jfs',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
         })(document);
-      </script>
+    </script>
 
     <!-- css -->
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
@@ -29,7 +29,7 @@
 
 <body>
     <header id="header" class="header-inner flex">
-        <h1><a href="../index.html"><img src="../img/logo.svg" alt="NEw DRIVE and DREAM 柳原遥香のポートフォリオ"></a></h1> 
+        <h1><a href="../index.html"><img src="../img/logo.svg" alt="NEw DRIVE and DREAM 柳原遥香のポートフォリオ"></a></h1>
         <nav class="gnav">
             <ul class="gnav_list flex">
                 <li class="gnav_item gnav__item_works"><a href="../works.html">WORKS <span>つくってきたもの</span></a></li>
@@ -38,11 +38,11 @@
             </ul>
             <div class="hamburger">
                 <!--SP用ハンバーガーメニュー３本線-->
-                <div class="btn-gNav">
+                <button class="btn-gNav">
                     <span class="hamburger_span1"></span>
                     <span class="hamburger_span2"></span>
                     <span class="hamburger_span3"></span>
-                </div>
+                </button>
             </div>
         </nav>
     </header>
@@ -52,8 +52,8 @@
         <div class="wrapper">
 
             <div class="works_text_box sec">
-                <h2>新商品の美容液 <br class="sp_br">ラベル/パッケージデザイン</h2>
-                <p>パッケージデザイン（コンペ作品）</p>
+                <h2>株式会社3サロン様<br class="sp_br">ラベル/パッケージデザイン</h2>
+                <p>パッケージデザイン</p>
             </div>
             <div class="imgMock"><img src="../img/beautyserum/beautyserum1.jpg" alt=""></div>
 
@@ -64,7 +64,8 @@
                 <dl>
                     <dt>概要</dt>
                     <dd>
-                        新しくECサイトで販売される美容液のロゴ、ラベル、パッケージのデザインコンペに出す為、作成しました。<br>
+                        株式会社3サロン様より販売される美容液のロゴ、ラベル、パッケージのデザインコンペに出す為、作成しました。
+                        コンペで採用いただき、今後商品化が決定しております。
                         <div class="work_text_cont">
                             <span>【依頼詳細】</span><br>
                             <ul>
@@ -78,14 +79,14 @@
                                     デザインで今後も展開予定
                                 </li>
                             </ul>
-                        </div>  
+                        </div>
                     </dd>
                 </dl>
                 <!-- ターゲット層 -->
                 <dl>
                     <dt>ターゲット層</dt>
                     <dd>
-                       美容に関心が高く、日頃よりエステに通う20-50代の女性
+                        美容に関心が高く、日頃よりエステに通う20-40代の女性
                     </dd>
                 </dl>
                 <!-- 目的・ゴール -->
@@ -103,42 +104,34 @@
                     <dt>制作ポイント</dt>
                     <dd>
                         <div class="work_text_cont">
-                        <ul>
-                            <li>
-                                海藻や微細藻類由来の成分が配合されている事から『海』と、ブランド名『roku』から幸福を意味する『禄（ろく）』をイメージし、上記のコンセプトでデザインさせていただきました。
-                            </li><br>
-                            <li>パッケージには、メインカラーの青を使用した水彩風イラストを用いて海を表現しています。オレンジの色の成分が入っているので、アクセントで一部オレンジを入れています。</li><br>
-                            <li>自分の中にある美しさを海の底から引き出している様子をイメージし、白い文字を配置しました。</li><br>
-                            <li>
-                                販売予定のサロンのシンプルながらも洗練された高級感がある印象になるようにデザインしました。
-                            </li><br>
-                            <li>
-                                美容液以外の商品に展開、また別のシリーズの美容液に展開のケースを考え、様々なサイズへ展開できる余白広めのデザインにさせていただきました
-                            </li>
-                        </ul>
+                            <ul>
+                                <li>
+                                    海藻や微細藻類由来の成分が配合されている事から『海』と、ブランド名『roku』から幸福を意味する『禄（ろく）』をイメージし、上記のコンセプトでデザインさせていただきました。
+                                </li><br>
+                                <li>パッケージには、メインカラーの青を使用した水彩風イラストを用いて海を表現しています。オレンジの色の成分が入っているので、アクセントで一部オレンジを入れています。</li><br>
+                                <li>自分の中にある美しさを海の底から引き出している様子をイメージし、白い文字を配置しました。</li><br>
+                                <li>
+                                    販売予定のサロンのシンプルながらも洗練された高級感がある印象になるようにデザインしました。
+                                </li><br>
+                                <li>
+                                    美容液以外の商品に展開、また別のシリーズの美容液に展開のケースを考え、様々なサイズへ展開できる余白広めのデザインにさせていただきました
+                                </li>
+                            </ul>
                         </div>
-
-                    
-
                     </dd>
                 </dl>
-                <!-- 制作過程 -->
-                <!-- <dl>
-                    <dt>制作過程</dt>
-                    <dd>職業訓練校のデザイン課題で制作しました。課題内容が『”健康堂”という名の架空サイトをつくる』だったので、そのまま『健康堂』だとつまらないと考え、”けんこうどう”ぶつクリニックと引っかけて今回動物病院のWebサイトの作成に至りました。
-                    </dd>
-                </dl> -->
+
                 <dl>
                     <dt>制作期間</dt>
                     <dd>2日間</dd>
                 </dl>
                 <dl>
                     <dt>使用ツール</dt>
-                    <dd>illustrator/AdobeFresco<br>
+                    <dd>Illustrator/AdobeFresco<br>
                     </dd>
                 </dl>
             </div>
-            <button type="button" onclick="history.back()" class="back_page">作品一覧にもどる</button>
+            <a href="../works.html" class="back_page">作品一覧にもどる</a>
         </div>
     </main>
 

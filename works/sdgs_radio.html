@@ -13,26 +13,26 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
     <script>
-        (function(d) {
-          var config = {
-            kitId: 'rlp3jfs',
-            scriptTimeout: 3000,
-            async: true
-          },
-          h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        (function (d) {
+            var config = {
+                kitId: 'rlp3jfs',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
         })(document);
-      </script>
+    </script>
     <!-- css -->
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link rel="stylesheet" href="../css/style.css">
 
-   
+
 </head>
 
 
 <body>
     <header id="header" class="header-inner flex">
-        <h1><a href="../index.html"><img src="../img/logo.svg" alt="NEw DRIVE and DREAM 柳原遥香のポートフォリオ"></a></h1> 
+        <h1><a href="../index.html"><img src="../img/logo.svg" alt="NEw DRIVE and DREAM 柳原遥香のポートフォリオ"></a></h1>
         <nav class="gnav">
             <ul class="gnav_list flex">
                 <li class="gnav_item gnav__item_works"><a href="../works.html">WORKS <span>つくってきたもの</span></a></li>
@@ -41,11 +41,11 @@
             </ul>
             <div class="hamburger">
                 <!--SP用ハンバーガーメニュー３本線-->
-                <div class="btn-gNav">
+                <button class="btn-gNav">
                     <span class="hamburger_span1"></span>
                     <span class="hamburger_span2"></span>
                     <span class="hamburger_span3"></span>
-                </div>
+                </button>
             </div>
         </nav>
     </header>
@@ -70,7 +70,7 @@
                     <dt>概要</dt>
                     <dd>
                         SDGsと音楽をテーマにしたラジオ番組のロゴデザインコンペに出す為、作成しました。<br>
-                       
+
                         <div class="work_text_cont">
                             <span>【依頼詳細】</span><br>
                             <ul>
@@ -86,16 +86,10 @@
                                 <li>雰囲気：かわいらしいデザイン
                                 </li>
                             </ul>
-                        </div> 
+                        </div>
                     </dd>
                 </dl>
-                <!-- ターゲット層 -->
-                <!-- <dl>
-                    <dt>ターゲット層</dt>
-                    <dd>
-                        沖縄旅行を計画している20-50代の男女
-                    </dd>
-                </dl> -->
+
                 <!-- 目的・ゴール -->
                 <dl>
                     <dt>目的・ゴール</dt>
@@ -111,27 +105,21 @@
                 <dl>
                     <dt>制作ポイント</dt>
                     <dd>メインのロゴは八分音符で新芽を表し、音楽から環境意識が芽生えているイメージを表しました。”サス×なび”の真ん中には音楽記号の『リピート』記号をあしらい、SDGsの基本概念である【持続可能な社会】への思いを込めました。<br>
-                    SNS等のアイコン等で一目でラジオのロゴであることが伝わるように、ラジオの電波やヘッドフォンのモチーフをあしらい、カラフルな色合いで全体的に可愛い雰囲気に仕上げました。
+                        SNS等のアイコン等で一目でラジオのロゴであることが伝わるように、ラジオの電波やヘッドフォンのモチーフをあしらい、カラフルな色合いで全体的に可愛い雰囲気に仕上げました。
                     </dd>
                 </dl>
 
-                <!-- 制作過程 -->
-                <!-- <dl>
-                    <dt>制作過程</dt>
-                    <dd>職業訓練校のデザイン課題で制作しました。課題内容が『”健康堂”という名の架空サイトをつくる』だったので、そのまま『健康堂』だとつまらないと考え、”けんこうどう”ぶつクリニックと引っかけて今回動物病院のWebサイトの作成に至りました。
-                    </dd>
-                </dl> -->
                 <dl>
                     <dt>制作期間</dt>
                     <dd>3時間</dd>
                 </dl>
                 <dl>
                     <dt>使用ツール</dt>
-                    <dd>illustrator<br>
+                    <dd>Illustrator<br>
                     </dd>
                 </dl>
             </div>
-            <button type="button" onclick="history.back()" class="back_page">作品一覧にもどる</button>
+            <a href="../works.html" class="back_page">作品一覧にもどる</a>
         </div>
     </main>
 

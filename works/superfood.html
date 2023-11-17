@@ -12,27 +12,27 @@
     <script src="../js/menu.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script>
-        (function(d) {
-          var config = {
-            kitId: 'rlp3jfs',
-            scriptTimeout: 3000,
-            async: true
-          },
-          h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        (function (d) {
+            var config = {
+                kitId: 'rlp3jfs',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
         })(document);
-      </script>
+    </script>
 
     <!-- css -->
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link rel="stylesheet" href="../css/style.css">
 
-   
+
 </head>
 
 
 <body>
     <header id="header" class="header-inner flex">
-        <h1><a href="../index.html"><img src="../img/logo.svg" alt="NEw DRIVE and DREAM 柳原遥香のポートフォリオ"></a></h1> 
+        <h1><a href="../index.html"><img src="../img/logo.svg" alt="NEw DRIVE and DREAM 柳原遥香のポートフォリオ"></a></h1>
         <nav class="gnav">
             <ul class="gnav_list flex">
                 <li class="gnav_item gnav__item_works"><a href="../works.html">WORKS <span>つくってきたもの</span></a></li>
@@ -41,11 +41,11 @@
             </ul>
             <div class="hamburger">
                 <!--SP用ハンバーガーメニュー３本線-->
-                <div class="btn-gNav">
+                <button class="btn-gNav">
                     <span class="hamburger_span1"></span>
                     <span class="hamburger_span2"></span>
                     <span class="hamburger_span3"></span>
-                </div>
+                </button>
             </div>
         </nav>
     </header>
@@ -94,47 +94,39 @@
                     <dt>制作ポイント</dt>
                     <dd>
                         <div class="work_text_cont">
-                        <ul>
-                            <li>生産方法のこだわり: 製品の原材料を背景イラストに描くことで、商品の中身を視覚的に伝えると同時に、原材料へのこだわりを強調しました。</li><br>
-                            
-                            <li>
-                                日常生活への溶け込み: 日本ではまだ馴染みの少ないスーパーフードですが、日常生活に取り入れやすく、お客様の健康をサポートするという思いを込めデザインしました。<br>
-                                スーパーフードは食品と健康食品の間の立場とのことでしたので、高級感や特別感を兼ね備えながらも、手書き感のあるフォントやイラストを取り入れることで、日常に溶け込み日頃より愛用していただけるよう思いを込めました。
-                            </li><br>
-                            <li>
-                                文字の流れ: 「有機」の文字は、企業コンセプトである「健康をデザインする」をイメージし、長期にわたる健康をイメージするために流れるようなフォントに仕上げました。
-                            </li><br>
-                            
-                            <li>
-                                環境への配慮: ビニールの代わりにクラフト紙のパッケージを選択することで、スーパーフードをより身近で環境にやさしいものとして位置づけ、お客様に気軽に取り入れていただけるよう考慮しました。
-                            </li><br>
-                            <li>
-                                通販サイトでの購入が主要なチャネルと考え、情報は必要最小限にとどめ、シンプルかつ日常生活になじむようなデザインにしました。
-                            </li>
-                        </ul>
+                            <ul>
+                                <li>生産方法のこだわり: 製品の原材料を背景イラストに描くことで、商品の中身を視覚的に伝えると同時に、原材料へのこだわりを強調しました。</li><br>
+
+                                <li>
+                                    日常生活への溶け込み: 日本ではまだ馴染みの少ないスーパーフードですが、日常生活に取り入れやすく、お客様の健康をサポートするという思いを込めデザインしました。<br>
+                                    スーパーフードは食品と健康食品の間の立場とのことでしたので、高級感や特別感を兼ね備えながらも、手書き感のあるフォントやイラストを取り入れることで、日常に溶け込み日頃より愛用していただけるよう思いを込めました。
+                                </li><br>
+                                <li>
+                                    文字の流れ: 「有機」の文字は、企業コンセプトである「健康をデザインする」をイメージし、長期にわたる健康をイメージするために流れるようなフォントに仕上げました。
+                                </li><br>
+
+                                <li>
+                                    環境への配慮: ビニールの代わりにクラフト紙のパッケージを選択することで、スーパーフードをより身近で環境にやさしいものとして位置づけ、お客様に気軽に取り入れていただけるよう考慮しました。
+                                </li><br>
+                                <li>
+                                    通販サイトでの購入が主要なチャネルと考え、情報は必要最小限にとどめ、シンプルかつ日常生活になじむようなデザインにしました。
+                                </li>
+                            </ul>
                         </div>
-
-                    
-
                     </dd>
                 </dl>
-                <!-- 制作過程 -->
-                <!-- <dl>
-                    <dt>制作過程</dt>
-                    <dd>職業訓練校のデザイン課題で制作しました。課題内容が『”健康堂”という名の架空サイトをつくる』だったので、そのまま『健康堂』だとつまらないと考え、”けんこうどう”ぶつクリニックと引っかけて今回動物病院のWebサイトの作成に至りました。
-                    </dd>
-                </dl> -->
+
                 <dl>
                     <dt>制作期間</dt>
                     <dd>2日間</dd>
                 </dl>
                 <dl>
                     <dt>使用ツール</dt>
-                    <dd>illustrator<br>
+                    <dd>Illustrator<br>
                     </dd>
                 </dl>
             </div>
-            <button type="button" onclick="history.back()" class="back_page">作品一覧にもどる</button>
+            <a href="../works.html" class="back_page">作品一覧にもどる</a>
         </div>
     </main>
 

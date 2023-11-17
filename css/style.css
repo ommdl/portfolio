@@ -16,7 +16,6 @@ html {
   font-size: 100%;
 }
 
-
 body {
   background-color: #fffdf9;
   color: #3f271a;
@@ -83,7 +82,7 @@ a:hover {
 }
 
 .sec {
-  padding: 50px 0;
+  padding: 80px 0;
 }
 
 
@@ -247,7 +246,7 @@ footer {
     background-color: #fae9d9;
     font-size: 16px;
     box-sizing: border-box;
-    z-index: 800;
+    z-index: 1000;
     padding-top: 50px;
     transition: .3s;
   }
@@ -385,7 +384,8 @@ footer {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 10px px;
+  padding: 0.5rem 1rem;
+
 }
 
 .sort-btn li {
@@ -584,13 +584,27 @@ footer {
   background-color: #c1a362;
 }
 
+#myportfolio .basecolor {
+  background-color: #fffdf9;
+}
+
+#myportfolio .maincolor {
+  background-color: #fdb2b2;
+}
+
+#myportfolio .accentcolor {
+  background-color: #ffc643;
+}
+
+
 
 .works_color {
-  grid-template-columns: repeat(auto-fit, 100px);
+  grid-template-columns: repeat(auto-fit, 105px);
   gap: 0.25rem;
 }
 
 .works_more_card {
+  display: grid;
   grid-row: span 3;
   /*サブグリットの指定*/
   grid-template-rows: subgrid;
@@ -606,95 +620,6 @@ footer {
 /* =====================================
 ===========about me===============
 =================================== */
-
-/* -------タイプライター風文字 ーーーーー*/
-.typewriter {
-  display: block;
-
-}
-
-.typewriter-text {
-  font-family: dotgothic16, sans-serif;
-  font-size: 18px;
-  animation: cursor 1s ease-in-out infinite;
-}
-
-/*文字列後ろの線の設定*/
-.typewriter-text::after {
-  content: "|";
-  animation: typinganime .8s ease infinite;
-}
-
-@keyframes typinganime {
-  from {
-    opacity: 0
-  }
-
-  to {
-    opacity: 1
-  }
-}
-
-
-/* @media (max-width: 767.98px) {
-  .typewriter { font-size: 35px; }
-} */
-
-
-
-/*------- 画像文字が流れる -------*/
-.flowimg {
-  position: relative;
-  overflow: hidden;
-}
-
-.flowimg::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 230px;
-  background-image: url(../img/aboutme/back_name.svg);
-  background-repeat: repeat-x;
-  background-position: 0 0;
-  background-size: 1000px auto;
-  animation: flowimg 60s linear infinite;
-  z-index: -1;
-}
-
-@keyframes flowimg {
-  0% {
-    background-position: 0 0;
-  }
-
-  100% {
-    background-position: -1000px 0;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .flow-font01 {
-    padding: 60px 10vw;
-  }
-
-  .flow-font01::before {
-    height: 90px;
-    background-size: 500px auto;
-  }
-
-  @keyframes flowimg {
-    0% {
-      background-position: 0 0;
-    }
-
-    100% {
-      background-position: -500px 0;
-    }
-  }
-}
-
-*/
 /* =============================================
 ===================career road========================
 ================================================== */
@@ -711,7 +636,8 @@ footer {
 
 
 .scroll {
-  height: 100svh;
+  overflow: hidden;
+  /* height: 100svh; */
   background-color: #ffc643;
 }
 
@@ -729,7 +655,7 @@ footer {
 
 .scroll_wrap {
   display: flex;
-  column-gap: 900px;
+  column-gap: 500px;
   position: absolute;
   top: 0;
   left: 0;
@@ -786,6 +712,9 @@ footer {
 
 /* ===============↓profileの基本設定 =========================
 =============================================================*/
+
+
+
 main {
   position: relative;
 }
@@ -794,6 +723,11 @@ main {
 .name,
 .sub_title {
   text-align: center;
+}
+
+
+.profile_visual {
+  height: 90vh;
 }
 
 .sub_title {
@@ -823,20 +757,30 @@ main {
   color: #ed8e23;
 }
 
-.profile_text {
-  max-width: 640px;
+.visual {
+  max-width: 1040px;
   margin: 0 auto;
-  line-height: 2;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.img_box {
+  width: 48%;
+  height: auto;
+}
+
+.profile_text {
+  width: 50%;
+  /* margin: 0 auto; */
 }
 
 .name h3 {
   font-size: 2rem;
-  line-height: 0;
-  padding-bottom: 0.5em;
 }
 
 .myname {
   font-size: 15px;
+  margin-bottom: 2rem;
 }
 
 
@@ -846,9 +790,7 @@ main {
 
 }
 
-#me_visual {
-  min-width: 300px;
-}
+
 
 
 .skill_box {
@@ -871,6 +813,20 @@ main {
   .skill_container {
     width: 100%;
     padding: 2rem 2rem;
+  }
+
+  .visual {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .img_box {
+    width: 70%;
+  }
+
+  .profile_text {
+    width: 90%;
+
   }
 }
 
@@ -969,15 +925,14 @@ main {
 
 .button_img1 {
   display: block;
-  transition: 0.5s;
-  filter: brightness(0.5) drop-shadow(2px 2px 2px #585858);
+  transition: 0.5s all;
+  filter: brightness(0.75) drop-shadow(0 7px 0 #838383);
 }
 
 
 .button_link.open .button_img1 {
-  filter: drop-shadow(1px 1px 1px #585858);
-  transform: scale(1.1);
-  transform: translateY(2px);
+  filter: drop-shadow(0 1px 0 #838383);
+  transform: translateY(6px);
 }
 
 
@@ -987,21 +942,21 @@ main {
   position: absolute;
   bottom: 10%;
   right: 0;
-  z-index: 1;
-
+  z-index: 100;
 }
 
 .skill_img_car {
   position: absolute;
   bottom: 0;
   right: 10%;
-  z-index: 2;
+  z-index: 101;
 }
 
 @media screen and (max-width: 768px) {
 
   .skill_img,
-  .skill_img_car {
+  .skill_img_car ,
+  .contact_car{
     display: none;
   }
 
@@ -1097,8 +1052,9 @@ main {
   color: #fafafa;
   border-radius: 8px;
   padding: 4px 20px;
-  display: inline;
+  display: inline-block;
   font-weight: bold;
+  margin-bottom: 0.5rem;
 }
 
 .skill-sec__container ul {
@@ -1125,26 +1081,31 @@ main {
 
 /*==========CONTACT ==================*/
 .contact {
-  height: calc(100svh - 120px);
   text-align: center;
-  line-height: 1;
+
 }
 
 .contact h3 {
   font-size: 40px;
-
+}
+.contact h3 ::after{
+    content: url(../img/top/array.png);
+    position: relative;
+    top: 7px;
+    padding-left: 5px;
 }
 
 .contact_car {
   margin-top: 4rem;
   animation: contact_car 8s ease infinite;
+
 }
 
 
 @keyframes contact_car {
   0% {
     opacity: 0;
-    transform: scale(100%);
+    /* transform: scale(100); */
   }
 
   15% {
@@ -1154,14 +1115,10 @@ main {
 
   30% {
     opacity: 1;
-    transform: scale(100%);
+    transform: scale(1);
 
   }
 
-  /* 50% {
-    opacity: 1;
-    transform:scale(50%)
-  } */
   100% {
     opacity: 0;
     transform: scale(0);
@@ -1176,8 +1133,8 @@ main {
 .mame_box .click_here {
   font-family: "jumble", sans-serif;
   font-size: 64px;
-  line-height: 1;
   color: #d43232;
+  line-height: 1;
   margin-top: 2rem;
 }
 
@@ -1193,37 +1150,117 @@ main {
   }
 }
 
-
-
-
-
-
 .back_page {
-  position: relative;
-  padding-left: 35px;
   font-weight: bold;
-  transition: 0.5s ease 0.2s;
+  color: #3f271a;
+  transition: all 0.8s ease 0.2s;
+  position: relative;
+  padding-left: 28px;
 }
 
-.back_page:before {
-  content: '';
-  display: block;
-  width: 30px;
-  height: 30px;
-  background-image: url('../img/works/handle.png');
-  background-size: contain;
-  background-repeat: no-repeat;
+.back_page::before {
   position: absolute;
-  top: 0;
   left: 0;
-  transition: 0.5s;
+  content: url('../img/works/handle.png');
+  transition: all 0.5s ease;
+
 }
-.back_page:hover{
+
+
+.back_page:hover {
   opacity: 0.5;
-  transform: translateX(-10px);
+  transform: translate(-16px, 0);
+
 }
 
-.back_page:hover::before{
-  transform: rotate(-30deg);
+.back_page:hover:before {
+  transform: rotate(-45deg);
+}
 
+
+#aboutme_footer {
+  background: #ffc643;
+  margin: 0 auto;
+}
+
+
+.c-form {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.c-form__item {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  margin-bottom: 2rem;
+}
+
+.c-form__label,
+.c-form__input {
+  padding: 1rem;
+}
+
+.c-form__label {
+  width: 40%;
+  text-align: left;
+}
+
+.c-form__input {
+  width: 55%;
+  font-size: 16px;
+  border: solid 1px #3f271a;
+  border-radius: 4px;
+}
+
+.c-form__input:focus-visible {
+  outline: #df5252 auto 1px;
+}
+
+.c-form__required {
+  color: #fafafa;
+  background-color: #d43232;
+  border-radius: 4px;
+  padding: 5px 8px;
+  margin: 0 0 0 18px;
+}
+
+textarea.c-form__input {
+  height: 160px;
+}
+
+.c-form__submit {
+  text-align: center;
+}
+
+.c-form__submit button {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background-image: linear-gradient(134deg, rgba(255, 196, 190, 1), rgba(236, 127, 119, 1) 100%, rgba(240, 226, 226, 1));
+  border-radius: 4px;
+  padding: 1rem 8rem;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.c-form__submit button:hover {
+  opacity: 0.5;
+  transform: translate(0, 5%);
+  background-color: transparent;
+
+}
+
+@media (max-width: 768px) {
+  .c-form__item {
+    flex-wrap: wrap;
+  }
+
+  .c-form__label {
+    width: 90%;
+  }
+
+  .c-form__input {
+    width: 80%;
+  }
 }

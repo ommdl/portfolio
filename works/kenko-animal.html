@@ -12,15 +12,15 @@
     <script src="../js/menu.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script>
-        (function(d) {
-          var config = {
-            kitId: 'rlp3jfs',
-            scriptTimeout: 3000,
-            async: true
-          },
-          h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        (function (d) {
+            var config = {
+                kitId: 'rlp3jfs',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
         })(document);
-      </script>
+    </script>
 
     <!-- css -->
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
@@ -31,7 +31,7 @@
 
 <body>
     <header id="header" class="header-inner flex">
-        <h1><a href="../index.html"><img src="../img/logo.svg" alt="NEw DRIVE and DREAM 柳原遥香のポートフォリオ"></a></h1>  
+        <h1><a href="../index.html"><img src="../img/logo.svg" alt="NEw DRIVE and DREAM 柳原遥香のポートフォリオ"></a></h1>
         <nav class="gnav">
             <ul class="gnav_list flex">
                 <li class="gnav_item gnav__item_works"><a href="../works.html">WORKS <span>つくってきたもの</span></a></li>
@@ -40,11 +40,11 @@
             </ul>
             <div class="hamburger">
                 <!--SP用ハンバーガーメニュー３本線-->
-                <div class="btn-gNav">
+                <button class="btn-gNav">
                     <span class="hamburger_span1"></span>
                     <span class="hamburger_span2"></span>
                     <span class="hamburger_span3"></span>
-                </div>
+                </button>
             </div>
         </nav>
     </header>
@@ -66,8 +66,8 @@
                 <!-- 作品概要 -->
 
                 <div class="view_site_button">
-                    <a href="kenko-animal/index.html" class="btn-gradient"><span>view site</span></a>
-                    </div>
+                    <a href="kenko-animal/index.html" target="_blank" rel="noopener" class="btn-gradient"><span>view site</span></a>
+                </div>
 
 
                 <dl>
@@ -78,7 +78,7 @@
                             <span>【健幸どうぶつクリニック】</span><br>
                             「共に歩み、健やかな未来へ」を理念とした新規オープンの犬猫専門の動物クリニック。大切なペットにはたとえ病気になってしまっても健やかに幸せに暮らしてほしいという思いのもと、一匹一人に寄り添った医療を提供している。動物病院のほかにもサロンやドッグラン付きのペットホテルがある。
                         </div>
-                        
+
                     </dd>
                 </dl>
                 <!-- ターゲット層 -->
@@ -109,12 +109,12 @@
                             <div class="works_color grid">
                                 <ul class="works_more_card grid">
                                     <li class="works_color_li basecolor"></li>
-                                    <li >#fcf2de</li>
+                                    <li>#fcf2de</li>
                                     <li>ベースカラー</li>
                                 </ul>
                                 <ul class="works_more_card grid">
                                     <li class="works_color_li maincolor"></li>
-                                    <li >#ed8e23</li>
+                                    <li>#ed8e23</li>
                                     <li>メインカラー</li>
                                 </ul>
                                 <ul class="works_more_card grid">
@@ -122,36 +122,30 @@
                                     <li>#89c4ec</li>
                                     <li>アクセントカラー</li>
                                 </ul>
-                                
+
                             </div>
                         </div>
 
                         トップページでは、家の形をしたリンクや本の形をしたセクションで訪問者が飽きずにWEBサイトを探索でき、視覚的にも目的の情報まで一目でたどり着けるよう工夫しました。<br>
-                        <div class="works_more">
-                        </div>
+
                         作成したロゴマークは、愛情深く犬と猫を包み込む姿をモチーフにしており、ペットたちが健康で幸せに暮らすことを願っています。病院の温かく優しい雰囲気を反映させ、手書きのような印象を持つようにデザインしました。
                         <div class="works_more">
                             <img src="../img/kenko-do/kenkodo_more.jpg" alt="健幸どうぶつクリニックのロゴはイニシャルのKを表現" width="500" height="150">
                         </div>
                     </dd>
                 </dl>
-                <!-- 制作過程 -->
-                <!-- <dl>
-                    <dt>制作過程</dt>
-                    <dd>職業訓練校のデザイン課題で制作しました。課題内容が『”健康堂”という名の架空サイトをつくる』だったので、そのまま『健康堂』だとつまらないと考え、”けんこうどう”ぶつクリニックと引っかけて今回動物病院のWebサイトの作成に至りました。
-                    </dd>
-                </dl> -->
+
                 <dl>
                     <dt>制作期間</dt>
                     <dd>デザイン１週間、コーディング１週間</dd>
                 </dl>
                 <dl>
                     <dt>使用ツール</dt>
-                    <dd>illustrator/Photoshop/HTML・CSS/JavaScript<br>
+                    <dd>Illustrator/Photoshop/HTML・CSS/JavaScript<br>
                     </dd>
                 </dl>
             </div>
-            <button type="button" onclick="history.back()" class="back_page">作品一覧にもどる</button>
+            <a href="../works.html" class="back_page">作品一覧にもどる</a>
         </div>
     </main>
 

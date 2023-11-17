@@ -13,26 +13,26 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
     <script>
-        (function(d) {
-          var config = {
-            kitId: 'rlp3jfs',
-            scriptTimeout: 3000,
-            async: true
-          },
-          h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        (function (d) {
+            var config = {
+                kitId: 'rlp3jfs',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
         })(document);
-      </script>
+    </script>
     <!-- css -->
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link rel="stylesheet" href="../css/style.css">
 
-  
+
 </head>
 
 
 <body>
     <header id="header" class="header-inner flex">
-        <h1><a href="../index.html"><img src="../img/logo.svg" alt="NEw DRIVE and DREAM 柳原遥香のポートフォリオ"></a></h1> 
+        <h1><a href="../index.html"><img src="../img/logo.svg" alt="NEw DRIVE and DREAM 柳原遥香のポートフォリオ"></a></h1>
         <nav class="gnav">
             <ul class="gnav_list flex">
                 <li class="gnav_item gnav__item_works"><a href="../works.html">WORKS <span>つくってきたもの</span></a></li>
@@ -41,11 +41,11 @@
             </ul>
             <div class="hamburger">
                 <!--SP用ハンバーガーメニュー３本線-->
-                <div class="btn-gNav">
+                <button class="btn-gNav">
                     <span class="hamburger_span1"></span>
                     <span class="hamburger_span2"></span>
                     <span class="hamburger_span3"></span>
-                </div>
+                </button>
             </div>
         </nav>
     </header>
@@ -70,7 +70,7 @@
                     <dt>概要</dt>
                     <dd>
                         結婚式で使用する結婚証明書やメモリアルグッズを販売しているHalo Wedding様のロゴデザインコンペに出す為、作成しました。<br>
-                        実際にCloud Worksで採用していただいた作品になります。 
+                        実際にCloud Worksで採用していただいた作品になります。
                     </dd>
                 </dl>
                 <!-- ターゲット層 -->
@@ -95,27 +95,20 @@
                 <dl>
                     <dt>制作ポイント</dt>
                     <dd>今後の新しい人生の門出にウェディングアイテムで寄り添うイメージを巻き付く葉に思いを込めました。<br>シンボルは『Halo』のHをモチーフにし、SNS等の小さなアイコンでも目につくようシンプルながら印象に残る高級感のあるデザインを心がけました。<br>
-                    また、花嫁様のサムシングブルーを意識した色を使用し、大切な結婚式に心強く、寄り添ってくれるような大切なおまじないのようなウェディンググッズであることをイメージしました。
+                        また、花嫁様のサムシングブルーを意識した色を使用し、大切な結婚式に心強く、寄り添ってくれるような大切なおまじないのようなウェディンググッズであることをイメージしました。
                     </dd>
                 </dl>
-
-                <!-- 制作過程 -->
-                <!-- <dl>
-                    <dt>制作過程</dt>
-                    <dd>職業訓練校のデザイン課題で制作しました。課題内容が『”健康堂”という名の架空サイトをつくる』だったので、そのまま『健康堂』だとつまらないと考え、”けんこうどう”ぶつクリニックと引っかけて今回動物病院のWebサイトの作成に至りました。
-                    </dd>
-                </dl> -->
                 <dl>
                     <dt>制作期間</dt>
                     <dd>2時間</dd>
                 </dl>
                 <dl>
                     <dt>使用ツール</dt>
-                    <dd>illustrator<br>
+                    <dd>Illustrator<br>
                     </dd>
                 </dl>
             </div>
-            <button type="button" onclick="history.back()" class="back_page">作品一覧にもどる</button>
+            <a href="../works.html" class="back_page">作品一覧にもどる</a>
         </div>
     </main>
 

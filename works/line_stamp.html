@@ -13,15 +13,15 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
     <script>
-        (function(d) {
-          var config = {
-            kitId: 'rlp3jfs',
-            scriptTimeout: 3000,
-            async: true
-          },
-          h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        (function (d) {
+            var config = {
+                kitId: 'rlp3jfs',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
         })(document);
-      </script>
+    </script>
     <!-- css -->
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link rel="stylesheet" href="../css/style.css">
@@ -32,7 +32,7 @@
 
 <body>
     <header id="header" class="header-inner flex">
-        <h1><a href="../index.html"><img src="../img/logo.svg" alt="NEw DRIVE and DREAM 柳原遥香のポートフォリオ"></a></h1> 
+        <h1><a href="../index.html"><img src="../img/logo.svg" alt="NEw DRIVE and DREAM 柳原遥香のポートフォリオ"></a></h1>
         <nav class="gnav">
             <ul class="gnav_list flex">
                 <li class="gnav_item gnav__item_works"><a href="../works.html">WORKS <span>つくってきたもの</span></a></li>
@@ -41,11 +41,11 @@
             </ul>
             <div class="hamburger">
                 <!--SP用ハンバーガーメニュー３本線-->
-                <div class="btn-gNav">
+                <button class="btn-gNav">
                     <span class="hamburger_span1"></span>
                     <span class="hamburger_span2"></span>
                     <span class="hamburger_span3"></span>
-                </div>
+                </button>
             </div>
         </nav>
     </header>
@@ -60,57 +60,23 @@
             </div>
             <div class="imgMock"><img src="../img/linestamp/linestamp.png" alt=""></div>
 
-
-
-
             <div class="work_text">
                 <!-- 作品概要 -->
-
-
-
-
                 <dl>
                     <dt>概要</dt>
                     <dd>
                         小さなお子さんがいる家族向け LINEスタンプです。<br>親戚家族間で使用する私の姪っ子をテーマにした使いやすいLINEスタンプを作りたいと思い作成しました。<br>
                         スタンプにする画像選定、画像編集、言葉の選定、加工を行い、40個分のスタンプを制作しました。
-                        
                     </dd>
                 </dl>
-                <!-- ターゲット層 -->
-                <!-- <dl>
-                    <dt>ターゲット層</dt>
-                    <dd>
-                        セカンドオピニオンや引っ越しにてこれから動物病院を探す犬猫を飼っている家庭<br>
-                        従来より来院していただいているお客様
-                    </dd>
-                </dl> -->
-                <!-- 目的・ゴール
-                <dl>
-                    <dt>目的・ゴール</dt>
-                    <dd>動物病院の雰囲気を知ってもらい、新規の顧客開拓に繋げる。<br>
-                        日頃より来院している方に病院の最新情報を伝え、WEB予約としての機能を果たす。
-                    </dd>
-                </dl> -->
-                <!--コンセプト -->
-                <!-- <dl>
-                    <dt>コンセプト</dt>
-                    <dd>2健康や環境に対して関心が高い20-50代の男女</dd>
-                </dl> -->
                 <dl>
                     <dt>制作ポイント</dt>
                     <dd>
                         親戚家族間でよく使用されているLINEスタンプや言葉を調べ、汎用性の高い40個のLINEスタンプにしました。親しみやすさや可愛さを感じてもらえるよう、イラストやフォントに丸みをもたせ、姪っ子が好きなアニメやキャラクターのような雰囲気が出るよう工夫しました。<br>
                         LINEスタンプの元となる写真は、顔がよく見えなかったり、見切れている物が多くあったため、Photoshopで修正し使用しました。
-                     
                     </dd>
                 </dl>
-                <!-- 制作過程 -->
-                <!-- <dl>
-                    <dt>制作過程</dt>
-                    <dd>職業訓練校のデザイン課題で制作しました。課題内容が『”健康堂”という名の架空サイトをつくる』だったので、そのまま『健康堂』だとつまらないと考え、”けんこうどう”ぶつクリニックと引っかけて今回動物病院のWebサイトの作成に至りました。
-                    </dd>
-                </dl> -->
+
                 <dl>
                     <dt>制作期間</dt>
                     <dd>2週間</dd>
@@ -121,7 +87,7 @@
                     </dd>
                 </dl>
             </div>
-            <button type="button" onclick="history.back()" class="back_page">作品一覧にもどる</button>
+            <a href="../works.html" class="back_page">作品一覧にもどる</a>
         </div>
     </main>
 
