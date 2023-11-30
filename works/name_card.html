@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WORKS | 名刺</title>
+    <meta name="description" content="名刺デザインの説明">
+
+
+    <!--自作のJS-->
+    <script src="../js/menu.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <script>
+        (function (d) {
+            var config = {
+                kitId: 'rlp3jfs',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
+    <!-- css -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+
+</head>
+
+
+<body>
+    <header id="header" class="header-inner flex">
+        <h1><a href="../index.html"><img src="../img/logo.svg" alt="NEw DRIVE and DREAM 柳原遥香のポートフォリオ"></a></h1>
+        <nav class="gnav">
+            <ul class="gnav_list flex">
+                <li class="gnav_item gnav__item_works"><a href="../works.html">WORKS <span>つくってきたもの</span></a></li>
+                <li class="gnav_item gnav__item_aboutme"><a href="../aboutme.html">ABOUTME <span>わたしのこと</span></a></li>
+                <li class="gnav_item gnav__item_contact"><a href="../contact.html">CONTACT <span>お問い合わせ</span></a></li>
+            </ul>
+            <div class="hamburger">
+                <!--SP用ハンバーガーメニュー３本線-->
+                <button class="btn-gNav">
+                    <span class="hamburger_span1"></span>
+                    <span class="hamburger_span2"></span>
+                    <span class="hamburger_span3"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+
+    <main id="name_card">
+        <div class="wrapper">
+
+            <div class="works_text_box sec">
+                <h2>自身の名刺</h2>
+                <p>グラフィックデザイン</p>
+            </div>
+            <div class="imgMock"><img src="../img/namecard/namecard.png" alt=""></div>
+
+
+
+
+            <div class="work_text">
+                <!-- 作品概要 -->
+
+                <dl>
+                    <dt>概要</dt>
+                    <dd>
+                        交流会用に自分自身の名刺を作成しました。表面には連絡先、裏面にはポートフォリオサイトへのリンクを載せています。
+                    </dd>
+                </dl>
+                <!-- ターゲット層 -->
+                <dl>
+                    <dt>ターゲット層</dt>
+                    <dd>
+                        交流会やイベントでお会いしたデザイナーやエンジニアなどの方々
+                    </dd>
+                </dl>
+                <!-- 目的・ゴール -->
+                <dl>
+                    <dt>目的・ゴール</dt>
+                    <dd>名刺をお渡しした方に、自分の人となりを知ってもらい顔と名前を覚えてもらう。<br>
+                       交流会での話のきっかけづくりにする。<br>
+                       興味を持ってもらい、ポートフォリオサイトを見ていただく。 <br>
+                    </dd>
+                </dl>
+
+                <dl>
+                    <dt>制作ポイント</dt>
+                    <dd>
+                        ポートフォリオサイトのテーマが『ドライブ』だったことから強い印象をもってもらえるよう『免許書』をモチーフにしたユーモアがあるデザインにしました。
+                        似顔絵のイラストは自作で、全体的にパステルカラーでかわいらしい印象をもっていただけるような色を使用しました。<br>
+                        交流会で話のきっかけ作りになるように、好きなものを織り込んだり、似顔絵のイラストにさりげなくモチーフとしてあしらいました。<br>
+                        また、紙選びもこだわり、イラストと全体の雰囲気があうと考えた光沢紙に印刷しています。
+                        裏面のポートフォリオサイトへのリンクは、見ていただきたいという気持ちを込めて、ハートをお渡ししているデザインにしました。
+
+
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>制作期間</dt>
+                    <dd>5時間</dd>
+                </dl>
+                <dl>
+                    <dt>使用ツール</dt>
+                    <dd>Illustrator<br>
+                    </dd>
+                </dl>
+            </div>
+            <a href="../works.html" class="back_page">作品一覧にもどる</a>
+        </div>
+    </main>
+
+
+    <footer class="wrapper">
+        <small>&copy;yanagiharaharuka</small>
+    </footer>
+</body>
+
+</html>

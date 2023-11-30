@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ABOUTME | NEW DRIVE AND DREAM</title>
-    <meta name="description" content="柳原遥香のポートフォリオです。">
+    <meta name="description" content="柳原遥香についての紹介ページです。">
 
 
     <!--CDN  -->
@@ -17,19 +17,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js" type="text/javascript"></script>
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
     <script>
-        (function(d) {
-          var config = {
-            kitId: 'rlp3jfs',
-            scriptTimeout: 3000,
-            async: true
-          },
-          h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        (function (d) {
+            var config = {
+                kitId: 'rlp3jfs',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
         })(document);
-      </script>
+    </script>
 
     <!--自作のJS-->
     <script src="js/menu.js" defer></script>
@@ -39,9 +38,6 @@
     <!-- css -->
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link rel="stylesheet" href="css/style.css">
-
-   
-
 </head>
 
 
@@ -51,7 +47,7 @@
 <body>
     <header id="header" class="header-inner flex">
         <h1><a href="index.html"><img src="img/logo.svg" alt="NEw DRIVE and DREAM 柳原遥香のポートフォリオ"></a></h1>
-                <nav class="gnav">
+        <nav class="gnav">
             <ul class="gnav_list flex">
                 <li class="gnav_item gnav__item_works"><a href="works.html">WORKS <span>つくってきたもの</span></a></li>
                 <li class="gnav_item gnav__item_aboutme"><a href="aboutme.html">ABOUTME <span>わたしのこと</span></a></li>
@@ -59,11 +55,11 @@
             </ul>
             <div class="hamburger">
                 <!--SP用ハンバーガーメニュー３本線-->
-                <div class="btn-gNav">
+                <button class="btn-gNav">
                     <span class="hamburger_span1"></span>
                     <span class="hamburger_span2"></span>
                     <span class="hamburger_span3"></span>
-                </div>
+                </button>
             </div>
         </nav>
     </header>
@@ -71,21 +67,13 @@
     <main id="aboutme">
         <h2 class="h2_hedding">Aboutme<br></h2>
 
-        <section id="profile" class="sec">
-            <!-- <div class="flowimg"> -->
-                <div class="profile_visual wrapper ">
-                    <!-- <div class="typewriter">
-                        <p class="typewriter-text" data-text='[ "Hello:)", "Welcome to my site!", "I am Aspiring to Be a Web Designer" ]'>
-                        </p>
-                    </div> -->
-                    <div id="me_visual"></div>
 
-                </div>
-            <!-- </div> -->
-
-            <div class="profile_text wrapper">
+        <section id="profile" class="visual flex  sec">
+            <div class="img_box">
+                <div id="me_visual"></div>
+            </div>
+            <div class="profile_text">
                 <div class="name">
-
                     <h3>柳原 遥香</h3>
                     <h2 class="myname">Yanagihara Haruka</h2>
                 </div>
@@ -109,7 +97,7 @@
                     <!-- スキルBOX -->
                     <div class="skill_text">
                         <div class="skill_button">
-                            <p class="click_here">Please choose from below</p>
+                            <p class="click_here">スキルボタンをクリック！</p>
                             <ul class="grid">
                                 <li class="button_link open " data-button="ai">
                                     <img src="img/skill/icon_ai_click.svg" alt="" class="button_img1">
@@ -159,8 +147,8 @@
                                 <div class="oil_img">
                                     <img src="img/skill/oil_red.png" alt="" width="60" height="60">
                                 </div>
-                                <h3 class="water1">illustrator</h3>
-                                <h3 class="water2">illustrator</h3>
+                                <h3 class="water1">Illustrator</h3>
+                                <h3 class="water2">Illustrator</h3>
                             </div>
                             <p class="time_study">学習期間：10カ月</p>
                             <p>できること</p>
@@ -171,7 +159,7 @@
                                 <li>パッケージデザイン制作</li>
                             </ul>
                             <p>基本的な操作はスクールで全て学習しております。<br>
-                                本サイトのイラストも全てillustratorで作成しております。<br>
+                                本サイトのイラストも全てIllustratorで作成しております。<br>
                                 SNS等で流行りのTipsを見るのが好きで、よく参考にしています。</p>
                         </section>
 
@@ -233,8 +221,7 @@
                                 <li>簡単なテキストモーション</li>
                                 <li>自作イラストのアニメーション</li>
                             </ul>
-                            <p
-                            >YouTubeや書籍でただいま勉強中です。</p>
+                            <p>YouTubeや書籍でただいま勉強中です。</p>
                             本サイトのアニメーションも全てAeで自作しました。より複雑なアニメーションが作成できるよう日々学んでおります。
                         </section>
 
@@ -281,8 +268,8 @@
                                 <div class="oil_img">
                                     <img src="img/skill/oil_red.png" alt="" width="60" height="60">
                                 </div>
-                                <h3 class="water1">css</h3>
-                                <h3 class="water2">css</h3>
+                                <h3 class="water1">CSS</h3>
+                                <h3 class="water2">CSS</h3>
                             </div>
                             <p class="time_study">学習期間：6カ月</p>
                             <p>できること</p>
@@ -290,10 +277,10 @@
                                 <li>初歩的な静的サイトの作成</li>
                                 <li>簡単なアニメーションの設定</li>
                                 <li>レスポンシブ対応サイトの構築</li>
-                                <li>SaSS（ただいま勉強中です）</li>
+                                <li>Sass（ただいま勉強中です）</li>
                             </ul>
                             <p>
-                                あとから修正しやすく、どこに何があるかわかりやすいように、ルールに基づいてコードを書くよう心がけております。<br>SaSSはただいま勉強中で、調べながら組み立てることができます。
+                                あとから修正しやすく、どこに何があるかわかりやすいように、ルールに基づいてコードを書くよう心がけております。<br>
                             </p>
                         </section>
 
@@ -361,17 +348,15 @@
         </section>
 
 
+        <div class="bg_yellow">
 
-<div class="bg_yellow">
-    
-    
-            <section id="career" class="scroll ">
+
+            <section id="career" class="scroll">
                 <div class="contents_inner wrapper">
-                    <h3 class="sub_title">Career Road<br><span>経歴</span></h3>
-    
                     <div class="scroll_container">
                         <div class="scroll_wrap">
                             <div class="scroll_box">
+                                <h3 class="sub_title">Career Road<br><span>経歴</span></h3>
                                 <div class="mame_box">
                                     <p class="click_here">Scroll HERE!</p>
                                     <img src="img/aboutme/roadster.gif" alt="">
@@ -384,17 +369,16 @@
                                     幼少期からパソコンで何か創作するころが大好きで、お絵描きソフトで絵を描いたり、文章を書いたりしていました。中学生になってからは携帯用の着メロを作ったり、簡単なＨＰを友人と作り運営して遊んでいました。
                                 </p>
                             </div>
-    
+
                             <div class="scroll_box">
                                 <img src="img/aboutme/1993.png" alt="">
                             </div>
-    
+
                             <div class="scroll_box">
                                 <p class="nen">2013</p>
                                 <h4 class="scroll_title">大好きなものを追及した大学時代</h4>
                                 <p class="scroll_text">山口大学工学部知能情報工学科に入学。主にプログラミングと画像処理について学びました。
-                                    サークル活動では、中学時代から続けていたマンドリン
-                                    クラブに入部し、情報宣伝係として広報の仕事に取り組みました。
+                                    サークル活動では、中学時代から続けていたマンドリンクラブに入部し、情報宣伝係として広報の仕事に取り組みました。クラブのHPやSNSを作成したり、広報活動に力を入れ定期演奏会の集客に繋げました。
                                 </p>
                             </div>
                             <div class="scroll_box">
@@ -408,17 +392,17 @@
                             <div class="scroll_box">
                                 <img src="img/aboutme/2017.png" alt="">
                             </div>
-    
-    
+
+
                             <div class="scroll_box">
                                 <p class="nen">2023</p>
                                 <h4 class="scroll_title">Web業界でよりお客様に近い立場でモノづくりに
                                 </h4>
-                                <p class="scroll_text">節目の年齢になる年で、Webエンジニアの父の影響で興味のあったWeb業界へキャリアチェンジするなら今しかないと思い、Webデザイナーを本格的に目指す。パソコンスクールHA＊NAにて毎日学んでおります。<br>これからもよりお客様に近い立場で、チームでのモノづくりに貢献していきたいと思っています。
+                                <p class="scroll_text">節目の年齢になる年で、Webエンジニアの父の影響で興味のあったWeb業界へキャリアチェンジするなら今しかないと思い、Webデザイナーを本格的に目指す。パソコンスクールHA＊NAにて毎日Webに関する事を広く学んでおります。<br>これからもよりお客様に近い立場で、チームでのモノづくりに貢献していきたいと思っています。
                                 </p>
                             </div>
                             <div class="scroll_box"></div>
-    
+
                         </div>
                     </div>
                 </div>
@@ -426,13 +410,13 @@
             <div class="car_img">
                 <img src="img/aboutme/roadster.gif" alt="">
             </div>
-</div>
+        </div>
 
 
     </main>
 
 
-    <footer class="wrapper"><small>&copy;yanagiharaharuka</small>
+    <footer id="aboutme_footer"><small>&copy;yanagiharaharuka</small>
     </footer>
 
 
