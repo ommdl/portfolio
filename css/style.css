@@ -1292,3 +1292,9 @@ textarea.c-form__input {
     width: 80%;
   }
 }
+
+.char {
+  transform: translateY(100px);
+  transition: transfrom 0.5s;
+  /* transform: translateY(-100px); テキストを上から出したい時*/
+}
