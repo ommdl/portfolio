@@ -1,0 +1,1842 @@
+@charset "utf-8";
+
+/* ====================================
+共通設定
+===================================== */
+html {
+  font-size: 100%;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  /* font-size: calc(18/16*1rem); */
+  font-size: 16px;
+  line-height: 1.5;
+  color: #14274C;
+  background-color: #FCFAF7;
+  background-image: url(../images/groovepaper.png);
+  background-repeat: repeat;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  transition: .3s;
+  display: block;
+  color: inherit
+}
+
+a:hover {
+  transform: translate(0, 3%);
+}
+
+/* ホバーの動き */
+a.opa:hover {
+  opacity: 0.5;
+}
+
+a.red:hover {
+  color: #d93b2b;
+}
+
+a.bold:hover {
+  font-weight: bold;
+}
+
+a.deg:hover {
+  transform: rotate(3deg);
+}
+
+.logo a:hover,
+.logo_img a:hover {
+  transform: translate(0, 0);
+}
+
+.sec {
+  margin-bottom: 160px;
+}
+
+.wrapper {
+  max-width: 1200px;
+  width: calc(100% - 4%);
+  margin-top: 0;
+  margin-right: auto;
+  margin-left: auto;
+
+}
+
+.inner {
+  max-width: 1040px;
+}
+
+/* ドロップシャドウ */
+.ds {
+  filter: drop-shadow(4px 4px 4px #ababab);
+}
+
+/* スマホの時だけ改行 */
+.br-sp {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .br-sp {
+    display: block;
+  }
+
+  .sec {
+    margin-bottom: 100px;
+  }
+
+}
+
+.center {
+  margin: 0 auto;
+}
+
+.center_inner {
+  text-align: center;
+}
+
+
+/* リンクボタン 矢印 */
+.custom-btn {
+  font-family: 'Zen Maru Gothic', serif;
+  position: relative;
+  display: inline-block;
+  background: #14274C;
+  color: #fff;
+  padding: 10px 50px 10px 20px;
+  border-radius: 24px;
+  text-align: center;
+  margin: 0.5rem;
+  border: 1px solid;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .custom-btn {
+    width: 90%;
+  }
+}
+
+.custom-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 20px;
+  margin: auto;
+  width: 20px;
+  height: 2px;
+  background: #fff;
+  transition: .3s;
+}
+
+.custom-btn::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 20px;
+  margin: auto;
+  width: 8px;
+  height: 8px;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(-135deg);
+  transition: .3s;
+}
+
+.custom-btn:hover::before {
+  right: 10px;
+  width: 30px;
+}
+
+.custom-btn:hover::after {
+  right: 10px;
+}
+
+.custom-btn2 {
+  font-family: 'Zen Maru Gothic', serif;
+  display: inline-block;
+  color: #14274C;
+  font-weight: 500;
+  padding: 10px 20px 10px 20px;
+  border-radius: 24px;
+  text-align: center;
+  margin: 0.5rem;
+  border: 2px solid #14274C;
+  line-height: 1.5;
+  transition: 0.3s;
+}
+
+
+.custom-btn2:hover {
+  background: #14274C;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  /* .custom-btn2  {
+    width: 90%;
+  } */
+}
+
+.sec_title {
+  font-family: 'Zen Maru Gothic', serif;
+  font-size: 3.5rem;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  color: #14274C;
+  display: inline-block;
+}
+
+/* 三本線　位置設定*/
+.hamburger .btn-gNav {
+  position: fixed;
+  top: 32px;
+  right: 32px;
+  width: 30px;
+  height: 24px;
+  z-index: 999;
+  box-sizing: border-box;
+  cursor: pointer;
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+}
+
+
+/* 通常時非表示 */
+.btn-gNav {
+  display: none;
+}
+
+/* 三本線の見た目 */
+.btn-gNav span {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: #14274C;
+  border-radius: 10px;
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+}
+
+
+.btn-gNav span:nth-child(1) {
+  top: 0;
+}
+
+.btn-gNav span:nth-child(2) {
+  top: 10px;
+}
+
+.hamburger .btn-gNav span:nth-child(3) {
+  top: 20px;
+}
+
+.btn-gNav.open span:nth-child(1) {
+  background: #14274C;
+  top: 6px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.btn-gNav.open span:nth-child(2),
+.btn-gNav.open span:nth-child(3) {
+  top: 6px;
+  background: #14274C;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+@media screen and (max-width:1200px) {
+  .btn-gNav {
+    display: block;
+  }
+}
+
+
+/* ====================================
+footer
+===================================== */
+footer {
+  font-family: 'Zen Maru Gothic', serif;
+  color: #14274C;
+  font-weight: 500;
+  /* height: 365px; */
+  /* text-align: center; */
+  padding-bottom: 1rem;
+}
+
+.footer_logo {
+  padding-bottom: 1rem;
+}
+
+.sec_footer {
+  display: flex;
+  align-items: flex-end;
+  padding: 40px 0 24px;
+}
+
+.footer_left {
+  width: 50%;
+  text-align: right;
+  padding-right: 150px;
+  font-size: 0.875rem;
+}
+
+.footer_left img {
+  width: 180px;
+  height: auto;
+}
+
+
+.footer_right {
+  display: flex;
+  align-items: flex-end;
+  width: 50%;
+}
+
+.footer_list_item {
+  margin-top: 10px;
+}
+
+span {
+  display: block;
+}
+
+.ja {
+  font-size: 1rem;
+  padding: 0 0 0.25rem 0.5rem;
+  /*上下 左右の余白*/
+  color: #494949;
+  /*文字色*/
+  background: transparent;
+  /*背景透明に*/
+  border-left: solid 5px #b81c22;
+  /*左線*/
+}
+
+.en {
+  font-size: 0.75rem;
+  padding-left: 0.875rem;
+}
+
+
+.footer_nav__listA ul {
+  margin-right: 70px;
+}
+
+
+.footer_gnav_sns {
+  display: flex;
+  /*  width: 50%;
+  padding-right: 180px;*/
+
+}
+
+.footer_gnav_sns img {
+  width: 30px;
+  height: 30px;
+  margin: 22px 10px 0 0;
+}
+
+.copy {
+  text-align: center;
+  margin-top: 110px;
+}
+
+.copy small {
+  font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+  .footer_container {
+    /* width: 400px; */
+    margin: 0 auto;
+  }
+
+  .sec_footer {
+    flex-direction: column;
+  }
+
+  .footer_left {
+    order: 2;
+    margin-top: 30px;
+    width: 100%;
+    text-align: center;
+    padding-right: 0px;
+  }
+
+  .footer_adress {
+    padding-right: 0px;
+  }
+
+  .footer_right {
+    order: 1;
+    width: auto;
+    margin: 0 auto;
+  }
+
+  .footer_nav__listA ul {
+    margin: 0 20px 0 0px;
+  }
+
+  .footer_nav__listB ul {
+    margin-left: 20px;
+  }
+
+
+  .footer_gnav_sns {
+    width: 100%;
+    justify-content: left;
+    padding-right: 0px;
+  }
+
+}
+
+/*リンクの形状*/
+#page-top a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+  width: 180px;
+}
+
+/*リンクを右下に固定*/
+#page-top {
+  position: fixed;
+  right: 50px;
+  bottom: 35px;
+  z-index: 60;
+}
+
+#page-top {
+  filter: drop-shadow(2px 2px 2px #ababab);
+}
+
+@media (max-width: 768px) {
+  #page-top a {
+    width: 120px;
+  }
+
+  #page-top {
+    right: 30px;
+  }
+}
+
+/* ====================================
+index.html
+===================================== */
+
+/* __________#hero __________ */
+
+.slide_box {
+  width: 85%;
+  height: 100svh;
+}
+
+.slider {
+  width: 100%;
+  height: 100svh;
+  border-radius: 0 0 160px 0;
+}
+
+.main_headding {
+  font-family: 'Zen Maru Gothic', serif;
+  font-weight: 500;
+  color: #fff;
+  text-shadow: 0 0 4px #14274C;
+  font-size: 3rem;
+  letter-spacing: 0.2em;
+  position: absolute;
+  bottom: 20%;
+  left: 10%;
+}
+
+.main_headding span {
+  display: inline-block;
+  font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+  .main_headding {
+    font-size: 2rem;
+    letter-spacing: 0.1em;
+  }
+}
+
+.right_header {
+  background-color: #FCFAF7;
+  background-image: url(../images/groovepaper.png);
+  background-repeat: repeat;
+  font-family: 'Zen Maru Gothic', serif;
+  font-weight: normal;
+  z-index: 110;
+  width: 15%;
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+
+#ujinamap .right_header,
+#goods .right_header,
+#history .right_header {
+  display: none;
+}
+
+.logo {
+  width: 83%;
+  margin-bottom: 0.5rem;
+  margin-right: 1rem;
+}
+
+.nav__list li {
+  margin-bottom: 1.5rem;
+}
+
+.nav__list .ja {
+  font-size: 16px;
+  font-weight: 500;
+  /* ➊700から500に変更 */
+}
+
+
+
+.gnav_sns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gnav_sns li {
+  padding: 0.5rem;
+}
+
+.top_nav .gnav_sns li {
+  padding: 0.5rem;
+}
+
+.gnav_sns img {
+  height: 34px;
+}
+
+
+@media (max-width: 1200px) {
+  .gnav_sns li {
+    width: 50px;
+  }
+
+  .top_nav {
+    display: none;
+  }
+
+  .slider {
+    border-radius: 0;
+  }
+
+  .slide_box {
+    width: 100%;
+  }
+
+  .right_header {
+    display: none;
+    position: fixed;
+    background: none;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .right_header.open #ujinamap .right_header,
+  .right_header.open #goods .right_header,
+  .right_header.open #history .right_header,
+  .right_header.open {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    animation-name: gnaviAnime;
+    animation-duration: 1s;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    color: #fff;
+  }
+
+  @keyframes gnaviAnime {
+    0% {
+      opacity: 0;
+      transform: translate(0, 3px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+
+  .circle-bg {
+    position: fixed;
+    z-index: 100;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #fafafa;
+    transform: scale(0);
+    right: -50px;
+    top: -50px;
+    transition: 1s;
+  }
+
+  .circle-bg.open {
+    transform: scale(100);
+  }
+
+  .logo {
+    width: 120px;
+    margin-bottom: 1rem;
+  }
+
+  .nav__list .ja {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .nav__list .en {
+    font-size: 14px;
+    color: #494949;
+  }
+
+
+}
+
+
+/* __________画面上部ヘッダー __________ */
+/* __________gnav __________ */
+.top_nav {
+  font-family: 'Zen Maru Gothic', serif;
+  width: 100%;
+  height: 100px;
+  background-color: rgba(252, 250, 247, 0.9);
+  filter: drop-shadow(2px 2px 2px #ababab);
+  padding: 1rem;
+  position: fixed;
+  z-index: 900;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+
+}
+
+.gnav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gnav__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.gnav__list li a {
+  position: relative;
+  padding: 0 1rem 0.5rem 1rem;
+  transition: .3s;
+  font-weight: 500;
+  font-size: 1.125rem;
+}
+
+
+.gnav__list li a::after {
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 5px;
+  background: url(../images/wave.png) repeat-x bottom left / auto 5px;
+  visibility: hidden;
+  transition: .5s;
+}
+
+.gnav__list li a.now {
+  font-weight: bold;
+  position: relative;
+}
+
+.logo_img {
+  width: 20%;
+  min-width: 200px;
+  padding: 1rem;
+}
+
+
+.gnav__list li.current a:after,
+.gnav__list li a:hover:after {
+  bottom: 0;
+  visibility: visible;
+}
+
+@media (max-width: 1200px) {
+
+  .top_nav .gnav_menu,
+  .top_nav .gnav_sns {
+    display: none;
+  }
+
+  .top_nav.open {
+    transform: translateY(-130%);
+    transition: 0.5s all;
+  }
+}
+
+/* __________ スクロールダウンバー __________ */
+/*スクロールダウン全体の場所*/
+.scrolldown1 {
+  /*描画位置※位置は適宜調整してください*/
+  display: none;
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  /*全体の高さ*/
+  height: 50px;
+}
+
+/*Scrollテキストの描写*/
+.scrolldown1 span {
+  /*描画位置*/
+  position: absolute;
+  left: -15px;
+  top: -15px;
+  /*テキストの形状*/
+  color: #fff;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+}
+
+/* 線の描写 */
+.scrolldown1::after {
+  content: "";
+  /*描画位置*/
+  position: absolute;
+  top: 0;
+  /*線の形状*/
+  width: 1px;
+  height: 30px;
+  background: #fff;
+  /*線の動き1.4秒かけて動く。永遠にループ*/
+  animation: pathmove 1.4s ease-in-out infinite;
+  opacity: 0;
+}
+
+/*高さ・位置・透過が変化して線が上から下に動く*/
+@keyframes pathmove {
+  0% {
+    height: 0;
+    top: 0;
+    opacity: 0;
+  }
+
+  30% {
+    height: 30px;
+    opacity: 1;
+  }
+
+  100% {
+    height: 0;
+    top: 50px;
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .main_headding {
+    position: absolute;
+    bottom: 30%;
+    left: 10%;
+  }
+
+  .scrolldown1 {
+    /*描画位置※位置は適宜調整してください*/
+    display: block;
+
+  }
+}
+
+
+/* __________ shop お店について __________ */
+.shop_inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text_box {
+  font-family: 'Zen Maru Gothic', serif;
+  font-weight: 500;
+  font-size: 1.25rem;
+  width: 65%;
+  letter-spacing: 0.2rem;
+  line-height: 1.7;
+  margin: auto;
+  position: relative;
+  margin-right: 8%;
+  overflow: hidden;
+}
+
+.text_box h2 {
+  margin-bottom: 2.5rem;
+}
+
+.text_box h2 span {
+  display: inline;
+  font-size: 0.9em;
+}
+
+.text_box p {
+  margin-bottom: 1.5rem;
+}
+
+.img_box {
+  width: 35%;
+  position: relative;
+}
+
+.img_box img {
+  border-radius: 40px;
+}
+
+.text_box .custom-btn {
+  margin-top: 2rem;
+}
+
+.illust_kamome {
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  z-index: 2;
+  width: 35%;
+  height: auto;
+  transform: scale(-1, 1) rotate(-20deg);
+}
+
+.illust_mountain {
+  position: absolute;
+  bottom: -50%;
+  right: -20%;
+  z-index: 2;
+  height: auto;
+}
+
+
+@media (max-width: 1200px) {
+  .illust_mountain {
+    position: absolute;
+    bottom: -50%;
+    right: 0%;
+    z-index: 2;
+    height: auto;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .shop_inner {
+    flex-direction: column;
+  }
+
+  .text_box {
+    width: 80%;
+    margin-bottom: 6rem;
+    line-height: 1.5;
+  }
+
+  .img_box {
+    width: 80%;
+  }
+
+  .text_box p {
+    font-size: 1rem;
+  }
+
+  .text_box .custom-btn {
+    margin-top: 1rem;
+  }
+
+  .illust_kamome {
+    top: -25%;
+    right: 20%;
+  }
+
+  .illust_mountain {
+    bottom: -30%;
+    right: 0%;
+    width: 80%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 450px) {
+  .text_box h2 {
+    font-size: 6.6vw;
+  }
+
+  .text_box .custom-btn {
+    font-size: 1rem;
+  }
+}
+
+/*  __________ ship __________ */
+.illust_ship {
+  margin: auto;
+  max-width: 300px;
+  animation: ship 10s infinite;
+  transition: 10s;
+  transform: rotate(2deg);
+}
+
+
+@keyframes ship {
+  50% {
+    transform: rotate(-2deg);
+  }
+
+  100% {
+    transform: rotate(2deg);
+  }
+}
+
+@media (max-width: 724px) {
+  .illust_ship {
+    width: 60%;
+  }
+}
+
+
+/* おすすめのお土産 */
+.osusume_midashi {
+  position: relative;
+}
+
+.omiyage {
+  position: absolute;
+  top: -30px;
+  left: 16%;
+  width: 15%;
+  max-width: 225px;
+}
+
+.midashi_kamome {
+  position: absolute;
+  bottom: 0;
+  right: 10%;
+  width: 20%;
+  z-index: 30;
+}
+
+
+.midashi {
+  overflow: hidden;
+  position: relative;
+  height: auto;
+}
+
+.osusume_midashi h2 {
+  text-align: center;
+  font-family: 'Zen Maru Gothic', serif;
+  line-height: 1.5;
+  letter-spacing: 0.2rem;
+  font-size: 2.5rem;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 50;
+}
+
+.osusume_midashi h2 span {
+  font-size: 0.8em;
+  display: inline;
+}
+
+
+@media (max-width: 768px) {
+  .midashi img {
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .osusume_midashi h2 {
+    font-size: 1.5rem;
+  }
+
+  .omiyage {
+    top: 0%;
+    left: 5%;
+    width: 30%;
+    min-width: 150px;
+  }
+
+  .midashi_kamome {
+    right: 1%;
+    width: 40%;
+    min-width: 220px;
+  }
+}
+
+
+
+
+
+.midashi::before {
+  content: '';
+  font-family: 'shape divider from ShapeDividers.com';
+  position: absolute;
+  bottom: -1px;
+  left: -1px;
+  right: -1px;
+  top: -1px;
+  z-index: 3;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-size: 336% 62px;
+  background-position: 55% 100%;
+  transform: rotateY(180deg);
+  background-image: url('data:image/svg+xml;charset=utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.28 2.17" preserveAspectRatio="none"><path d="M35.28 1.67c-3.07-.55-9.27.41-16.15 0-6.87-.4-13.74-.58-19.13.1v.4h35.28z" fill="%23fafafa"/><path d="M35.28 1.16c-3.17-.8-7.3.4-10.04.56-2.76.17-9.25-1.47-12.68-1.3-3.42.16-4.64.84-7.04.86C3.12 1.31 0 .4 0 .4v1.77h35.28z" opacity=".5" fill="%23fafafa"/><path d="M35.28.31c-2.57.84-7.68.3-11.8.43-4.1.12-6.85.61-9.57.28C11.18.69 8.3-.16 5.3.02 2.3.22.57.85 0 .87v1.2h35.28z" opacity=".5" fill="%23fafafa"/></svg>');
+}
+
+@media (min-width:768px) {
+
+
+  .midashi::before {
+    background-size: 113% 39px;
+    background-position: 50% 100%;
+    transform: rotateY(180deg);
+  }
+}
+
+@media (min-width:1025px) {
+  .midashi::before {
+    bottom: -0.1vw;
+    left: -0.1vw;
+    right: -0.1vw;
+    top: -0.1vw;
+    background-size: 100% 90px;
+    background-position: 50% 100%;
+    transform: rotateY(180deg);
+  }
+}
+
+@media (min-width:2100px) {
+  .midashi::before {
+    background-size: 100% calc(2vw + 90px);
+  }
+}
+
+
+/*  __________ goods __________ */
+
+.goods_text {
+  position: relative;
+}
+
+.goods_text .contact_headding {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.goods_text .sec_title {
+  font-size: 48px;
+}
+
+/* ____見出し＿自分用お土産_____ */
+.goods_midashi {
+  text-align: center;
+  font-family: 'Zen Maru Gothic', serif;
+  line-height: 1;
+  font-size: 4rem;
+  margin-bottom: 3rem;
+}
+
+.fukidashi {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+
+.goods_midashi p {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  letter-spacing: 0.3em;
+  margin-top: 1em;
+}
+
+/* 見出し＿これだけは外せない */
+.teiban_title .fukidashi {
+  display: inline-block;
+  line-height: 1.5;
+}
+
+
+@media (max-width: 768px) {
+  .teiban_title .fukidashi {
+    padding-bottom: 2rem;
+    display: block;
+    transform: rotate(-10deg);
+  }
+
+  .sec_title {
+    font-size: 2rem;
+
+  }
+
+}
+
+
+/* 見出し＿4選 */
+.teiban_title .sec_title span {
+  font-size: 5rem;
+  display: inline-block;
+  font-weight: bold;
+  position: relative;
+  color: #d93b2b;
+}
+
+.teiban_title .sec_title span::after {
+  content: "";
+  position: absolute;
+  top: -25px;
+  right: -70px;
+  background: url(../images/top/concen.png);
+  background-repeat: no-repeat;
+  object-fit: contain;
+  width: 150px;
+  height: 100px;
+}
+
+/* 見出し＿お自宅用にもおすすめ*/
+.gohoubi_title .sec_title {
+  position: relative;
+}
+
+.h2-kamome {
+  width: 100px;
+  height: auto;
+  position: absolute;
+  z-index: 10;
+  transform: scale(-1, 1) rotate(25deg);
+  top: -90%;
+  left: -20%;
+}
+
+@media (max-width: 768px) {
+  .h2-kamome {
+    width: 50%;
+    height: auto;
+    top: -55%;
+    left: -52%;
+  }
+}
+
+.gohoubi_title .fukidashi {
+  padding-bottom: 30px;
+  background-image: url(../images/top/fukidashi.svg);
+  background-position: bottom center;
+  background-size: 200px 50px;
+  transform: rotate(5deg);
+}
+
+
+.goods_name {
+  text-align: center;
+  font-family: 'Zen Maru Gothic', serif;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+  letter-spacing: 0.2em;
+}
+
+.goods_name h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.goods_name p {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+
+  .goods_name h3 {
+    font-size: 1.25rem;
+  }
+
+  .goods_name p {
+    font-size: 0.8rem;
+  }
+}
+
+
+
+
+/* ________これだけは外せない！定番4選________ */
+.souvenir_4th {
+  background-color: #fafafa;
+  overflow-x: hidden;
+  padding: 3rem;
+  /* ➎padding-topだけ広げる？ */
+
+}
+
+.bs_box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  overflow-x: hidden;
+
+}
+
+.bs_box:last-of-type {
+  margin-bottom: 0;
+}
+
+.bs_box:nth-child(even) {
+  justify-content: right;
+}
+
+.bs_box:nth-child(odd) {
+  justify-content: left;
+}
+
+.bs_box:nth-child(even) .goods_info {
+  padding-right: 1rem;
+}
+
+.bs_box:nth-child(odd) .goods_info {
+  padding-left: 1rem;
+}
+
+.goods_img2,
+.goods_img {
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.goods_info {
+  max-width: 340px;
+  line-height: 1.75;
+  padding: 2px;
+  letter-spacing: 0.15em;
+
+}
+
+.goods_info .custom-btn {
+  margin: 2rem 0;
+}
+
+@media (max-width: 768px) {
+  .bs_box {
+    margin-bottom: 3rem;
+  }
+
+  .bs_box:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .bs_box:nth-child(even) {
+    flex-direction: column-reverse;
+  }
+
+  .bs_box:nth-child(odd) {
+    flex-direction: column;
+  }
+
+  .bs_box:nth-child(even) .goods_info {
+    padding-right: 0;
+  }
+
+  .bs_box:nth-child(odd) .goods_info {
+    padding-left: 0;
+  }
+
+  .goods_img {
+    width: 100%;
+  }
+
+  .goods_info {
+    width: 90%;
+    line-height: 1.5;
+  }
+
+
+}
+
+
+/* ________自分へのご褒美________ */
+.souvenir_mine {
+  position: relative;
+  padding-top: 140px;
+  /* 波を入れるので.sec使えない　個別に余白設定する。 */
+}
+
+.souvenir_wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  z-index: -1;
+}
+
+.goods_img2 {
+  width: 80%;
+}
+
+.mysouvenir {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  /* grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); */
+  gap: 5rem 2rem;
+  place-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.ms_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+
+@media (max-width: 768px) {
+  .souvenir_wave {
+    height: 160px;
+  }
+
+  .mysouvenir {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+  }
+
+  .goods_img2 {
+    width: 80%;
+  }
+}
+
+
+/*  __________ slideshow __________ */
+
+.map_title {
+  text-align: center;
+}
+
+.images {
+  width: 100%;
+  overflow: hidden;
+}
+
+.images__inner {
+  width: fit-content;
+  margin: 48px 0;
+}
+
+.images__flex {
+  width: fit-content;
+  display: flex;
+}
+
+.images__grid {
+  width: fit-content;
+  margin: 0 auto;
+  display: grid;
+  gap: 8px;
+  /* grid-template-columns: 2fr 3fr 5fr 2fr;
+  grid-template-rows: 2fr 1fr 2fr; */
+  /* width: 80vw; */
+  grid-template-columns: 200px 300px 500px 200px;
+  grid-template-rows: 200px 100px 200px;
+  padding: 0 10px;
+}
+
+/* __ __ __ slideshow ループ __ __ __ */
+.images__grid {
+  animation: loop-slide 30s infinite linear 1s both;
+}
+
+@keyframes loop-slide {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* __ __ __ slideshow ループ __ __ __ */
+
+.images__grid img {
+  display: block;
+  border-radius: 8px;
+  overflow: hidden;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.images__grid img:nth-of-type(1) {
+  grid-column: 1/2;
+  grid-row: 1/4;
+}
+
+.images__grid img:nth-of-type(2) {
+  grid-column: 2/3;
+  grid-row: 1/3;
+}
+
+.images__grid img:nth-of-type(3) {
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+
+.images__grid img:nth-of-type(4) {
+  grid-column: 3/4;
+  grid-row: 1/4;
+}
+
+.images__grid img:nth-of-type(5) {
+  grid-column: 4/5;
+  grid-row: 1/2;
+}
+
+.images__grid img:nth-of-type(6) {
+  grid-column: 4/5;
+  grid-row: 2/4;
+}
+
+
+@media (max-width: 768px) {
+  .images__grid {
+
+    grid-template-columns: 100px 150px 250px 100px;
+    grid-template-rows: 100px 50px 100px;
+
+  }
+}
+
+/* __________ Instagram __________ */
+#insta {
+  background-color: #ECEBEB;
+  text-align: center;
+  padding: 80px;
+}
+
+#insta .custom-btn {
+  margin-top: 3rem;
+}
+
+#insta .sec_title::before {
+  content: url('../images/top/insta_mimdashi.png');
+  margin-right: .3em;
+}
+
+#insta .sec_title span {
+  display: inline-block;
+  font-size: 2rem;
+}
+
+
+@media (max-width: 768px) {
+  .kamome_img {
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  .contact_headding {
+    font-size: 2em;
+  }
+
+  #insta {
+    padding: 50px;
+  }
+
+  #insta .custom-btn {
+    margin-top: 1rem;
+  }
+
+  #insta .sec_title {
+    font-size: 1.5rem;
+  }
+
+  #insta .sec_title span {
+    display: inline-block;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #insta .sec_title::before {
+    content: url('../images/top/insta_midashi_2.png');
+  }
+}
+
+/* __________ セクション区切り __________ */
+.ashiato {
+  width: 100%;
+  overflow-x: hidden;
+  height: 200px;
+  background-image: url(../images/top/ashiato.svg);
+  background-repeat: no-repeat;
+ background-position: center center;
+}
+
+/* __________ access __________ */
+#access {
+  padding-top: 100px;
+}
+
+.floor,
+.area {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+  align-items: center;
+}
+
+.area_map,
+.floor_map {
+  width: 80%;
+  margin-right: 2rem;
+}
+
+.area_map img {
+  border-radius: 30px;
+}
+
+.google_btn {
+  text-align: center;
+  margin-top: 1rem;
+
+}
+
+.area_guide,
+.floor_guide {
+  width: 25%;
+}
+
+.area_guide .sec_title {
+  font-size: 2.5rem;
+}
+
+.floor_guide p {
+  font-family: 'Zen Maru Gothic', serif;
+  font-weight: 500;
+  font-size: 1.25rem;
+  letter-spacing: 0.2em;
+}
+
+.area_map iframe {
+  width: 100%;
+}
+
+@media (max-width: 980px) {
+  .ashiato {
+    height: 100px;
+  }
+  .floor,
+  .area {
+    flex-direction: column;
+  }
+
+  .area_map,
+  .floor_map {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .area_guide,
+  .floor_guide {
+    width: 80%;
+  }
+
+  .area_guide .sec_title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .area_guide {
+    text-align: center;
+  }
+
+  .area_guide .custom-btn2 {
+    padding: 4px 8px 4px 8px;
+    margin-bottom: 1rem;
+  }
+
+  .floor_guide p {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.info_cont {
+  display: flex;
+  justify-content: space-between;
+}
+
+.area_info,
+.floor_info {
+  max-width: 450px;
+  flex: 1;
+}
+
+.area_info {
+  margin-right: 2rem;
+}
+
+.info_cont dt {
+  font-weight: bold
+}
+
+.info_cont dd {
+  margin-bottom: 1rem;
+}
+
+.info_cont h3 {
+  font-family: Zen Maru Gothic;
+  font-size: 1.75rem;
+  letter-spacing: 0.2rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  padding: 0.5em 0;
+  /*上下の余白*/
+  border-top: solid 3px #14274C;
+  /*上線*/
+  border-bottom: solid 3px #14274C;
+  /*下線*/
+}
+
+.area_info h3:before {
+  content: url("../images/top/train_info_icon.png");
+  margin-right: 0.5rem;
+}
+
+.floor_info h3:before {
+  content: url("../images/top/shop_info_icon.png");
+  margin-right: 0.5rem;
+}
+
+.area_info dt {
+  text-decoration: underline;
+  display: inline;
+}
+
+dt a {
+  display: inline;
+}
+
+.area_info p:last-of-type {
+  margin-bottom: 1rem;
+}
+
+.area_info dd span {
+  padding: 0 0 0.5rem 0.5rem;
+}
+
+
+.floor_info dl {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.floor_info dt {
+  width: 25%;
+}
+
+.floor_info dd {
+  width: 75%;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .info_cont {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .area_info {
+    margin-right: 0;
+    margin-bottom: 2rem;
+    width: 90%;
+    ;
+  }
+
+  .floor_info,
+  .area_info {
+    width: 90%;
+  }
+
+
+  .info_cont dd {
+    margin-bottom: 0.5rem;
+  }
+
+  .info_cont h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .area_info p:last-of-type {
+    margin-bottom: 1rem;
+  }
+
+  .area_info dd span {
+    padding: 0 0 0.5rem 0.5rem;
+  }
+
+}
+
+
+
+
+
+/* __________ コンタクト __________ */
+#contact {
+  background-image: url(../images/top5.jpg);
+  /* min-height: 60svh; */
+  background-position: bottom 40% center;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  background-size: cover;
+  display: grid;
+  text-align: center;
+  place-content: center;
+  place-items: center;
+  position: relative;
+  font-family: 'Zen Maru Gothic', serif;
+  color: #fff;
+  letter-spacing: 0.3rem;
+  padding-top: 100px;
+}
+
+.contact_box {
+  text-align: left;
+  padding: 100px 0;
+}
+
+
+.contact_box h2 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.contact_headding {
+  font-family: 'Zen Maru Gothic', serif;
+  color: #fff;
+  position: relative;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.tel_icon::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: url(../images/tel.svg) no-repeat;
+  background-size: contain;
+  margin-right: 4px;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+
+  .kamome_img {
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 250px;
+
+  }
+
+  .contact_box h2 {
+    font-size: 1.5rem;
+  }
+
+  .contact_headding {
+    font-size: 2em;
+  }
+
+  .contact_box {
+    text-align: center;
+    padding: 80px 0 150px 0;
+  }
+
+}
+
+
+
+
+.top_logo {
+  display: none;
+}
+
+
+@media (max-width: 1200px) {
+  .top_logo {
+    display: block;
+    margin: 1.5rem;
+    width: 20%;
+    min-width: 150px;
+  }
+}

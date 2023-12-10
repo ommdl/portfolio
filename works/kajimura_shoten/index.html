@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head prefix="og: https://ogp.me/ns#">
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>有限会社梶村商店</title>
+    <meta name="description" content="広島港にある梶村商店では心に残るお土産を提供しており、このサイトでは「これだけは外せない広島みやげ定番４選！」「ご自宅にもおすすめイチ押しおみやげ」を紹介しております。また、広島港周辺のスポットを「お散歩マップ」として紹介。広島港と共に歩んできた歴史紹介。にしき堂などのお土産多数揃えておりますので好みに合ったお土産をお探しください。">
+
+    <!-- OGPタグ/twitterカード -->
+        <!-- ドメイン決定後、記入よろしくお願いいたします -->
+    <meta property="og:url" content="ページのURL">
+    <meta property="og:title" content="梶村商店 | 広島港の土産物屋">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="広島港にある梶村商店では心に残るお土産を提供しており、このサイトでは「これだけは外せない広島みやげ定番４選！」「ご自宅にもおすすめイチ押しおみやげ」を紹介しております。にしき堂などのお土産多数揃えておりますので好みに合ったお土産をお探しください。">
+    <meta property="og:image" content="画像のURL">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@Twitterユーザー名">
+    <meta property="og:site_name" content="サイト名">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="fb:app_id" content="FacebookアプリID">
+
+    <!-- 電話番号やメールアドレスの変換設定 リンク飛ばさない設定-->
+    <meta name="format-detection" content="email=no,telephone=no,address=no">
+
+    <!-- css -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <!-- Vegas Background SlideShow -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css">
+
+    <!-- js -->
+    <script src="js/script.js" defer></script>
+    <script src="js/gsap.js" defer></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- web fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Zen+Maru+Gothic:wght@400;500;900&display=swap" rel="stylesheet">
+
+    <!-- favicon -->
+    <link rel="icon" href="images/favicon.ico">
+</head>
+
+
+
+
+<body id="top">
+    <header>
+        <div id="hero" class="sec">
+            <!-- スライドショー -->
+            <div class="slide_box">
+                <div class="slider">
+                    <h1 class="top_logo"><img src="images/logo_shironuki_ol.png" alt="梶村商店" width="100" height="100"></h1>
+                    <h1 class="main_headding ">広島港<span>で</span><br>心<span>に</span>残<span>る</span>お土産<span>を。
+                        </span></h1>
+                </div>
+
+                <!-- スクロールダウン -->
+                <div class="scrolldown1"><span>Scroll</span></div>
+
+                <!-- 右側のヘッダー -->
+                <div id="right_header" class="right_header">
+                    <div class="logo">
+                        <a href="index.html"><img src="images/logo_ol.svg" alt="広島港の土産物屋 梶村商店"></a>
+                    </div>
+                    <nav class="right_nav">
+                        <ul class="nav__list">
+                            <li><a href="goods.html" class="opa">
+                                    <span class="ja">商品一覧</span>
+                                    <span class="en">GOODS</span>
+                                </a></li>
+                            <li><a href="index.html#access" class="opa">
+                                    <span class="ja">店舗案内</span>
+                                    <span class="en">STORE GUIDE</span>
+                                </a></li>
+                            <li><a href="history.html" class="opa">
+                                    <span class="ja">私たちの歩み
+                                    </span>
+                                    <span class="en">HISTORY</span>
+                                </a></li>
+                            <li><a href="ujinamap.html" class="opa">
+                                    <span class="ja">お散歩マップ</span>
+                                    <span class="en">UJINA MAP</span>
+                                </a></li>
+                            <li><a href="index.html#contact">
+                                    <span class="ja">お問い合わせ</span>
+                                    <span class="en">CONTACT</span>
+                                </a></li>
+                        </ul>
+                    </nav>
+                    <ul class="gnav_sns">
+                        <li><a href="https://maps.app.goo.gl/B4WHyeRJaHEMmqs98" target="_blank" rel="norefferrer"><img src="images/access_icon.svg" alt="グーグルマップ"></a></li>
+                        <li><a href="https://www.instagram.com/kajimurasyouten/" target="_blank" rel="norefferrer"><img src="images/insa_icon.svg" alt="インスタグラム"></a></li>
+                        <li><a href="https://www.facebook.com/kajimurashouten/" target="_blank" rel="norefferrer"><img src="images/facebook_icon.svg" alt="フェイスブック"></a></li>
+                    </ul>
+                </div>
+                <div class="circle-bg"></div>
+
+                <!--SP用ハンバーガーメニュー３本線-->
+                <button class="hamburger">
+                    <span class="btn-gNav">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!--画面上部ヘッダー-->
+    <nav class="top_nav top">
+        <div class="wrapper gnav">
+            <div class="logo_img">
+                <a href="index.html"><img src="images/logo_yoko_ol.svg" alt="広島港の土産物屋 梶村商店" ></a>
+            </div>
+            <div class="gnav_menu">
+                <ul class="gnav__list">
+                    <li><a href="index.html" class="bold now">ホーム</a></li>
+                    <li><a href="goods.html" class="bold">商品一覧</a></li>
+                    <li><a href="index.html#access" class=" bold">店舗案内</a></li>
+                    <li><a href="history.html" class=" bold">私たちの歩み</a></li>
+                    <li><a href="ujinamap.html" class=" bold">お散歩マップ</a></li>
+                    <li><a href="index.html#contact" class=" bold">お問い合わせ</a></li>
+                </ul>
+            </div>
+            <ul class="gnav_sns">
+                <li><a href="https://maps.app.goo.gl/B4WHyeRJaHEMmqs98" target="_blank" rel="norefferrer"><img src="images/access_icon.svg" alt="グーグルマップ"></a></li>
+                <li><a href="https://www.instagram.com/kajimurasyouten/" target="_blank" rel="norefferrer"><img src="images/insa_icon.svg" alt="インスタグラム"></a></li>
+                <li><a href="https://www.facebook.com/kajimurashouten/" target="_blank" rel="norefferrer"><img src="images/facebook_icon.svg" alt="フェイスブック"></a></li>
+            </ul>
+        </div>
+    </nav>
+    <p id="page-top"><a href="#" class="deg"><img src="images/pagtop.png" alt="ページトップに戻るアイコン"></a></p>
+
+
+    <main>
+        <!-- お店について -->
+        <section id="shop" class="sec">
+            <div class="wrapper inner shop_inner">
+                <div class="text_box">
+                    <h2>旅人<span>と</span>人<span>を</span>結ぶお土産<br>広島港『梶村商店』</h2>
+
+                    <p>穏やかな瀬戸内海を背景に日本一の船数が行き交う<br>広島港宇品旅客ターミナル。</p>
+
+                    <p>梶村商店は広島港の土産物屋として昭和10年からお客様をお迎えして参りました。</p>
+
+                    <p>
+                        広島の銘菓や各種お土産。<br>
+                        お弁当・サンドイッチ・パン・飲料水・お菓子・アイスクリームや雑貨などを取り揃え皆様をお待ちしております。
+                    </p>
+
+                    <p>営業時間　6:00 ~ 20:50<br>
+                       年中無休
+                    </p>
+
+                    <a href="history.html" class="custom-btn">梶村商店と<br class="br-sp">広島港の歴史</a>
+                </div>
+
+                <div class="img_box">
+                    <img src="images/top/top_shop.jpg" alt="まごころこめて接客しています。">
+                    <img src="images/top/top-2.png" alt="" class="illust_kamome">
+                    <img src="images/top/top-5.png" alt="" class="illust_mountain">
+                </div>
+            </div>
+        </section>
+
+        <!-- セクション区切り　船 -->
+        <div class="sec wrapper">
+            <div class="illust_ship"><img src="images/top/seaspica_2.png" alt=""></div>
+        </div>
+
+        <!-- osusume midashi -->
+        <section class="osusume_midashi">
+            <h2>おすすめ<span>の</span><br class="br-sp">お土産</h2>
+            <div class="midashi"><img src="images/omiyage_header.png" alt=""></div>
+            <img src="images/top/omiyage.png" alt="" class="omiyage">
+            <img src="images/kamome.png" alt="" class="midashi_kamome">
+        </section>
+
+
+
+        <!-- 商品紹介 -->
+        <section id="goods" class="sec">
+
+            <!--これだけは外せない4選-->
+            <section class="souvenir_4th ">
+                <div class="teiban_title goods_midashi">
+                    <span class="fukidashi">これだけは外せない！<br>広島みやげ</span>
+                    <h2 class="sec_title">定番<span>4</span>選</h2>
+                    <p>4 standard selection</p>
+                </div>
+
+                <div class="bestsouvenir wrapper">
+                    <div class="bs_box left_in">
+                        <!-- <div class="bs_box "> -->
+                        <div class="goods_img "><img src="images/top/top-10.png" alt="にしき堂生もみじ" class="ds "></div>
+                        <div class="goods_info">
+                            <div class="goods_name">
+                                <h3>生もみじ</h3>
+                                <p>nama momiji</p>
+                            </div>
+                            <p>モチモチ感がたまらない！にしき堂の大人気商品です！モチモチの生地には、広島産の米粉が使われています。
+                            </p>
+                            <div class="center center_inner"><a href="goods.html#nisikido" class="custom-btn2">にしき堂の商品一覧を見る</a></div>
+                        </div>
+                    </div>
+
+
+                    <div class="bs_box right_in">
+                        <!-- <div class="bs_box"> -->
+                        <div class="goods_info">
+                            <div class="goods_name">
+                                <h3>あきもみじ</h3>
+                                <p>aki momiji</p>
+                            </div>
+                            <p>リピーターが多い天光堂の人気No1商品。クルミやアーモンドの香ばしい生地とこだわりあんこがコーヒーにも相性◎
+                            </p>
+                            <div class="center center_inner"><a href="goods.html#tenkodo" class="custom-btn2">天光堂の商品一覧を見る</a></div>
+                        </div>
+                        <div class="goods_img"><img src="images/top/top-8.png" alt="天光堂あきもみじ" class="ds"></div>
+                    </div>
+
+                    <div class="bs_box  left_in">
+                        <!-- <div class="bs_box"> -->
+                        <div class="goods_img"><img src="images/top/top-6.png" alt="亀屋川通り餅" class="ds"></div>
+                        <div class="goods_info">
+                            <div class="goods_name">
+                                <h3>川通り餅</h3>
+                                <p>kawadoori mochi</p>
+                            </div>
+                            <p>広島県民で知らない人はいない銘菓。一見シンプルな見た目ですが、クルミがアクセントになっていて食べ出したら止まらない美味しさ。
+                            </p>
+                            <div class="center center_inner"><a href="goods.html#kameya" class="custom-btn2">亀屋の商品一覧を見る</a></div>
+                        </div>
+                    </div>
+
+                    <div class="bs_box right_in">
+                        <!-- <div class="bs_box"> -->
+                        <div class="goods_info">
+                            <div class="goods_name">
+                                <h3>安芸紫</h3>
+                                <p>aki-murasaki</p>
+                            </div>
+                            <p>広島の特産品・広島菜を一番美味しい旬の時期に収穫し、手間暇かけて作られた「山豊」のお漬物。
+                            </p>
+                            <div class="center center_inner"><a href="goods.html#yamatoyo" class="custom-btn2">山豊の商品一覧を見る</a></div>
+                        </div>
+                        <div class="goods_img"><img src="images/top/top-7.png" alt="山豊あきむらさき" class="ds"></div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <!--自分へのご褒美-->
+            <section class="sec souvenir_mine">
+                <img src="images/top/wave.svg" alt="" class="souvenir_wave">
+                <div class="gohoubi_title goods_midashi wrapper ">
+                    <span class="fukidashi">ご自宅用にも<br>おすすめ</span>
+                    <h2 class="sec_title">
+                        <img src="images/top/top-2.png" alt="" class="h2-kamome">
+                        イチ押し<br class="br-sp">おみやげ
+                    </h2>
+                    <p>souvenir for yourself</p>
+                </div>
+
+                <div class="mysouvenir wrapper inner">
+
+                    <div class="ms_box fadein">
+                        <div class="goods_img2"><img src="images/top/ms_1.png" alt="レモンケーキ" class="ds"></div>
+                        <div class="goods_info">
+                            <div class="goods_name">
+                                <h3>レモンケーキ</h3>
+                                <p>lemon cake</p>
+                            </div>
+                            <p>女性人気ナンバーワン。瀬戸内海産レモンをふんだんに使用ししっとりと焼き上げました。
+                            </p>
+                            <div class="center center_inner"><a href="goods.html" class="custom-btn2">商品一覧をみる</a></div>
+                        </div>
+                    </div>
+                    <div class="ms_box fadein">
+                        <div class="goods_img2"><img src="images/top/ms_2.png" alt="広島菜ごはん" class="ds"></div>
+                        <div class="goods_info">
+                            <div class="goods_name">
+                                <h3>広島菜ごはん</h3>
+                                <p>rice with hiroshima-na</p>
+                            </div>
+                            <p>炊いたご飯に混ぜるだけであっという間に一品出来上がり。あなご味は広島ならでは。
+                            </p>
+                            <div class="center center_inner"><a href="goods.html" class="custom-btn2">商品一覧をみる</a></div>
+                        </div>
+                    </div>
+                    <div class="ms_box fadein">
+                        <div class="goods_img2"><img src="images/top/ms_3.png" alt="にしき堂おとなのもみじ" class="ds"></div>
+                        <div class="goods_info">
+                            <div class="goods_name">
+                                <h3>おとなのもみじ</h3>
+                                <p>otona no momiji</p>
+                            </div>
+                            <p>濃厚な抹茶生地に、とろりとした餅状のあん。大人のプチご褒美にピッタリの贅沢な一品。
+                            </p>
+                            <div class="center center_inner"><a href="goods.html" class="custom-btn2">商品一覧をみる</a></div>
+                        </div>
+                    </div>
+                    <div class="ms_box fadein">
+                        <div class="goods_img2"><img src="images/top/ms_4.png" alt="山豊広島菜パスタソース" class="ds"></div>
+                        <div class="goods_info">
+                            <div class="goods_name">
+                                <h3>広島菜パスタソース</h3>
+                                <p>pasta sauce with Hirosimana</p>
+                            </div>
+                            <p>漬物とパスタの新しい出逢い。新感覚のパスタソースは一人前サイズで色々な種類から選べます。
+                            </p>
+                            <div class="center center_inner"><a href="goods.html" class="custom-btn2">商品一覧をみる</a></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- インスタグラム -->
+        <section id="insta" class="sec">
+            <div class="wrapper inner">
+                <h2 class="sec_title">Instagram<span>で</span><br class="br-sp">最新情報配信中</h2>
+                <a href="https://www.instagram.com/kajimurasyouten/" class="custom-btn" target="_blank" rel="norefferrer">Instagramでお店の情報を見る</a>
+            </div>
+        </section>
+
+        <!-- スライドショー -->
+        <section id="slideshow" class="sec">
+            <div class="wrapper inner map_title">
+                <h2 class="sec_title">お散歩マップ</h2>
+            </div>
+            <div class="images">
+                <!-- <a href="slideshow.html"> -->
+                <div class="images__inner">
+                    <div class="images__flex">
+                        <div class="images__grid">
+                            <img src="images/slideshow/noriba.jpg" alt="広島港">
+                            <img src="images/slideshow/tou2.jpg" alt="宇品波止場公園">
+                            <img src="images/slideshow/umi.jpg" alt="広島港">
+                            <img src="images/slideshow/densya1.jpg" alt="市電広島港駅">
+                            <img src="images/slideshow/okamo.jpg" alt="広島港屋上">
+                            <img src="images/slideshow/densya2.jpg" alt="市電広島港駅">
+                        </div>
+                        <div class="images__grid">
+                            <img src="images/slideshow/tou1.jpg" alt="宇品波止場公園">
+                            <img src="images/slideshow/tenjyou.jpg" alt="広島港">
+                            <img src="images/slideshow/yuuhi2.jpg" alt="暁橋">
+                            <img src="images/slideshow/akutasu.jpg" alt="アクタス広島">
+                            <img src="images/slideshow/keisatu2.jpg" alt="旧水上警察跡地">
+                            <img src="images/slideshow/kokutetu.jpg" alt="旧国鉄倉庫">
+                        </div>
+                        <div class="images__grid">
+                            <img src="images/slideshow/noriba.jpg" alt="広島港">
+                            <img src="images/slideshow/tou2.jpg" alt="宇品波止場公園">
+                            <img src="images/slideshow/umi.jpg" alt="広島港">
+                            <img src="images/slideshow/densya1.jpg" alt="市電広島港駅">
+                            <img src="images/slideshow/okamo.jpg" alt="広島港屋上">
+                            <img src="images/slideshow/densya2.jpg" alt="市電広島港駅">
+                        </div>
+                        <div class="images__grid">
+                            <img src="images/slideshow/tou1.jpg" alt="宇品波止場公園">
+                            <img src="images/slideshow/tenjyou.jpg" alt="広島港">
+                            <img src="images/slideshow/yuuhi2.jpg" alt="暁橋">
+                            <img src="images/slideshow/akutasu.jpg" alt="アクタス広島">
+                            <img src="images/slideshow/keisatu2.jpg" alt="旧水上警察跡地">
+                            <img src="images/slideshow/kokutetu.jpg" alt="旧国鉄倉庫">
+                        </div>
+                    </div>
+                </div>
+                <!-- </a> -->
+            </div>
+            <div class="wrapper inner center map_title"><a href="ujinamap.html" class="custom-btn" rel="norefferrer">お散歩マップを見る</a></div>
+        </section>
+
+        <!-- セクション区切り 　足跡-->
+        <div class="wrapper ashiato">
+        </div>
+
+        <!-- アクセス -->
+        <section id="access" class="sec wrapper">
+            <!-- フロアマップ -->
+            <div class="area">
+                <div class="area_guide center">
+                    <h2 class="sec_title">アクセス</h2>
+                    <!-- <div class="center"><a href="https://maps.app.goo.gl/PgXks7HQ6pX9Hopg6" target="_blank" rel="noopener noreferrer" class="custom-btn2">Google Mapを見る</a>
+                    </div> -->
+                </div>
+                <div class="area_map">
+                    <!-- <img src="images/top/syuhenmap1.jpg" alt="宇品港エリアマップ"> -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3293.9121465767553!2d132.45434727924513!3d34.3527139344438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x355aa340a4e9fb43%3A0xd458f21ab178fe96!2z5bqD5bO25rivIOaituadkeWVhuW6lw!5e0!3m2!1sja!2sjp!4v1701322318786!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="center google_btn"><a href="https://maps.app.goo.gl/PgXks7HQ6pX9Hopg6" target="_blank" rel="noopener noreferrer" class="custom-btn2">Google Mapを見る</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="floor">
+                <div class="floor_guide center">
+                    <p>広島港１F<br>
+                        ターミナル内マップ</p>
+
+                </div>
+                <div class="floor_map">
+                    <img src="images/top/kannaimap1.svg" alt="フロアマップ">
+                </div>
+            </div>
+
+            <div class="info_cont inner center ">
+                <div class="area_info">
+                    <h3>JR広島駅から</h3>
+                    <p>電車または路線バスで約30～50分</p>
+                    <p>
+                        （正確な運行情報は各社ホームページで
+                        ご確認ください。）
+                    </p>
+
+                    <dl>
+                        <dt><a href="https://www.hiroden.co.jp/train/index.html" target="_blank" class="opa ">広島電鉄</a></dt>
+                        <dd>1番線 / 5番線（比治山下経由）<br>
+                            <span>「広島港」下車</span>
+                        </dd>
+
+                        <dt><a href="http://www.hirobus.co.jp/route-bus/area/" target="_blank" class="opa">広島バス</a></dt>
+                        <dd>21－1 / 21－2 宇品線<br>
+                            <span>「広島港」下車</span>
+                            広島みなと新線(広島港桟橋行)<br>
+                            <span>「広島港桟橋」下車</span>
+                        </dd>
+                        <dt><a href="https://www.chugoku-jrbus.co.jp/teikan/meipurupu/" target="_blank" class="opa">中国JRバス</a></dt>
+                        <dd>ひろしま めいぷる～ぷ ブルールート<br>（広島港アクセスバス）<br>
+                            <span>「広島港（東ターミナル）」下車</span>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="floor_info">
+                    <h3>店舗情報</h3>
+                    <dl>
+                        <dt>店舗名</dt>
+                        <dd>梶村商店</dd>
+                        <dt>会社名</dt>
+                        <dd>有限会社　梶村商店</dd>
+                        <dt>住所</dt>
+                        <dd>〒734-0011<br>広島市南区宇品海岸1丁目13-26<br>広島港宇品旅客ターミナル1階</dd>
+                        <dt>TEL</dt>
+                        <dd>082-256-2898</dd>
+                        <dt>営業時間</dt>
+                        <dd>6:00～20:50</dd>
+                        <dt>定休日</dt>
+                        <dd>年中無休</dd>
+                        <dt>支払方法</dt>
+                        <dd>現金のみ</dd>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+        <!-- コンタクト -->
+        <section id="contact">
+            <div class=" contact_box">
+                <h2>梶村商店</h2>
+                <p class="tel contact_headding"><a href="tel:0822562898" class="tel_icon">082-256-2898</a></p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer_container">
+            <div class="sec_footer">
+                <div class="footer_left">
+                    <div class="footer_logo">
+                        <a href="index.html"><img src="images/logo_ol.svg" alt="広島港の土産物屋 梶村商店" ></a>
+                    </div>
+                    <div class="footer_adress">
+                        <p>広島市南区宇品海岸1丁目13-26<br>広島港宇品旅客ターミナル1階</p>
+                    </div>
+                </div>
+                <nav class="footer_right">
+                    <div class="footer_nav__listA">
+                        <ul>
+                            <li><a href="goods.html" class="footer_list_item bold">
+                                    <span class="ja">商品一覧</span>
+                                    <span class="en">GOODS</span>
+                                </a></li>
+                            <li><a href="index.html#access" class="footer_list_item bold">
+                                    <span class="ja">店舗案内</span>
+                                    <span class="en">STORE GUIDE</span>
+                                </a></li>
+
+                            <li><a href="history.html" class="footer_list_item bold">
+                                    <span class="ja">私たちの歩み</span>
+                                    <span class="en">HISTORY</span>
+                                </a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_nav__listB">
+                        <ul>
+                            <li><a href="ujinamap.html" class="footer_list_item bold">
+                                    <span class="ja">お散歩マップ</span>
+                                    <span class="en">UJINA MAP</span>
+                                </a></li>
+                            <li><a href="index.html#contact" class="footer_list_item bold">
+                                    <span class="ja">お問い合わせ</span>
+                                    <span class="en">CONTACT</span>
+                                </a></li>
+                        </ul>
+                        <div class="footer_sns">
+                            <ul class="footer_gnav_sns">
+                                <li><a href="https://maps.app.goo.gl/B4WHyeRJaHEMmqs98" target="_blank" rel="norefferrer"><img src="images/access_icon.svg" alt="グーグルマップ" width="28" height="28"></a></li>
+                                <li><a href="https://www.instagram.com/kajimurasyouten/" target="_blank" rel="norefferrer"><img src="images/insa_icon.svg" alt="インスタグラム" width="30" height="30"></a></li>
+                                <li><a href="https://www.facebook.com/kajimurashouten/" target="_blank" rel="norefferrer"><img src="images/facebook_icon.svg" alt="フェイスブック" width="20" height="30"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="copy ">
+                <small>&copy;2023 kajimura Co.</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,266 @@
+@charset "utf-8";
+
+/* __________ shop.htmlのみ適用 __________ */
+footer {
+  width: 100%;
+  background-color: #FCFAF7;
+  background-image: url(../images/groovepaper.png);
+  background-repeat: repeat;
+  position: relative;
+}
+
+/* __________ 改行 __________ */
+.line1{
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .line1{
+    display: block;
+  }
+}
+
+
+/* ================================================
+main
+=================================================*/
+/* __________ top_img __________ */
+
+.top_visual {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  margin-top: 74px;
+}
+
+
+
+.top_visual img {
+  object-fit: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.shop_title_contents {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+}
+
+.shop_title {  /*h2 ページタイトル*/
+  font-family: 'Zen Maru Gothic', serif;
+  font-weight: 500;
+  color: #fff;
+  text-shadow: 0 0 4px #14274C;
+  font-size: 3rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.shop_title_contents p{
+  color: #fff;
+  text-shadow: 0 0 4px #14274C;
+  letter-spacing: 0.1em;
+}
+
+
+
+@media (max-width: 768px) {
+  .wrapper {
+    width: calc(100% - 10%);
+    margin: 0 auto;
+  }
+  .shop_title_contents{
+    top: 0%;
+    left: 0%;
+    transform: translate(0%,0%);
+    margin:5%;
+    padding:0;
+  } 
+  .shop_title{   /*h2 ページタイトル*/
+    font-size: 28px;
+    letter-spacing: 0.2em;
+    margin-bottom: 1rem;
+  }
+  .shop_title_contents p{
+    color: #fff;
+    text-shadow: 0 0 4px #14274C;
+    letter-spacing: 0;
+  }
+}
+
+/* __________h2 フェードイン __________ */
+
+.title_fade {
+  animation-name: fadeInAnime;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  /* padding-bottom: 30px; */
+}
+
+@keyframes fadeInAnime {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* __________下のエリアが上にかぶさる_________ */
+
+ /* .intro {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+} */
+
+/*下の被さるエリアの指定*/
+/* .history {
+  width: 100%;
+  background: white;
+  position: relative;
+  z-index:1;
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 24px;
+  }
+} */
+
+/* __________ タイムライン __________ */
+
+.timeline_container {
+  background-color: #FCFAF7;
+}
+
+.timeline {
+  width: 96%;
+  max-width: 940px;
+  margin-top: 28px;
+  margin: 0 auto;
+}
+
+.timeline-list {
+  padding: 40px 0;
+}
+
+.timeline-list-item {
+  display: flex;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+.timeline-list-item .date {
+  width: 15%;
+  padding: 8px 10px 0 10px;
+  font-size: 24px;
+  color: #888888;
+  font-weight: bold;
+  font-family: 'Zen Maru Gothic', serif;
+}
+
+.timeline-list-item .content {
+  position: relative;
+  width: 80%;
+  padding: 0 20px 60px 30px;
+  border-left: 1px solid #aaaaaa;
+}
+
+.timeline-list-item .content_port {
+  position: relative;
+  width: 80%;
+  padding: 0 20px 60px 30px;
+  border-left: 1px solid #aaaaaa;
+}
+
+.s7_port p {
+  text-align: center;
+}
+
+.timeline-list-item .content::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: -10px;
+  /*widthの半分の値を指定 */
+  width: 20px;
+  height: 20px;
+  background-color: #d93b2b;
+  border-radius: 10px;
+}
+
+.timeline-list-item .content_port::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: -10px;
+  /*widthの半分の値を指定 */
+  width: 20px;
+  height: 20px;
+  background-color: #14274c;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .timeline-list-item .date {
+    width: 12%;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: right;
+    padding: 0  16px 0 0;
+  }
+}
+
+/* __________ タイムライン見出し __________ */
+
+.timeline_title {
+  position: relative;
+  display: inline-block;
+  padding-left: 55px;
+  font-size: 24px;
+  font-family: 'Zen Maru Gothic', serif;
+}
+
+.timeline_title:before
+/* .timeline_title:after*/ { 
+  content: '';
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  width: 45px;
+  height: 1px;
+  background-color: black;
+}
+
+.timeline_title:before {
+  left: 0;
+}
+
+/* .timeline_title:after {
+  right: 0;
+} */
+
+.shop_photo {
+  margin: 20px 0;
+}
+
+.shop_photo p {
+  text-align: left;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .timeline_title {
+    font-size: 20px;
+  }
+
+}

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お散歩マップ | 梶村商店</title>
+    <meta name="description" content="広島港周辺ではフォトスポットをが多数あり散策するには絶好のスポットとなります。ここでは「お散歩マップ」として広島港周辺を紹介しております。広島港や梶村商店にお立ち寄りの際は周辺散策は如何でしょうか？">
+
+    <!-- OGPタグ/twitterカード -->
+    <!-- ドメイン決定後、記入よろしくお願いいたします -->
+    <meta property="og:url" content="ページのURL">
+    <meta property="og:title" content="ページのタイトル">
+    <meta property="og:type" content="ページのタイプ">
+    <meta property="og:description" content="記事の抜粋">
+    <meta property="og:image" content="画像のURL">
+    <meta name="twitter:card" content="カード種類">
+    <meta name="twitter:site" content="@Twitterユーザー名">
+    <meta property="og:site_name" content="サイト名">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="fb:app_id" content="appIDを入力">
+
+ 
+    <!-- 電話番号やメールアドレスの変換設定 リンク飛ばさない設定-->
+    <meta name="format-detection" content="email=no,telephone=no,address=no">
+
+    <!-- css -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slideshow.css">
+
+    <!-- Vegas Background SlideShow -->
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css"> -->
+
+    <!-- js -->
+    <script src="js/slideshow.js" defer></script>
+    <script src="js/script.js" defer></script>
+
+    <!-- jQuery ハンバーガーのため消さない-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <!-- GSAP -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script> -->
+
+    <!-- web fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Zen+Maru+Gothic:wght@400;500;900&display=swap" rel="stylesheet">
+
+    <!-- favicon -->
+    <link rel="icon" href="images/favicon.ico">
+
+    <!--==============レイアウトを制御する独自のCSSを読み込み===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css">
+</head>
+
+<body id="ujinamap">
+    <header>
+        <!-- 右側のヘッダー(ハンバーガー) -->
+        <div id="right_header" class="right_header">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo_ol.svg" alt="広島港の土産物屋 梶村商店"  width="110" height="97"></a>
+            </div>
+            <nav class="right_nav">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="opa">
+                            <span class="ja">ホーム</span>
+                            <span class="en">HOME</span>
+                        </a></li>
+                    <li><a href="goods.html" class="opa">
+                            <span class="ja">商品一覧</span>
+                            <span class="en">GOODS</span>
+                        </a></li>
+                    <li><a href="index.html#access" class="opa">
+                            <span class="ja">店舗案内</span>
+                            <span class="en">STORE GUIDE</span>
+                        </a></li>
+                    <li><a href="history.html" class="opa">
+                            <span class="ja">私たちの歩み
+                            </span>
+                            <span class="en">HISTORY</span>
+                        </a></li>
+                    <!-- <li><a href="ujinamap.html" class="opa">
+                                    <span class="ja">お散歩マップ</span>
+                                    <span class="en">UJINA MAP</span>
+                                </a></li> -->
+                    <li><a href="index.html#contact">
+                            <span class="ja">お問い合わせ</span>
+                            <span class="en">CONTACT</span>
+                        </a></li>
+                </ul>
+            </nav>
+            <ul class="gnav_sns">
+                <li><a href="https://maps.app.goo.gl/B4WHyeRJaHEMmqs98" target="_blank" rel="norefferrer"><img src="images/access_icon.svg" alt="グーグルマップ"></a></li>
+                <li><a href="https://www.instagram.com/kajimurasyouten/" target="_blank" rel="norefferrer"><img src="images/insa_icon.svg" alt="インスタグラム"></a></li>
+                <li><a href="https://www.facebook.com/kajimurashouten/" target="_blank" rel="norefferrer"><img src="images/facebook_icon.svg" alt="フェイスブック"></a></li>
+            </ul>
+        </div>
+        <div class="circle-bg"></div>
+
+        <!--SP用ハンバーガーメニュー３本線-->
+        <button class="hamburger">
+            <span class="btn-gNav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </button>
+    </header>
+
+    <!--画面上部ヘッダー-->
+    <nav class="top_nav">
+        <div class="wrapper gnav">
+            <div class="logo_img">
+                <a href="index.html"><img src="images/logo_yoko_ol.svg" alt="広島港の土産物屋 梶村商店" ></a>
+            </div>
+            <div class="gnav_menu">
+                <ul class="gnav__list">
+                    <li><a href="index.html" class="bold ">ホーム</a></li>
+                    <li><a href="goods.html" class="bold">商品一覧</a></li>
+                    <li><a href="index.html#access" class=" bold">店舗案内</a></li>
+                    <li><a href="history.html" class=" bold">私たちの歩み</a></li>
+                    <li><a href="ujinamap.html" class=" bold now">お散歩マップ</a></li>
+                    <li><a href="index.html#contact" class=" bold">お問い合わせ</a></li>
+                </ul>
+            </div>
+            <ul class="gnav_sns">
+                <li><a href="https://maps.app.goo.gl/B4WHyeRJaHEMmqs98" target="_blank" rel="norefferrer"><img src="images/access_icon.svg" alt="グーグルマップ"></a></li>
+                <li><a href="https://www.instagram.com/kajimurasyouten/" target="_blank" rel="norefferrer"><img src="images/insa_icon.svg" alt="インスタグラム"></a></li>
+                <li><a href="https://www.facebook.com/kajimurashouten/" target="_blank" rel="norefferrer"><img src="images/facebook_icon.svg" alt="フェイスブック"></a></li>
+            </ul>
+        </div>
+    </nav>
+    <p id="page-top"><a href="#" class="deg"><img src="images/pagtop.png" alt="ページトップに戻るアイコン"></a></p>
+
+    <main>
+        <div class="wrapper">
+            <div class="title_contents">
+                <h2 class="slideshow_title">お散歩<br class="line1">マップ</h2>
+            </div>
+            <p class="slideshow_contents">広島港・宇品周辺のおすすめフォトスポットをご紹介。<br>
+                気になる場所をクリックしてスポット情報をチェック！</p>
+            <div>
+                <ul class="gallery">
+                    <li><a href="images/slideshow/tou2.jpg" data-lightbox="gallery1" data-title="5.波止場エリア‐宇品波止場公園‐"><img src="images/slideshow/tou2.jpg" alt="宇品波止場公園"></a></li>
+                    <li><a href="images/slideshow/akutasu.jpg" data-lightbox="gallery1" data-title="8.波止場エリア-アクタス広島-"><img src="images/slideshow/akutasu.jpg" alt="アクタス広島"></a></li>
+                    <li><a href="images/slideshow/kouen.jpg" data-lightbox="gallery1" data-title="2.広島港エリア-広島みなと公園-"><img src="images/slideshow/kouen.jpg" alt="広島みなと公園"></a></li>
+                    <li><a href="images/slideshow/keisatu1.jpg" data-lightbox="gallery1" data-title="4.波止場エリア-旧水上警察跡地-"><img src="images/slideshow/keisatu1.jpg" alt="旧水上警察跡地"></a></li>
+                    <li><a href="images/slideshow/hune4.jpg" data-lightbox="gallery1" data-title="1.広島港エリア-広島港-"><img src="images/slideshow/hune4.jpg" alt="広島港"></a></li>
+                    <li><a href="images/slideshow/okamo.jpg" data-lightbox="gallery1" data-title="1.広島港エリア-広島港屋上-"><img src="images/slideshow/okamo.jpg" alt="広島港屋上"></a></li>
+                    <li><a href="images/slideshow/keisatu2.jpg" data-lightbox="gallery1" data-title="4.波止場エリア-旧水上警察跡地-"><img src="images/slideshow/keisatu2.jpg" alt="旧水上警察跡地"></a></li>
+                    <li><a href="images/slideshow/iwa2.jpg" data-lightbox="gallery1" data-title="10.元宇品エリア-節理(アース・ミュージアム元宇品)-"><img src="images/slideshow/iwa2.jpg" alt="節理(アース・ミュージアム元宇品)"></a></li>
+                    <li><a href="images/slideshow/yuuhi1.jpg" data-lightbox="gallery1" data-title="9.元宇品エリア-鉢ヶ谷の浜-"><img src="images/slideshow/yuuhi1.jpg" alt="鉢ヶ谷の浜"></a></li>
+                    <li><a href="images/slideshow/momiji.jpg" data-lightbox="gallery1" data-title="2.広島港エリア-広島みなと公園-"><img src="images/slideshow/momiji.jpg" alt="広島みなと公園"></a></li>
+                    <li><a href="images/slideshow/yuuyake1.jpg" data-lightbox="gallery1" data-title="5.波止場エリア-宇品波止場公園-"><img src="images/slideshow/yuuyake1.jpg" alt="宇品波止場公園"></a></li>
+                    <li><a href="images/slideshow/momiji2.jpg" data-lightbox="gallery1" data-title="1.広島港エリア-広島港-"><img src="images/slideshow/momiji2.jpg" alt="広島港"></a></li>
+                    <li><a href="images/slideshow/noriba.jpg" data-lightbox="gallery1" data-title="1.広島港エリア-広島港-"><img src="images/slideshow/noriba.jpg" alt="広島港"></a></li>
+                    <li><a href="images/slideshow/hiroshimakou.JPG" data-lightbox="gallery1" data-title="1.広島港エリア-広島港-"><img src="images/slideshow/hiroshimakou.JPG" alt=""></a></li>
+                    <li><a href="images/slideshow/tou1.jpg" data-lightbox="gallery1" data-title="5.波止場エリア-宇品波止場公園-"><img src="images/slideshow/tou1.jpg" alt="宇品波止場公園"></a></li>
+                    <li><a href="images/slideshow/densya2.jpg" data-lightbox="gallery1" data-title="3.広島港エリア-市電広島港駅-"><img src="images/slideshow/densya2.jpg" alt="市電広島港駅"></a></li>
+                    <li><a href="images/slideshow/puromu.jpg" data-lightbox="gallery1" data-title="8.波止場エリア-アクタス広島-"><img src="images/slideshow/puromu.jpg" alt="アクタス広島"></a></li>
+                    <li><a href="images/slideshow/kiirohana.jpg" data-lightbox="gallery1" data-title="2.広島港エリア-広島みなと公園-"><img src="images/slideshow/kiirohana.jpg" alt="広島みなと公園"></a></li>
+                    <li><a href="images/slideshow/yuuhi2.jpg" data-lightbox="gallery1" data-title="6.広島港エリア-暁橋-"><img src="images/slideshow/yuuhi2.jpg" alt="鉢ヶ谷の浜"></a></li>
+                    <li><a href="images/slideshow/kaigan.jpg" data-lightbox="gallery1" data-title="9.元宇品エリア-鉢ヶ谷の浜-"><img src="images/slideshow/kaigan.jpg" alt="鉢ヶ谷の浜"></a></li>
+                    <li><a href="images/slideshow/kokutetu.jpg" data-lightbox="gallery1" data-title="7.波止場エリア旧国鉄倉庫-"><img src="images/slideshow/kokutetu.jpg" alt=""></a></li>
+                    <li><a href="images/slideshow/taminaru.jpg" data-lightbox="gallery1" data-title="1.広島港エリア-広島港-"><img src="images/slideshow/taminaru.jpg" alt="広島港"></a></li>
+                    <li><a href="images/slideshow/densya1.jpg" data-lightbox="gallery1" data-title="3.広島港エリア-市電広島港駅-"><img src="images/slideshow/densya1.jpg" alt="市電広島港駅"></a></li>
+                    <li><a href="images/slideshow/yuuhi3.jpg" data-lightbox="gallery1" data-title="9.元宇品エリア-鉢ヶ谷の浜-"><img src="images/slideshow/yuuhi3.jpg" alt="鉢ヶ谷の浜"></a></li>
+                    <li><a href="images/slideshow/tou5.jpg" data-lightbox="gallery1" data-title="5.波止場エリア-宇品波止場公園-"><img src="images/slideshow/tou5.jpg" alt="宇品波止場公園"></a></li>
+                    <li><a href="images/slideshow/hatoba2.jpg" data-lightbox="gallery1" data-title="5.波止場エリア-宇品波止場公園-"><img src="images/slideshow/hatoba2.jpg" alt="宇品波止場公園"></a></li>
+                    <li><a href="images/slideshow/hune1.jpg" data-lightbox="gallery1" data-title="1.広島港エリア-広島港-"><img src="images/slideshow/hune1.jpg" alt=""></a></li>
+                    <li><a href="images/slideshow/tenjyou.jpg" data-lightbox="gallery1" data-title="1.広島港エリア-広島港-"><img src="images/slideshow/tenjyou.jpg" alt="広島港"></a></li>
+                    <li><a href="images/slideshow/hatoba3.jpg" data-lightbox="gallery1" data-title="5.波止場エリア-宇品波止場公園-"><img src="images/slideshow/hatoba3.jpg" alt="宇品波止場公園"></a></li>
+                    <li><a href="images/slideshow/tou3.jpg" data-lightbox="gallery1" data-title="5.波止場エリア-宇品波止場公園-"><img src="images/slideshow/tou3.jpg" alt="宇品波止場公園"></a></li>
+                </ul>
+            </div>
+
+            <!--map追加-->
+            <div class="photospot_list">
+                <div class="map_top">
+                    <div class="photo_map">
+                        <img src="images/slideshow/photspotmap.jpg" alt="フォトスポットマップ">
+                    </div>
+                    <div class="area_a">
+                        <div class="title_area_a">広島港エリア</div>
+                        <div class="area_hune">
+                            <ul>
+                                <li>1.広島港</li>
+                                <li>2.広島みなと公園</li>
+                                <li>3.市電広島港駅</li>
+                                <li>6.暁橋</li>
+                            </ul>
+                            <div class="map_img"><img src="images/top/top-1.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="area_b">
+                        <div class="title_area_b">波止場エリア</div>
+                        <div class="area_hune">
+                            <ul>
+                                <li>4.旧水上警察跡地</li>
+                                <li>5.宇品波止場公園</li>
+                                <li>7.旧国鉄倉庫</li>
+                                <li>8.アクタス広島</li>
+                            </ul>
+                            <div class="map_tori"><img src="images/top/top-2.png" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="map_bottom">
+                    <div class="area_c">
+                        <div class="title_area_c">元宇品エリア</div>
+                        <ul>
+                            <li>9.鉢ヶ谷の浜</li>
+                            <li>10.節理(アース・ミュージアム元宇品)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--map追加　終-->
+
+            <!--/wrapper-->
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer_container">
+            <div class="sec_footer">
+                <div class="footer_left">
+                    <div class="footer_logo">
+                        <a href="index.html"><img src="images/logo_ol.svg" alt="広島港の土産物屋 梶村商店"></a>
+                    </div>
+                    <div class="footer_adress">
+                        <p>広島市南区宇品海岸1丁目13-26<br>広島港宇品旅客ターミナル1階</p>
+                    </div>
+                </div>
+                <nav class="footer_right">
+                    <div class="footer_nav__listA">
+                        <ul>
+                            <li><a href="goods.html" class="footer_list_item bold">
+                                    <span class="ja">商品一覧</span>
+                                    <span class="en">GOODS</span>
+                                </a></li>
+                            <li><a href="index.html#access" class="footer_list_item bold">
+                                    <span class="ja">店舗案内</span>
+                                    <span class="en">STORE GUIDE</span>
+                                </a></li>
+                            <li><a href="history.html" class="footer_list_item bold">
+                                    <span class="ja">私たちの歩み</span>
+                                    <span class="en">HISTORY</span>
+                                </a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_nav__listB">
+                        <ul>
+                            <li><a href="ujinamap.html" class="footer_list_item bold">
+                                    <span class="ja">お散歩マップ</span>
+                                    <span class="en">UJINA MAP</span>
+                                </a></li>
+                            <li><a href="index.html#contact" class="footer_list_item bold">
+                                    <span class="ja">お問い合わせ</span>
+                                    <span class="en">CONTACT</span>
+                                </a></li>
+                        </ul>
+                        <div class="footer_sns">
+                            <ul class="footer_gnav_sns">
+                                <li><a href="https://maps.app.goo.gl/B4WHyeRJaHEMmqs98" target="_blank" rel="norefferrer"><img src="images/access_icon.svg" alt="グーグルマップ" width="28" height="28"></a></li>
+                                <li><a href="https://www.instagram.com/kajimurasyouten/" target="_blank" rel="norefferrer"><img src="images/insa_icon.svg" alt="インスタグラム" width="30" height="30"></a></li>
+                                <li><a href="https://www.facebook.com/kajimurashouten/" target="_blank" rel="norefferrer"><img src="images/facebook_icon.svg" alt="フェイスブック" width="20" height="30"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="copy ">
+                <small>&copy;2023 kajimura Co.</small>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <!-- Lighbox -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js"></script>
+    <!-- CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.js"></script>
+</body>
+
+</html>

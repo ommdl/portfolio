@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品一覧 | 梶村商店</title>
+    <meta name="description" content="広島のお土産と言えば「もみじ饅頭」ですが、広島港の梶村商店では広島県民が愛用するお菓子も多数取り揃えております。人気の高い「にしき堂のもみじ饅頭」、「亀屋の川通り餅」、「天光堂のあきもみじ」、「山豊の漬物と広島菜パスタ」他にもレモンケーキ、生もみじ、もみじ煎餅など数多く揃えております。">
+
+    <!-- OGPタグ/twitterカード -->
+        <!-- ドメイン決定後、記入よろしくお願いいたします -->
+
+    <meta property="og:url" content="ページのURL">
+    <meta property="og:title" content="梶村商店 | 広島港の土産物屋">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="記事の抜粋">
+    <meta property="og:image" content="画像のURL">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@Twitterユーザー名">
+    <meta property="og:site_name" content="サイト名">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="fb:app_id" content="appIDを入力">
+
+
+    <!-- 電話番号やメールアドレスの変換設定 リンク飛ばさない設定-->
+    <meta name="format-detection" content="email=no,telephone=no,address=no">
+
+    <!-- css -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/goods.css">
+
+    <!-- Vegas Background SlideShow -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css">
+
+    <!-- js -->
+    <script src="js/script.js" defer></script>
+    <script src="js/gsap.js" defer></script>
+
+    <!-- jQuery ハンバーガーのため消さない-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- web fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Zen+Maru+Gothic:wght@400;500;900&display=swap" rel="stylesheet">
+
+    <!-- favicon -->
+    <link rel="icon" href="images/favicon.ico">
+</head>
+
+
+
+
+<body id="goods">
+    <header>
+        <!-- 右側のヘッダー (ハンバーガー)-->
+        <div id="right_header" class="right_header">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo_ol.svg" alt="広島港の土産物屋 梶村商店"></a>
+            </div>
+            <nav class="right_nav">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="opa">
+                            <span class="ja">ホーム</span>
+                            <span class="en">HOME</span>
+                        </a></li>
+                    <!-- <li><a href="goods.html" class="opa">
+                                <span class="ja">商品一覧</span>
+                                <span class="en">GOODS</span>
+                            </a></li> -->
+                    <li><a href="index.html#access" class="opa">
+                            <span class="ja">店舗案内</span>
+                            <span class="en">STORE GUIDE</span>
+                        </a></li>
+                    <li><a href="history.html" class="opa">
+                            <span class="ja">私たちの歩み
+                            </span>
+                            <span class="en">HISTORY</span>
+                        </a></li>
+                    <li><a href="ujinamap.html" class="opa">
+                            <span class="ja">お散歩マップ</span>
+                            <span class="en">UJINA MAP</span>
+                        </a></li>
+                    <li><a href="index.html#contact">
+                            <span class="ja">お問い合わせ</span>
+                            <span class="en">CONTACT</span>
+                        </a></li>
+                </ul>
+            </nav>
+            <ul class="gnav_sns">
+                <li><a href="https://maps.app.goo.gl/B4WHyeRJaHEMmqs98" target="_blank" rel="norefferrer"><img src="images/access_icon.svg" alt="グーグルマップ"></a></li>
+                <li><a href="https://www.instagram.com/kajimurasyouten/" target="_blank" rel="norefferrer"><img src="images/insa_icon.svg" alt="インスタグラム"></a></li>
+                <li><a href="https://www.facebook.com/kajimurashouten/" target="_blank" rel="norefferrer"><img src="images/facebook_icon.svg" alt="フェイスブック"></a></li>
+            </ul>
+        </div>
+        <div class="circle-bg"></div>
+
+        <!--SP用ハンバーガーメニュー３本線-->
+        <button class="hamburger">
+            <span class="btn-gNav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </button>
+    </header>
+
+    <!--画面上部ヘッダー-->
+    <nav class="top_nav">
+        <div class="wrapper gnav">
+            <div class="logo_img">
+                <a href="index.html"><img src="images/logo_yoko_ol.svg" alt="広島港の土産物屋 梶村商店" ></a>
+            </div>
+            <div class="gnav_menu">
+                <ul class="gnav__list">
+                    <li><a href="index.html" class="bold">ホーム</a></li>
+                    <li><a href="goods.html" class="bold now">商品一覧</a></li>
+                    <li><a href="index.html#access" class=" bold">店舗案内</a></li>
+                    <li><a href="history.html" class=" bold">私たちの歩み</a></li>
+                    <li><a href="ujinamap.html" class=" bold">お散歩マップ</a></li>
+                    <li><a href="index.html#contact" class=" bold">お問い合わせ</a></li>
+                </ul>
+            </div>
+            <ul class="gnav_sns">
+                <li><a href="https://maps.app.goo.gl/B4WHyeRJaHEMmqs98" target="_blank" rel="norefferrer"><img src="images/access_icon.svg" alt="グーグルマップ"></a></li>
+                <li><a href="https://www.instagram.com/kajimurasyouten/" target="_blank" rel="norefferrer"><img src="images/insa_icon.svg" alt="インスタグラム"></a></li>
+                <li><a href="https://www.facebook.com/kajimurashouten/" target="_blank" rel="norefferrer"><img src="images/facebook_icon.svg" alt="フェイスブック"></a></li>
+            </ul>
+        </div>
+    </nav>
+    <p id="page-top"><a href="#" class="deg"><img src="images/pagtop.png" alt="ページトップに戻るアイコン"></a></p>
+    <main>
+        <div class="top_visual">
+            <div class="top_visual_contents">
+                <img src="images/goods/omiyage_header2.5.jpg" alt="" class="top_text">
+
+            </div>
+
+            <div class="goods_title_container">
+                <div class="goods_title_contents title_fade">
+                    <h2 class="goods_title">梶村商店の<br class="line1">商品一覧</h2>
+                    <p>梶村商店では、広島を代表するお土産や季節を感じるお土産、広島県民愛用のお茶菓子など幅広く取り扱っております。<br>日用品やお茶、お弁当など旅行の必需品も取り揃えております。</p>
+                </div>
+                <div class="kamome_images">
+                    <img src="images/goods/kamome.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper">
+
+            <!--========== にしき堂 ==========-->
+            <section id="nishikido">
+                <div class="shop_introduction title_fade">
+                    <h3 class="shop_name">にしき堂</h3>
+                    <p>10年かけて開発し、2009年に販売開始した「生もみじ」は広島のお土産ランキング常にトップの大人気もみじ饅頭です。<br>定番のもみじ饅頭「錦もみじ」は味の種類が豊富で選ぶのが楽しいと大好評です。</p>
+                </div>
+                <!-- にしき堂 生もみじ -->
+                <div class="goods1">
+                    <div class="goods_main shop_fade-in">
+                        <div class="goods_main_img">
+                            <img src="images/goods/nishikido/nishikido-1.png" alt="にしき堂生もみじ">
+                        </div>
+                        <div class="goods_main_text">
+                            <h4 class="main_item">生もみじ</h4>
+                            <p class="goods_detail">生地に米粉を使用していますので、もちもちとした食感となっています。広島県産の米粉や北海道産小豆など、素材のこだわりから生まれた上品な味わいは「ザ・広島ブランド」として認定されました。にしき堂が10年かけて開発した大人気の広島新銘菓を、ぜひご賞味ください。</p>
+                            <p class="set_item">化粧箱入り：6 個入／10 個入／15 個入<br>お日持ち：約10日間前後</p>
+                        </div>
+                    </div>
+
+                    <div class="goods_sub shop_fade-in accordion-area">
+                        <div class="goods_sub_list">
+                            <div class="goods_sub_img">
+                                <img src="images/goods/nishikido/nishikido-2.jpg" alt="生もみじこしあん">
+                            </div>
+                            <div class="goods_sub_text">
+                                <div class="sub_item">
+                                    <h5 class="sub_name">生もみじ　<br class="line2">こしあん</h5>
+                                </div>
+                                <div class="sub_box">
+                                    <p>北海道産の小豆と、良質な水を使用して製餡したこし餡はすっきりとした甘さと滑らかな舌触りが特徴で、生地は風味豊かな柚子入りです。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="goods_sub_list">
+                            <div class="goods_sub_img">
+                                <img src="images/goods/nishikido/nishikido-3.jpg" alt="生もみじつぶあん">
+                            </div>
+                            <div class="goods_sub_text">
+                                <div class="sub_item">
+                                    <h5 class="sub_name">生もみじ　<br class="line2">つぶあん</h5>
+                                </div>
+                                <div class="sub_box">
+                                    <p>北海道産の大粒の小豆を、食感が残るよう二日間かけ丁寧に炊き上げた粒餡は、小豆本来の味わいをお楽しみいただけます。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="goods_sub_list">
+                            <div class="goods_sub_img">
+                                <img src="images/goods/nishikido/nishikido-4.jpg" alt="生もみじ抹茶">
+                            </div>
+                            <div class="goods_sub_text">
+                                <div class="sub_item">
+                                    <h5 class="sub_name">生もみじ　<br class="line2">抹茶</h5>
+                                </div>
+                                <div class="sub_box">
+                                    <p>京都府産宇治抹茶を、ふんだんに生地と餡に練り込み、味わい深く香り豊かです。 上品な甘さと風味をお楽しみいただけます。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- にしき堂 もみじ饅頭  -->
+                <div class="goods2">
+                    <div class="goods_main shop_fade-in">
+                        <div class="goods_main_img">
+                            <img src="images/goods/nishikido/nishikido-5.png" alt="にしき堂もみじ饅頭">
+                        </div>
+                        <div class="goods_main_text">
+                            <h4 class="main_item">もみじ饅頭</h4>
+                            <p class="goods_detail">
+                                広島県の県花・県木のもみじを形どった、広島の代表銘菓です。甘みは抑えられており、老若男女問わずどなたにも喜ばれています。認知度も高く「ザ・広島ブランド」に認定されました。</p>
+                            <p class="set_item">化粧箱入り：6個入／10個入／18個入<br>お日持ち：約10日間前後</p>
+                        </div>
+                    </div>
+
+                    <div class="goods_sub shop_fade-in">
+                        <div class="goods_sub_list">
+                            <div class="goods_sub_img">
+                                <img src="images/goods/nishikido/nishikido-6.jpg" alt="もみじ饅頭こしあん">
+                            </div>
+                            <div class="goods_sub_text">
+                                    <div class="sub_item">
+                                        <h5 class="sub_name">もみじ饅頭
+                                        <br class="line2">こしあん</h5>
+                                    </div>
+                                <div class="sub_box">
+                                    <p>北海道産の厳選した小豆と、良質な水を使ったこしあんを、ふっくら焼き上げたカステラ生地で包みました。甘みを抑えあっさりとした素朴な味わいです。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="goods_sub_list">
+                            <div class="goods_sub_img">
+                                <img src="images/goods/nishikido/nishikido-7.jpg" alt="もみじ饅頭つぶあん">
+                            </div>
+                            <div class="goods_sub_text">
+                                <div class="sub_item">
+                                    <h5 class="sub_name">もみじ饅頭
+                                    <br class="line2">つぶあん</h5>
+                                </div>
+                                <div class="sub_box">
+                                    <p>北海道産小豆を使用して製餡された、粒あんのもみじ饅頭です。餡の味をしっかりと感じとっていただけます。小豆の風味を存分にお楽しみいただけます。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="goods_sub_list">
+                            <div class="goods_sub_img">
+                                <img src="images/goods/nishikido/nishikido-8.jpg" alt="もみじ饅頭チーズクリーム">
+                            </div>
+                            <div class="goods_sub_text">
+                                <div class="sub_item">
+                                    <h5 class="sub_name">もみじ饅頭　<br class="line2">チーズクリーム</h5>
+                                </div>
+                                <div class="sub_box">
+                                    <p>2種類のチーズがブレンドされており、一口食べると濃厚なチーズの味が口いっぱいに広がるチーズ好きにオススメなお饅頭です。にしき堂では2番目に誕生したロングセラー商品です。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="goods_sub_list">
+                            <div class="goods_sub_img">
+                                <img src="images/goods/nishikido/nishikido-9.jpg" alt="もみじ饅頭チョコレート">
+                            </div>
+                            <div class="goods_sub_text">
+                                <div class="sub_item">
+                                    <h5 class="sub_name">もみじ饅頭　<br class="line2">チョコレート</h5>
+                                </div>
+                                <div class="sub_box">
+                                    <p>とろりとしたなめらかなチョコレートクリームが、口溶けの良いチョコレートケーキ風の生地で包み込まれた、チョコ好きにはたまらない一品です。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="goods_sub_list">
+                            <div class="goods_sub_img">
+                                <img src="images/goods/nishikido/nishikido-10.jpg" alt="もみじ饅頭お餅">
+                            </div>
+                            <div class="goods_sub_text">
+                                <div class="sub_item">
+                                    <h5 class="sub_name">もみじ饅頭　<br class="line2">お餅</h5>
+                                </div>
+                                <div class="sub_box">
+                                    <p>もちもちのお餅餡入りもみじ饅頭です。大手亡豆で自社製餡した白あんを、もちもちのお餅餡に仕上げました。ほんのり柚子風味が特徴です。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="goods_sub_list">
+                            <div class="goods_sub_img">
+                                <img src="images/goods/nishikido/nishikido-11.jpg" alt="もみじ饅頭お芋">
+                            </div>
+                            <div class="goods_sub_text">
+                                <div class="sub_item">
+                                    <h5 class="sub_name">もみじ饅頭　<br class="line2">お芋</h5>
+                                </div>
+                                <div class="sub_box">
+                                    <p>ほくほくのお芋餡入りのもみじ饅頭です。徳島産「なると金時」の焼き芋ペーストが使用されており満足感たっぷりの一品です。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- にしき堂 おとなのもみじ -->
+                <div class="goods3">
+                    <div class="goods_main shop_fade-in">
+                        <div class="goods_main_img">
+                            <img src="images/goods/nishikido/nishikido-12.png" alt="にしき堂おとなのもみじ">
+                        </div>
+                        <div class="goods_main_text">
+                            <h4 class="main_item item_otona">おとなのもみじ　抹茶と餡餅</h4>
+                            <p class="goods_detail">餡はつきたてのお餅のようなトロリとした食感。生地は抹茶本来の苦みを活かし、食感も風味も楽しめるお菓子が出来上がりました。抹茶とあん餅の新しい出逢いが生んだ奇跡の味を、ぜひご賞味ください。</p>
+                            <p class="set_item">化粧箱入り：6個入<br>お日持ち：約10日間前後</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--========== 亀屋 ==========-->
+            <section id="kameya">
+                <div class="shop_introduction title_fade">
+                    <h3 class="shop_name">亀屋</h3>
+                    <p>もっちりとした食感が癖になる、亀屋の川通り餅。<br>箱入りは重厚感もあり、年代問わず喜ばれるお土産です。可愛い7個入りの小箱はちょっとしたお土産に最適です。</p>
+                </div>
+                <!-- 亀屋 川通り餅 -->
+                <div class="goods1">
+                    <div class="goods_main shop_fade-in">
+                        <div class="goods_main_img">
+                            <img src="images/goods/kameya/kameya-4.png" alt="亀屋川通り餅">
+                        </div>
+                        <div class="goods_main_text">
+                            <h4 class="main_item">川通り餅</h4>
+                            <p class="goods_detail">上質の求肥に胡桃を加えた広島の代表銘菓の一つです。素朴な中に雅味と風味のある味が特徴です。ひろしまグッドデザイン賞やNIPPON OMIYAGE AWARDなど多くの賞にノミネートされました。</p>
+                            <p class="set_item">化粧箱入り：小箱7個入／1段（15ケ入）／2段（30ケ入）<br>お日持ち：約7日間前後</p>
+                        </div>
+                    </div>
+
+                    <div class="goods_sub shop_fade-in">
+                        <div class="goods_sub_list">
+                            <div class="goods_sub_img">
+                                <img src="images/goods/kameya/kameya-1.jpg" alt="川通り餅小箱7ケ入">
+                            </div>
+                            <div class="goods_sub_text">
+                                <div class="sub_item">
+                                    <h5>小箱(7ケ入)</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="goods_sub_list">
+                            <div class="goods_sub_img">
+                                <img src="images/goods/kameya/kameya-2.jpg" alt="川通り餅一段15ケ入">
+                            </div>
+                            <div class="goods_sub_text">
+                                <div class="sub_item">
+                                    <h5>一段(15ケ入)</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="goods_sub_list">
+                            <div class="goods_sub_img">
+                                <img src="images/goods/kameya/kameya-3.jpg" alt="川通り餅二段30ケ入">
+                            </div>
+                            <div class="goods_sub_text">
+                                <div class="sub_item">
+                                    <h5>二段(30ケ入)</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--========== 天光堂 ==========-->
+            <section id="tenkodo">
+                <div class="shop_introduction title_fade">
+                    <h3 class="shop_name">天光堂</h3>
+                    <p>創業明治41年。90年を超える歴史を持つ老舗、天光堂の和洋菓子は多くのお客様に愛され、リピーターが多いのが特徴です。<br>本格和菓子からケーキ焼きドーナツまで色々なシーンにお土産として御利用いただけます。
+
+                    </p>
+                </div>
+                <!-- 天光堂 あきもみじ -->
+                <div class="goods1">
+                    <div class="goods_main shop_fade-in">
+                        <div class="goods_main_img">
+                            <img src="images/goods/tennkodo/tennkodo-1.png" alt="天光堂あきもみじ">
+                        </div>
+                        <div class="goods_main_text">
+                            <h4 class="main_item">あきもみじ</h4>
+                            <p class="goods_detail">天光堂一番人気の和菓子がこれ！ このごつごつ感が「あきもみじ」という商品の売り。そう、おいしさの秘密！ なのです。今までの和菓子にはないサクサクとしたクッキー感覚の皮と、甘さ控えめ粒あんがコーヒーや紅茶、日本茶にもよくあいます。和菓子と洋菓子両方の食感を持つあきもみじならでは！</p>
+
+                            <p class="set_item">化粧箱入り：8 個入／12個入<br>お日持ち：約15日間前後</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 天光堂 四十二万石 -->
+                <div class="goods2">
+                    <div class="goods_main shop_fade-in">
+                        <div class="goods_main_img">
+                            <img src="images/goods/tennkodo/tennkodo-2.png" alt="天光堂浅野四十二万石">
+                        </div>
+                        <div class="goods_main_text">
+                            <h4 class="main_item">浅野四十二万石</h4>
+                            <p class="goods_detail">こしあん・白あんの美味しさを味わうなら、天光堂の代表銘菓浅野四十二万石」しっとり柔らかな生地と、こしあん・白あんのなめらかな甘さをお楽しみください。</p>
+
+                            <p class="set_item">化粧箱入り：6個入／10個入／18個入<br>お日持ち：約10日間前後</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 天光堂 ほろ酔いもみじ -->
+                <div class="goods3">
+                    <div class="goods_main shop_fade-in">
+                        <div class="goods_main_img">
+                            <img src="images/goods/tennkodo/tennkodo-3.png" alt="天光堂ほろ酔いもみじ">
+                        </div>
+                        <div class="goods_main_text">
+                            <h4 class="main_item">ほろ酔いもみじ</h4>
+                            <p class="goods_detail">広島にはもみじまんじゅうの種類がいっぱい。オーソドックスなこしあんだけでなく、チーズ入りや粒あん、抹茶いり……などなど。 当ショップではこちらのもみじまんじゅうをオススメします。 なんと、こしあんいりもみじまんじゅうにミルクチョコレートをコーティングした上、ブランデー入りシロップにつけこみました。</p>
+                            <p class="set_item">化粧箱入り：15個入／20個入<br>お日持ち：約15日間前後</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!--========== 山豊 ==========-->
+            <section id="yamatoyo">
+                <div class="shop_introduction title_fade">
+                    <h3 class="shop_name">山豊</h3>
+                    <p>山豊では、低農薬で安心安全な高品質の広島菜を新鮮な状態で直接仕入れ、心を込めた手仕事で一つ一つ丁寧に漬け込んでいます。<br>パスタソースなど今までにないバラエティーに富んだ漬物商品があるのも魅力です。</p>
+                </div>
+                <!-- 山豊 安藝紫(あきむらさき) -->
+                <div class="goods1">
+                    <div class="goods_main shop_fade-in">
+                        <div class="goods_main_img">
+                            <img src="images/goods/yamatoyo/yamatoyo-1.png" alt="山豊あきむらさき">
+                        </div>
+                        <div class="goods_main_text">
+                            <h4 class="main_item">安藝紫(あきむらさき)</h4>
+                            <p class="goods_detail">ザ・広島ブランド認定産品です。多くの方に認められた安藝紫をお楽しみください。細かく刻んであるので、お茶漬けやおむすびなどにもピッタリ!さわやかなしその風味がたまりません。</p>
+                            <p class="set_item">お日持ち：約120日間</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 山豊 広島菜ごはん -->
+                <div class="goods2">
+                    <div class="goods_main shop_fade-in">
+                        <div class="goods_main_img">
+                            <img src="images/goods/yamatoyo/yamatoyo-2.png" alt="山豊広島菜ごはん">
+                        </div>
+                        <div class="goods_main_text">
+                            <h4 class="main_item">広島菜ごはん</h4>
+                            <p class="goods_detail">瀬戸内の恵みと広島菜を合わせたすぐできる混ぜご飯の素です。炊き立てご飯2合に一袋、混ぜてお召し上がりください。</p>
+
+                            <p class="set_item">お日持ち：約90日間</p>
+                        </div>
+                    </div>
+                    <div class="goods_sub yamatoyo_rice shop_fade-in">
+                        <div class="goods_sub_list">
+                            <div class="goods_sub_img">
+                                <img src="images/goods/yamatoyo/yamatoyo-3.jpg" alt="広島菜ごはんあなご">
+                            </div>
+                            <div class="goods_sub_text">
+                                <div class="sub_item">
+                                    <h5 class="sub_name">広島菜ごはん　<br class="line2">あなご</h5>
+                                </div>
+                                <div class="sub_box">
+                                    <p>広島菜と瀬戸内産のあなごを合わせた混ぜごはんの素です。甘口醤油仕立てで、ごはんとの相性抜群です。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="goods_sub_list">
+                            <div class="goods_sub_img">
+                                <img src="images/goods/yamatoyo/yamatoyo-4.jpg" alt="広島菜ごはんちりめん">
+                            </div>
+                            <div class="goods_sub_text">
+                                <div class="sub_item">
+                                    <h5 class="sub_name">広島菜ごはん　<br class="line2">ちりめん</h5>
+                                </div>
+                                <div class="sub_box">
+                                    <p>広島菜と瀬戸内産ちりめんを合わせた混ぜごはんの素です。あっさり塩味です。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 山豊 広島菜パスタ -->
+                <div class="goods3">
+                    <div class="goods_main shop_fade-in">
+                        <div class="goods_main_img">
+                            <img src="images/goods/yamatoyo/yamatoyo-5.5.jpg" alt="山豊広島菜パスタソース">
+                        </div>
+                        <div class="goods_main_text">
+                            <h4 class="main_item">広島菜パスタソース</h4>
+                            <p class="goods_detail">おうちで簡単！茹でたパスタに絡めるだけでお手軽パスタの完成です。4種類の味があり、それぞれアレンジしてもお楽しみいただけます。</p>
+
+                            <p class="set_item">お日持ち：約90日間</p>
+                        </div>
+                    </div>
+                    <div class="goods_sub yamatoyo_pasta shop_fade-in">
+                        <div class="goods_sub_list">
+                            <div class="goods_sub_img">
+                                <img src="images/goods/yamatoyo/yamatoyo-6.jpg" alt="さらっとトマト">
+                            </div>
+                            <div class="goods_sub_text">
+                                <div class="sub_item">
+                                    <h5 class="sub_name">さらっとトマト</h5>
+                                </div>
+                                <div class="sub_box">
+                                    <p>さらりとからめたトマトケチャップ風味です。一袋に約90ccの湯を注げば、トマト味のスープに早がわりです。お好みの具材を入れてみてください。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="goods_sub_list">
+                            <div class="goods_sub_img">
+                                <img src="images/goods/yamatoyo/yamatoyo-7.jpg" alt="豆乳レモンクリーム">
+                            </div>
+                            <div class="goods_sub_text">
+                                <div class="sub_item">
+                                    <h5 class="sub_name">豆乳レモンクリーム</h5>
+                                </div>
+                                <div class="sub_box">
+                                    <p>豆乳のコクとなめらかさが やみつきの味わいです。一袋を一合のごはんと混ぜればドリア作りに大活躍です。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="goods_sub_list">
+                            <div class="goods_sub_img">
+                                <img src="images/goods/yamatoyo/yamatoyo-8.jpg" alt="和風ペペロンチーノ">
+                            </div>
+                            <div class="goods_sub_text">
+                                <div class="sub_item">
+                                    <h5 class="sub_name">和風ペペロンチーノ</h5>
+                                </div>
+                                <div class="sub_box">
+                                    <p>パンチのある辛さと かくし味の山椒が決め手です。食パンやバゲットにうすくぬり、こんがり焼けば、ガーリックトーストに。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="goods_sub_list">
+                            <div class="goods_sub_img">
+                                <img src="images/goods/yamatoyo/yamatoyo-9.jpg" alt="ほんのり梅風味">
+                            </div>
+                            <div class="goods_sub_text">
+                                <div class="sub_item">
+                                    <h5 class="sub_name">ほんのり梅風味</h5>
+                                </div>
+                                <div class="sub_box">
+                                    <p>梅酢のさっぱり感ときゅうりの食感を楽します。鶏ささみと和えるだけで、さっぱりとした和え物が出来上がります。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--========== その他 ==========-->
+            <section id="others">
+                <div class="shop_introduction title_fade">
+                    <h3 class="shop_name">その他のお土産</h3>
+                </div>
+
+                <!-- その他 一覧 -->
+                <div class="goods1">
+                    <div class="goods_sub others_list shop_fade-in">
+                        <div class="goods_sub_list">
+                            <div class="goods_sub_img">
+                                <img src="images/goods/others/others-1.png" alt="レモンケーキ">
+                            </div>
+                            <div class="goods_sub_text">
+                                <div class="sub_item">
+                                    <h5 class="sub_name">レモンケーキ</h5>
+                                </div>
+                                <div class="sub_box">
+                                    <p>瀬戸内海産のレモンを使用し、しっとりと焼き上げました。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="goods_sub_list">
+                            <div class="goods_sub_img">
+                                <img src="images/goods/others/others-2.5.png" alt="焼きドーナツ">
+                            </div>
+                            <div class="goods_sub_text">
+                                <div class="sub_item">
+                                    <h5 class="sub_name">焼きドーナツ</h5>
+                                </div>
+                                <div class="sub_box">
+                                    <p>しっとりとした生地で柔らかいく、生地の中に果肉と合わさり優しい甘みです。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="goods_sub_list">
+                            <div class="goods_sub_img">
+                                <img src="images/goods/others/others-3.png" alt="笑喜どら">
+                            </div>
+                            <div class="goods_sub_text">
+                                <div class="sub_item">
+                                    <h5 class="sub_name">笑喜どら</h5>
+                                </div>
+                                <div class="sub_box">
+                                    <p>卵をたっぷり使い、食用竹炭を入れた皮は、ふんわり優しい口当たりになっています。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="goods_sub_list">
+                            <div class="goods_sub_img">
+                                <img src="images/goods/others/others-4.5.jpg" alt="ひろしまれもん餅">
+                            </div>
+                            <div class="goods_sub_text">
+                                <div class="sub_item">
+                                    <h5 class="sub_name">ひろしまれもん餅</h5>
+                                </div>
+                                <div class="sub_box">
+                                    <p>瀬戸内海産レモンを使ったぎゅうひ餅です。 レモンの甘酸っぱさと、お餅の組み合わせです。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="goods_sub_list">
+                            <div class="goods_sub_img">
+                                <img src="images/goods/others/others-5.png" alt="ひろしまどら焼き">
+                            </div>
+                            <div class="goods_sub_text">
+                                <div class="sub_item">
+                                    <h5 class="sub_name">ひろしまどら焼き</h5>
+                                </div>
+                                <div class="sub_box">
+                                    <p>ふんわりどら焼き皮で、広島県産大納言小豆の粒餡と、栗の食感を残した栗あんを包んだ贅沢などら焼きです。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="goods_sub_list">
+                            <div class="goods_sub_img">
+                                <img src="images/goods/others/sennbei.jpg" alt="もみじ煎餅">
+                            </div>
+                            <div class="goods_sub_text">
+                                <div class="sub_item">
+                                    <h5 class="sub_name">もみじ煎餅</h5>
+                                </div>
+                                <div class="sub_box">
+                                    <p>もみじの形の小粒おせんべいです。醤油(白ごま)、抹茶、紫芋、胡麻マヨなど全部で８種の味が楽しめます。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer_container">
+            <div class="sec_footer">
+                <div class="footer_left">
+                    <div class="footer_logo">
+                        <a href="index.html"><img src="images/logo_ol.svg" alt="広島港の土産物屋 梶村商店"></a>
+                    </div>
+                    <div class="footer_adress">
+                        <p>広島市南区宇品海岸1丁目13-26<br>広島港宇品旅客ターミナル1階</p>
+                    </div>
+                </div>
+                <nav class="footer_right">
+                    <div class="footer_nav__listA">
+                        <ul>
+                            <li><a href="goods.html" class="footer_list_item bold">
+                                    <span class="ja">商品一覧</span>
+                                    <span class="en">GOODS</span>
+                                </a></li>
+                            <li><a href="index.html#access" class="footer_list_item bold">
+                                    <span class="ja">店舗案内</span>
+                                    <span class="en">STORE GUIDE</span>
+                                </a></li>
+                            <li><a href="history.html" class="footer_list_item bold">
+                                    <span class="ja">私たちの歩み</span>
+                                    <span class="en">HISTORY</span>
+                                </a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_nav__listB">
+                        <ul>
+                            <li><a href="ujinamap.html" class="footer_list_item bold">
+                                    <span class="ja">お散歩マップ</span>
+                                    <span class="en">UJINA MAP</span>
+                                </a></li>
+                            <li><a href="index.html#contact" class="footer_list_item bold">
+                                    <span class="ja">お問い合わせ</span>
+                                    <span class="en">CONTACT</span>
+                                </a></li>
+                        </ul>
+                        <div class="footer_sns">
+                            <ul class="footer_gnav_sns">
+                                <li><a href="https://maps.app.goo.gl/B4WHyeRJaHEMmqs98" target="_blank" rel="norefferrer"><img src="images/access_icon.svg" alt="グーグルマップ" width="28" height="28"></a></li>
+                                <li><a href="https://www.instagram.com/kajimurasyouten/" target="_blank" rel="norefferrer"><img src="images/insa_icon.svg" alt="インスタグラム" width="30" height="30"></a></li>
+                                <li><a href="https://www.facebook.com/kajimurashouten/" target="_blank" rel="norefferrer"><img src="images/facebook_icon.svg" alt="フェイスブック" width="20" height="30"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="copy ">
+                <small>&copy;2023 kajimura Co.</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.js"></script>
+
+</body>
+
+</html>

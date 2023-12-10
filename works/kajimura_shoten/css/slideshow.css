@@ -1,0 +1,261 @@
+@charset "utf-8";
+
+/* __________ 改行 __________ */
+.line1{
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .line1{
+    display: block;
+  }
+}
+
+/* ====================================
+slideshow.html
+===================================== */
+
+/* __________ ギャラリーのためのcss __________ */
+.gallery{
+  columns: 4;/*段組みの数*/
+  padding:0 15px;/*ギャラリー左右に余白をつける*/
+  }
+  
+  .gallery li {
+      margin-bottom: 20px;/*各画像下に余白をつける*/
+  }
+  
+  /*ギャラリー内のイメージは横幅100%にする*/
+  .gallery img{
+    width:100%;
+    height:auto;
+    vertical-align: bottom;/*画像の下にできる余白を削除*/}
+  
+  /*　横幅900px以下の段組み設定　*/
+  @media only screen and (max-width: 900px) {
+    .gallery{
+    columns:3;
+    } 
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .gallery{
+    columns: 2;
+    } 
+  }
+  
+  
+  /*========= レイアウトのためのCSS ===============*/
+  
+  /* ul{
+    margin:0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  a{
+    color: #333;
+  }
+  
+  a:hover,
+  a:active{
+    text-decoration: none;
+  } */
+
+.title_contents{
+  margin-top:100px;
+}
+
+  .slideshow_title {
+    font-family: 'Zen Maru Gothic', serif;
+    font-size: 46px;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    margin-bottom: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  p{
+    margin:0 10px 10px 10px;
+    word-wrap : break-word;
+  }
+
+  .slideshow_contents {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  /*画像を出現させるアニメーションCSS*/
+  
+  .flipLeft{
+  animation-name: flipLeft;
+  animation-duration:0.5s;
+  animation-fill-mode:forwards;
+  perspective-origin: left center;
+  opacity: 0;
+  }
+  
+  @keyframes flipLeft{
+    from {
+     transform: perspective(600px) translate3d(0, 0, 0) rotateY(30deg);
+    opacity: 0;
+    }
+  
+    to {
+    transform: perspective(600px) translate3d(0, 0, 0) rotateY(0deg);
+    opacity: 1;
+    }
+  }
+
+
+    .title_contents{
+      margin-top:74px;
+    }
+
+  @media (max-width: 768px) {
+    .slideshow_title{
+      letter-spacing: 0em;
+    } 
+  }
+
+
+  /* map追加 */
+
+.photospot_list{
+  margin: 160px 0;
+}
+
+.map_top{
+  display: flex;
+  justify-content: center;
+}
+
+.photospot_list li{
+  padding-bottom: 1rem;
+}
+
+.photo_map{
+  order: 2;
+  text-align: center;
+  width: 50%;
+}
+
+.map_bottom{
+  width: 50%;
+  margin: 2rem auto;
+}
+
+.area_a{
+  order: 1;
+  margin: 8px;
+  /*左上にずらした背景色ありタイトル*/
+  /*margin: 2em auto;  ボックスの余白 */
+  padding:3em 2em 2em; /* ボックス内側余白 */
+	position:relative; /* 配置(ここを基準に)*/
+	border: 1px solid #909792;	/* ボックスの線 (太さ　種類　色)*/
+}
+
+.title_area_a {
+	background-color:#14274C; /* タイトル背景色 */
+	font-size: 1em;/* タイトル文字の大きさ */
+	color: #fff ; /* タイトル文字色 */
+	padding: 0.5rem 2rem;/*タイトルの余白*/
+	line-height: 1;/*タイトルの行の高さ*/
+	position:absolute;	/* 配置(ここを動かす) */
+	top: 0; /*上から（0px）移動*/
+	left: 0; /*左から(0px)移動*/
+  width: 100%;
+}
+
+.area_b{
+  order: 3;
+  margin: 8px;
+  /*左上にずらした背景色ありタイトル*/
+  /*margin: 2em auto;  ボックスの余白 */
+  padding:3em 2em 2em; /* ボックス内側余白 */
+	position:relative; /* 配置(ここを基準に)*/
+	border: 1px solid #909792;	/* ボックスの線 (太さ　種類　色)*/
+}
+
+
+.title_area_b {
+	background-color:#14274C; /* タイトル背景色 */
+	font-size: 1em;/* タイトル文字の大きさ */
+	color: #fff ; /* タイトル文字色 */
+	padding: 0.5rem 2rem;/*タイトルの余白*/
+	line-height: 1;/*タイトルの行の高さ*/
+	position:absolute;	/* 配置(ここを動かす) */
+	top: 0; /*上から（0px）移動*/
+	left: 0; /*左から(0px)移動*/
+  width: 100%;
+}
+
+.area_c{
+  margin: 8px;
+  /*左上にずらした背景色ありタイトル*/
+  /*margin: 2em auto;  ボックスの余白 */
+  padding:3em 2em 2em; /* ボックス内側余白 */
+	position:relative; /* 配置(ここを基準に)*/
+	border: 1px solid #909792;	/* ボックスの線 (太さ　種類　色)*/
+}
+
+.title_area_c {
+	background-color:#14274C; /* タイトル背景色 */
+	font-size: 1em;/* タイトル文字の大きさ */
+	color: #fff ; /* タイトル文字色 */
+	padding: 0.5rem 2rem;/*タイトルの余白*/
+	line-height: 1;/*タイトルの行の高さ*/
+	position:absolute;	/* 配置(ここを動かす) */
+	top: 0; /*上から（0px）移動*/
+	left: 0; /*左から(0px)移動*/
+}
+
+.map_img {
+  margin-top: 30px;
+}
+
+.map_tori {
+  margin: 30px 10px 0 10px;
+}
+
+@media (max-width: 768px) {
+
+  .map_top{
+    display: block;
+    justify-content: center;
+  }
+
+  .photo_map{
+    width: 100%;
+  }
+
+  .map_bottom{
+    width: 100%;
+  }
+
+  .area_hune {
+    display: flex;
+  }
+
+  .title_area_c {
+    background-color:#14274C; /* タイトル背景色 */
+    font-size: 1em;/* タイトル文字の大きさ */
+    color: #fff ; /* タイトル文字色 */
+    padding: 0.5rem 2rem;/*タイトルの余白*/
+    line-height: 1;/*タイトルの行の高さ*/
+    position:absolute;	/* 配置(ここを動かす) */
+    top: 0; /*上から（0px）移動*/
+    left: 0; /*左から(0px)移動*/
+    width: 100%;
+  }
+
+  .map_img {
+    margin: 0 auto;
+  }
+
+  .map_tori {
+    margin: 0 auto;
+  }
+
+}

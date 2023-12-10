@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>私たちの歩み | 梶村商店</title>
+    <meta name="description" content="梶村商店は歴史が長く、昭和７年宇品港が広島港へ改称された3年後の昭和１０年創業となります。観光客や地元のお客様にも親しまれてきた土産物屋です。宇品の広島港と共に歩んできた歴史を紹介しています。">
+
+    <!-- OGPタグ/twitterカード -->
+        <!-- ドメイン決定後、記入よろしくお願いいたします -->
+    <meta property="og:url" content="ページのURL">
+    <meta property="og:title" content="ページのタイトル">
+    <meta property="og:type" content="ページのタイプ">
+    <meta property="og:description" content="記事の抜粋">
+    <meta property="og:image" content="画像のURL">
+    <meta name="twitter:card" content="カード種類">
+    <meta name="twitter:site" content="@Twitterユーザー名">
+    <meta property="og:site_name" content="サイト名">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="fb:app_id" content="appIDを入力">
+
+    <!-- 電話番号やメールアドレスの変換設定 リンク飛ばさない設定-->
+    <!-- <meta name="format-detection" content="email=no,telephone=no,address=no" /> -->
+
+    <!-- css -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/shop.css">
+
+    <!-- Vegas Background SlideShow -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css">
+
+    <!-- js -->
+    <script src="js/script.js" defer></script>
+    <script src="js/gsap.js" defer></script>
+
+    <!-- jQuery ハンバーガーのため消さない-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- web fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Zen+Maru+Gothic:wght@400;500;900&display=swap" rel="stylesheet">
+
+    <!-- favicon -->
+    <link rel="icon" href="images/favicon.ico">
+</head>
+
+
+
+
+<body id="history">
+    <header>
+        <!-- 右側のヘッダー (ハンバーガー) -->
+        <div id="right_header" class="right_header">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo_ol.svg" alt="広島港の土産物屋 梶村商店"></a>
+            </div>
+            <nav class="right_nav">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="opa">
+                            <span class="ja">ホーム</span>
+                            <span class="en">HOME</span>
+                        </a></li>
+                    <li><a href="goods.html" class="opa">
+                            <span class="ja">商品一覧</span>
+                            <span class="en">GOODS</span>
+                        </a></li>
+                    <li><a href="index.html#access" class="opa">
+                            <span class="ja">店舗案内</span>
+                            <span class="en">STORE GUIDE</span>
+                        </a></li>
+                    <!-- <li><a href="history.html" class="opa">
+                            <span class="ja">私たちの歩み
+                            </span>
+                            <span class="en">HISTORY</span>
+                        </a></li> -->
+                    <li><a href="ujinamap.html" class="opa">
+                            <span class="ja">お散歩マップ</span>
+                            <span class="en">UJINA MAP</span>
+                        </a></li>
+                    <li><a href="index.html#contact">
+                            <span class="ja">お問い合わせ</span>
+                            <span class="en">CONTACT</span>
+                        </a></li>
+                </ul>
+            </nav>
+            <ul class="gnav_sns">
+                <li><a href="https://maps.app.goo.gl/B4WHyeRJaHEMmqs98" target="_blank" rel="norefferrer"><img src="images/access_icon.svg" alt="グーグルマップ"></a></li>
+                <li><a href="https://www.instagram.com/kajimurasyouten/" target="_blank" rel="norefferrer"><img src="images/insa_icon.svg" alt="インスタグラム"></a></li>
+                <li><a href="https://www.facebook.com/kajimurashouten/" target="_blank" rel="norefferrer"><img src="images/facebook_icon.svg" alt="フェイスブック"></a></li>
+            </ul>
+        </div>
+        <div class="circle-bg"></div>
+
+        <!--SP用ハンバーガーメニュー３本線-->
+        <button class="hamburger">
+            <span class="btn-gNav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </button>
+    </header>
+
+    <!--画面上部ヘッダー-->
+    <nav class="top_nav">
+        <div class="wrapper gnav">
+            <div class="logo_img">
+                <a href="index.html"><img src="images/logo_yoko_ol.svg" alt="広島港の土産物屋 梶村商店" ></a>
+            </div>
+            <div class="gnav_menu">
+                <ul class="gnav__list">
+                    <li><a href="index.html" class="bold">ホーム</a></li>
+                    <li><a href="goods.html" class="bold">商品一覧</a></li>
+                    <li><a href="index.html#access" class=" bold">店舗案内</a></li>
+                    <li><a href="history.html" class=" bold now">私たちの歩み</a></li>
+                    <li><a href="ujinamap.html" class=" bold">お散歩マップ</a></li>
+                    <li><a href="index.html#contact" class=" bold">お問い合わせ</a></li>
+                </ul>
+            </div>
+            <ul class="gnav_sns">
+                <li><a href="https://maps.app.goo.gl/B4WHyeRJaHEMmqs98" target="_blank" rel="norefferrer"><img src="images/access_icon.svg" alt="グーグルマップ"></a></li>
+                <li><a href="https://www.instagram.com/kajimurasyouten/" target="_blank" rel="norefferrer"><img src="images/insa_icon.svg" alt="インスタグラム"></a></li>
+                <li><a href="https://www.facebook.com/kajimurashouten/" target="_blank" rel="norefferrer"><img src="images/facebook_icon.svg" alt="フェイスブック"></a></li>
+            </ul>
+        </div>
+    </nav>
+    <p id="page-top"><a href="#" class="deg"><img src="images/pagtop.png" alt="ページトップに戻るアイコン"></a></p>
+
+
+
+    <main>
+        <section class="intro">
+            <div class="top_visual">
+                <img src="images/shop/rekishi_header2.png" alt="">
+                <div class="shop_title_contents title_fade">
+                    <h2 class="shop_title">梶村商店の歩み</h2>
+                    <p>梶村商店は宇品港が広島港へ改称してから３年後の１９３５年(昭和１０年)に創業しました。３代目となった今も「広島港のおみやげ屋」として当時と変わることなく皆様に笑顔とおもてなしを届け続けています。ご来店いただいたお客様の心に留まり、ご愛顧いただけるようこれからも努めてまいります。
+                    </p>
+
+                </div>
+            </div>
+
+        </section>
+
+        <section class="history">
+            <div class="timeline_container">
+                <div class="timeline">
+                    <ul class="timeline-list">
+                        <li class="timeline-list-item ">
+                            <div class="date">昭和<br class="line1">７年</div>
+                            <div class="content_port">
+                                <h3 class="timeline_title">宇品港が『<strong>広島港</strong>』へ改称</h3>
+                                <div class="shop_photo s7_port shop_fade-in">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-list-item">
+                            <div class="date">昭和<br class="line1">10年</div>
+                            <div class="content ">
+                                <h3 class="timeline_title">梶村商店誕生</h3>
+                                <div class="shop_photo shop_fade-in">
+                                    <img src="images/shop/pora1.jpg" alt="一代目写真" class="ds">
+                                    <p>広島港の歴史は約800年前、年貢の運搬用の船運が太田川河口付近に集まったことに始まります。しかし、広島港が港としての機能を備えたのは、明治22年、千田県令により宇品築港が完成した時で、これによって近代港湾としての第一歩を踏み出しました。その後、1935年　昭和10年に宇品港から広島港へ改称。『梶村商店』もこのころ創業いたしました。</p>
+                                </div>
+
+                            </div>
+                        </li>
+
+                        <li class="timeline-list-item">
+                            <div class="date">昭和<br class="line1">末期</div>
+                            <div class="content_port">
+                                <h3 class="timeline_title">昔の広島港の様子</h3>
+                                <div class="shop_photo shop_fade-in">
+                                    <img src="images/shop/pora2.jpg" alt="昭和７年の広島港" class="ds">
+                                    <p>旧ターミナルは1965年(昭和40年)に完成。写真は1989年開催の「海と島の博覧会」の文字が建物入口上に写っている為、昭和末期から平成初期に撮影したものと思われます。</p>
+                                </div>
+
+                            </div>
+                        </li>
+
+                        <li class="timeline-list-item">
+                            <div class="date">平成<br class="line1">15年</div>
+                            <div class="content_port">
+                                <h3 class="timeline_title">広島港国際コンテナターミナル供用開始</h3>
+                                <div class="shop_photo shop_fade-in">
+                                    <img src="images/shop/pora3.jpg" alt="広島港国際コンテナターミナル供用開始" class="ds">
+                                    <p>広島港宇品旅客ターミナルは、広島の海の玄関口として多くの旅行者・通勤者・通学者等の拠点であるとともに、国土交通省から登録を受けた「みなとオアシス広島」の代表施設として住民参加による地域振興の取り組みが継続的に行われる拠点となっています。</p>
+                                </div>
+
+                            </div>
+                        </li>
+                        <li class="timeline-list-item">
+                            <div class="date">昭和<br class="line1">47年</div>
+                            <div class="content">
+                                <h3 class="timeline_title">梶村商店二代目</h3>
+                                <div class="shop_photo shop_fade-in">
+                                    <img src="images/shop/pora4.jpg" alt="梶村商店二代目" class="ds">
+                                    <p>二代目は、昭和、平成、令和と長きに渡り、「売店のおばちゃん」として多くの皆様から愛されてきました。気さくな人柄は、幅広い年代の方々に親しくしていただきました。</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-list-item">
+                            <div class="date">令和<br class="line1">３年</div>
+                            <div class="content">
+                                <h3 class="timeline_title">梶村商店三代目</h3>
+                                <div class="shop_photo shop_fade-in">
+                                    <img src="images/shop/pora5.jpg" alt="梶村商店三代目" class="ds">
+                                    <p>現在は三代目へと代替わりをしましたが、先代の意志も受け継がれ、お客様に笑顔とおもてなしを心がけ温かい気持ちで帰っていただけるように日々、精進させていただいております。</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer_container">
+            <div class="sec_footer">
+                <div class="footer_left">
+                    <div class="footer_logo">
+                        <a href="index.html"><img src="images/logo_ol.svg" alt="広島港の土産物屋 梶村商店"></a>
+                    </div>
+                    <div class="footer_adress">
+                        <p>広島市南区宇品海岸1丁目13-26<br>広島港宇品旅客ターミナル1階</p>
+                    </div>
+                </div>
+                <nav class="footer_right">
+                    <div class="footer_nav__listA">
+                        <ul>
+                            <li><a href="goods.html" class="footer_list_item bold">
+                                    <span class="ja">商品一覧</span>
+                                    <span class="en">GOODS</span>
+                                </a></li>
+                            <li><a href="index.html#access" class="footer_list_item bold">
+                                    <span class="ja">店舗案内</span>
+                                    <span class="en">STORE GUIDE</span>
+                                </a></li>
+                            <li><a href="history.html" class="footer_list_item bold">
+                                    <span class="ja">私たちの歩み</span>
+                                    <span class="en">HISTORY</span>
+                                </a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_nav__listB">
+                        <ul>
+                            <li><a href="ujinamap.html" class="footer_list_item bold">
+                                    <span class="ja">お散歩マップ</span>
+                                    <span class="en">UJINA MAP</span>
+                                </a></li>
+                            <li><a href="index.html#contact" class="footer_list_item bold">
+                                    <span class="ja">お問い合わせ</span>
+                                    <span class="en">CONTACT</span>
+                                </a></li>
+                        </ul>
+                        <div class="footer_sns">
+                            <ul class="footer_gnav_sns">
+                                <li><a href="https://maps.app.goo.gl/B4WHyeRJaHEMmqs98" target="_blank" rel="norefferrer"><img src="images/access_icon.svg" alt="グーグルマップ" width="28" height="28"></a></li>
+                                <li><a href="https://www.instagram.com/kajimurasyouten/" target="_blank" rel="norefferrer"><img src="images/insa_icon.svg" alt="インスタグラム" width="30" height="30"></a></li>
+                                <li><a href="https://www.facebook.com/kajimurashouten/" target="_blank" rel="norefferrer"><img src="images/facebook_icon.svg" alt="フェイスブック" width="20" height="30"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="copy ">
+                <small>&copy;2023 kajimura Co.</small>
+            </div>
+        </div>
+    </footer>
+    <!-- CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.js"></script>
+
+</body>
+
+</html>

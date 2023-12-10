@@ -547,7 +547,8 @@ footer {
 }
 
 .works_more {
-  margin: 1rem 0 2rem 0;
+text-align: center;
+  margin: 1rem auto 2rem auto;
   font-size: 12px;
   line-height: 1;
 }
@@ -615,12 +616,21 @@ footer {
   grid-template-rows: subgrid;
 }
 
+.ds{
+  filter:drop-shadow(0 2px 2px #888888);
+}
+
 @media (max-width: 767px) {
   .work_text dt {
     display: block;
     width: 100%;
   }
 }
+#kajimura_shoten  dl dd small{
+  display:block;
+  text-align: right;
+}
+
 
 /* =====================================
 ===========about me===============
