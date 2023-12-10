@@ -93,6 +93,9 @@ a:hover {
 .grid {
   display: grid;
 }
+.center{
+  text-align: center;
+}
 
 
 /* スマホの時に見出しに改行させる */
@@ -801,11 +804,8 @@ main {
 
 .profile_p {
   letter-spacing: 0.9px;
-  line-height: 1.5;
-
+  line-height: 1.8;
 }
-
-
 
 
 .skill_box {
@@ -968,7 +968,6 @@ main {
 }
 
 @media screen and (max-width: 768px) {
-
   .skill_img,
   .skill_img_car ,
   .contact_car{
@@ -1095,25 +1094,155 @@ main {
 }
 
 /*==========CONTACT ==================*/
-.contact {
+
+.Form {
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 720px;
+}
+
+@media screen and (max-width: 480px) {
+  .Form {
+    margin-top: 40px;
+  }
+}
+.Form-Item {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 480px) {
+  .Form-Item {
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    flex-wrap: wrap;
+  }
+}
+
+.Form-Item-Label {
+  width: 100%;
+  max-width: 248px;
+  letter-spacing: 0.05em;
+  font-weight: bold;
+  font-size: 18px;
+}
+@media screen and (max-width: 480px) {
+  .Form-Item-Label {
+    max-width: inherit;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+  }
+}
+.Form-Item-Label.isMsg {
+  margin-top: 8px;
+  margin-bottom: auto;
+}
+@media screen and (max-width: 480px) {
+  .Form-Item-Label.isMsg {
+    margin-top: 0;
+  }
+}
+.Form-Item-Label-Required {
+  border-radius: 6px;
+  margin-right: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 48px;
+  display: inline-block;
   text-align: center;
-
+  background: #d43232;
+  color: #fff;
+  font-size: 14px;
 }
-
-.contact h3 {
-  font-size: 40px;
+@media screen and (max-width: 480px) {
+  .Form-Item-Label-Required {
+    border-radius: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    width: 32px;
+    font-size: 10px;
+  }
 }
-.contact h3 ::after{
-    content: url(../img/top/array.png);
-    position: relative;
-    top: 7px;
-    padding-left: 5px;
+.Form-Item-Input {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-left: 40px;
+  padding-left: 1em;
+  padding-right: 1em;
+  height: 48px;
+  flex: 1;
+  width: 100%;
+  max-width: 410px;
+  background: #eaedf2;
+  font-size: 18px;
+}
+@media screen and (max-width: 480px) {
+  .Form-Item-Input {
+    margin-left: 0;
+    margin-top: 18px;
+    height: 40px;
+    flex: inherit;
+    font-size: 15px;
+  }
+}
+.Form-Item-Textarea {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-left: 40px;
+  padding-left: 1em;
+  padding-right: 1em;
+  height: 216px;
+  flex: 1;
+  width: 100%;
+  max-width: 410px;
+  background: #eaedf2;
+  font-size: 18px;
+}
+@media screen and (max-width: 480px) {
+  .Form-Item-Textarea {
+    margin-top: 18px;
+    margin-left: 0;
+    height: 200px;
+    flex: inherit;
+    font-size: 15px;
+  }
+}
+.Form-Btn {
+  border-radius: 6px;
+  margin-top: 32px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 280px;
+  display: block;
+  letter-spacing: 0.05em;
+  background: #3f271a;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+}
+@media screen and (max-width: 480px) {
+  .Form-Btn {
+    margin-top: 24px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 160px;
+    font-size: 16px;
+  }
 }
 
 .contact_car {
   margin-top: 4rem;
+  text-align: center;
   animation: contact_car 8s ease infinite;
-
 }
 
 
@@ -1127,7 +1256,6 @@ main {
     transform: rotateX(20deg);
   }
 
-
   30% {
     opacity: 1;
     transform: scale(1);
@@ -1140,6 +1268,12 @@ main {
   }
 }
 
+#thansk{
+  text-align: center;
+}
+#thansk h3{
+  margin-bottom: 1rem;
+} 
 .mame_box {
   text-align: center;
   animation: mame_go 2s ease infinite;
@@ -1224,92 +1358,4 @@ main {
 #aboutme_footer {
   background: #ffc643;
   margin: 0 auto;
-}
-
-
-.c-form {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.c-form__item {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-evenly;
-  margin-bottom: 2rem;
-}
-
-.c-form__label,
-.c-form__input {
-  padding: 1rem;
-}
-
-.c-form__label {
-  width: 40%;
-  text-align: left;
-}
-
-.c-form__input {
-  width: 55%;
-  font-size: 16px;
-  border: solid 1px #3f271a;
-  border-radius: 4px;
-}
-
-.c-form__input:focus-visible {
-  outline: #df5252 auto 1px;
-}
-
-.c-form__required {
-  color: #fafafa;
-  background-color: #d43232;
-  border-radius: 4px;
-  padding: 5px 8px;
-  margin: 0 0 0 18px;
-}
-
-textarea.c-form__input {
-  height: 160px;
-}
-
-.c-form__submit {
-  text-align: center;
-}
-
-.c-form__submit button {
-  font-size: 18px;
-  font-weight: bold;
-  color: #fff;
-  background-image: linear-gradient(134deg, rgba(255, 196, 190, 1), rgba(236, 127, 119, 1) 100%, rgba(240, 226, 226, 1));
-  border-radius: 4px;
-  padding: 1rem 8rem;
-  transition: 0.4s;
-  cursor: pointer;
-}
-
-.c-form__submit button:hover {
-  opacity: 0.5;
-  transform: translate(0, 5%);
-  background-color: transparent;
-
-}
-
-@media (max-width: 768px) {
-  .c-form__item {
-    flex-wrap: wrap;
-  }
-
-  .c-form__label {
-    width: 90%;
-  }
-
-  .c-form__input {
-    width: 80%;
-  }
-}
-
-.char {
-  transform: translateY(100px);
-  transition: transfrom 0.5s;
-  /* transform: translateY(-100px); テキストを上から出したい時*/
 }
