@@ -262,7 +262,6 @@ else if($confirmDsp == 1){
 #formWrap {
 	width:700px;
 	margin:0 auto;
-	color:#555;
 	line-height:120%;
 	font-size:90%;
 }
