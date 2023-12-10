@@ -553,7 +553,6 @@ footer {
 }
 
 
-
 .works_color_li {
   height: 50px;
   width: 50px;
@@ -563,11 +562,9 @@ footer {
 #kenko-animal .basecolor {
   background-color: #fcf2de;
 }
-
 #kenko-animal .maincolor {
   background-color: #ed8e23;
 }
-
 #kenko-animal .accentcolor {
   background-color: #89c4ec;
 }
@@ -575,11 +572,9 @@ footer {
 #lemansauto .basecolor {
   background-color: #1e1c1b;
 }
-
 #lemansauto .maincolor {
   background-color: #545353;
 }
-
 #lemansauto .accentcolor {
   background-color: #c1a362;
 }
@@ -587,20 +582,30 @@ footer {
 #myportfolio .basecolor {
   background-color: #fffdf9;
 }
-
 #myportfolio .maincolor {
   background-color: #fdb2b2;
 }
-
 #myportfolio .accentcolor {
   background-color: #ffc643;
 }
 
-
+#kajimura_shoten .basecolor
+{
+  background-color: #9B9595;
+}
+#kajimura_shoten .maincolor
+{
+  background-color: #14274C;
+}
+#kajimura_shoten .accentcolor
+{
+  background-color: #D93B2B;
+}
 
 .works_color {
   grid-template-columns: repeat(auto-fit, 105px);
   gap: 0.25rem;
+  margin-top: 1rem;
 }
 
 .works_more_card {
